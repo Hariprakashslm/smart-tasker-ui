@@ -1,0 +1,9 @@
+/* src/ui/boards/KanbanBoard.css */
+
+.kanban-board {
+  display: flex;
+  flex-direction: row;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 16px;
+}

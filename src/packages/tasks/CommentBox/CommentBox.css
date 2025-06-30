@@ -1,0 +1,26 @@
+/* src/ui/tasks/CommentBox.css */
+
+.comment-box {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.comment-avatar {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.comment-input-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.comment-actions {
+  display: flex;
+  justify-content: flex-end;
+}

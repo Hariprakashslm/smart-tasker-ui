@@ -1,0 +1,69 @@
+.avatar {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #e0e0e0;
+  color: #444;
+  font-weight: 600;
+  overflow: hidden;
+  font-family: 'Segoe UI', sans-serif;
+  text-transform: uppercase;
+}
+
+.avatar img.avatar-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.avatar-fallback {
+  font-size: 1rem;
+}
+
+/* Sizes */
+.avatar-small {
+  width: 32px;
+  height: 32px;
+  font-size: 14px;
+}
+
+.avatar-medium {
+  width: 48px;
+  height: 48px;
+  font-size: 16px;
+}
+
+.avatar-large {
+  width: 72px;
+  height: 72px;
+  font-size: 20px;
+}
+
+/* Shapes */
+.avatar-circle {
+  border-radius: 50%;
+}
+
+.avatar-square {
+  border-radius: 8px;
+}
+
+/* Status Indicator */
+.avatar-status {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 10px;
+  height: 10px;
+  border: 2px solid white;
+  border-radius: 50%;
+}
+
+.avatar-status.online {
+  background-color: #4caf50;
+}
+
+.avatar-status.offline {
+  background-color: #bbb;
+}

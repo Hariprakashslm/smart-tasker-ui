@@ -1,0 +1,40 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "target": "ES2020",
+    "module": "ESNext",
+    "lib": ["DOM", "DOM.Iterable", "ES2020"],
+    "outDir": "dist",
+    "declaration": true,
+    "declarationDir": "dist/types",
+    "noEmit": false,
+    "moduleResolution": "bundler",
+    "jsx": "react-jsx",
+    "allowImportingTsExtensions": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "baseUrl": ".",
+    "paths": {
+      "core/*": ["./src/packages/core/*"],
+      "page/*": ["./src/packages/page/*"],
+      "auth/*": ["./src/packages/auth/*"],
+      "layout/*": ["./src/packages/layout/*"],
+      "dashboard/*": ["./src/packages/dashboard/*"],
+      "projects/*": ["./src/packages/projects/*"],
+      "boards/*": ["./src/packages/boards/*"],
+      "tasks/*": ["./src/packages/tasks/*"],
+      "uploads/*": ["./src/packages/uploads/*"],
+      "notifications/*": ["./src/packages/notifications/*"],
+      "activity/*": ["./src/packages/activity/*"],
+      "search/*": ["./src/packages/search/*"],
+      "collaboration/*": ["./src/packages/collaboration/*"],
+      "admin/*": ["./src/packages/admin/*"]
+    },
+    "strict": true,
+    "skipLibCheck": true,
+    "types": ["vite/client"],
+    "declarationMap": true,
+    "emitDeclarationOnly": true
+  },
+  "include": ["src"]
+}

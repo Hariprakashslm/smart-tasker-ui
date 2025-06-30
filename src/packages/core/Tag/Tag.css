@@ -1,0 +1,45 @@
+.tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 4px 8px;
+  font-size: 13px;
+  border-radius: 12px;
+  background-color: #e0e0e0;
+  color: #333;
+  margin: 4px;
+  user-select: none;
+}
+
+.tag-primary {
+  background-color: #007bff;
+  color: white;
+}
+
+.tag-success {
+  background-color: #28a745;
+  color: white;
+}
+
+.tag-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.tag-disabled {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.tag-remove {
+  background: transparent;
+  border: none;
+  margin-left: 6px;
+  color: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+.tag-remove:hover {
+  opacity: 0.8;
+}

@@ -1,0 +1,56 @@
+/* src/ui/tasks/AttachmentPreview.css */
+
+.attachment-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.attachment-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  background-color: #fafafa;
+}
+
+.attachment-thumbnail {
+  width: 48px;
+  height: 48px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.attachment-icon {
+  width: 48px;
+  height: 48px;
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee;
+  border-radius: 4px;
+}
+
+.attachment-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.attachment-name {
+  font-weight: 500;
+  font-size: 14px;
+  color: #333;
+}
+
+.attachment-download {
+  font-size: 13px;
+  color: #007bff;
+  text-decoration: none;
+}
+
+.attachment-download:hover {
+  text-decoration: underline;
+}

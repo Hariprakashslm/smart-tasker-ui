@@ -1,0 +1,7 @@
+/* src/ui/boards/ColumnAddTaskButton.css */
+
+.column-add-task-button {
+  display: flex;
+  justify-content: center;
+  margin-top: 8px;
+}

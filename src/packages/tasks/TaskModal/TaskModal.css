@@ -1,0 +1,21 @@
+/* src/ui/tasks/TaskModal.css */
+
+.task-modal-body {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+  margin-top: 16px;
+}
+
+.task-label {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 4px;
+  color: #333;
+}

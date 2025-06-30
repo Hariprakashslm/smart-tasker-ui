@@ -1,0 +1,51 @@
+/* src/ui/auth/OAuthButtons.css */
+
+.oauth-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.oauth-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+  color: white;
+  transition: background 0.2s ease;
+}
+
+.oauth-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+}
+
+.oauth-google {
+  background: #db4437;
+}
+
+.oauth-google:hover {
+  background: #c1351d;
+}
+
+.oauth-github {
+  background: #333;
+}
+
+.oauth-github:hover {
+  background: #222;
+}
+
+.oauth-facebook {
+  background: #4267b2;
+}
+
+.oauth-facebook:hover {
+  background: #365899;
+}

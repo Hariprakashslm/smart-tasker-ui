@@ -1,0 +1,32 @@
+/* src/ui/tasks/ActivityTimeline.css */
+
+.activity-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  position: relative;
+  padding-left: 20px;
+  border-left: 2px solid #e0e0e0;
+}
+
+.timeline-entry {
+  position: relative;
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -9px;
+  top: 12px;
+  width: 10px;
+  height: 10px;
+  background: #4caf50;
+  border-radius: 50%;
+  border: 2px solid white;
+}
+
+.timeline-empty {
+  font-size: 14px;
+  color: #777;
+  font-style: italic;
+  padding-left: 20px;
+}
