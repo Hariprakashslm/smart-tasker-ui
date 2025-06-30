@@ -1,32 +1,48 @@
-/* src/ui/auth/LoginForm.css */
+/* src/ui/admin/LogViewer.css */
 
-.login-form {
-  max-width: 400px;
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-  padding: 24px;
-  background: #fff;
+.log-viewer {
+  overflow-y: auto;
+  border: 1px solid #e5e7eb;
   border-radius: 8px;
-  box-shadow: 0 1px 6px rgba(0, 0, 0, 0.06);
+  background-color: #f9fafb;
+  padding: 12px;
+  font-family: monospace;
 }
 
-.login-title {
-  font-size: 20px;
-  font-weight: 600;
-  text-align: center;
-  margin-bottom: 8px;
+.log-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.login-actions {
+.log-item {
   display: flex;
-  justify-content: flex-end;
-  gap: 10px;
-}
-
-.login-oauth {
-  display: flex;
-  flex-direction: column;
+  align-items: center;
   gap: 12px;
-  margin-top: 16px;
+  padding: 6px 0;
+  border-bottom: 1px dashed #e5e7eb;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.log-item:last-child {
+  border-bottom: none;
+}
+
+.log-time {
+  color: #6b7280;
+  white-space: nowrap;
+  min-width: 140px;
+}
+
+.log-message {
+  flex: 1;
+  white-space: pre-wrap;
+  color: #111827;
+}
+
+.log-empty {
+  text-align: center;
+  color: #6b7280;
+  padding: 20px;
 }

@@ -1,68 +1,37 @@
-.storybook-PresenceIndicator {
-  margin: 0 auto;
-  padding: 48px 20px;
-  max-width: 600px;
-  color: #333;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
-}
+/* src/packages/collaboration/PresenceIndicator.css */
 
-.storybook-PresenceIndicator h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
-}
-
-.storybook-PresenceIndicator p {
-  margin: 1em 0;
-}
-
-.storybook-PresenceIndicator a {
-  color: inherit;
-}
-
-.storybook-PresenceIndicator ul {
-  margin: 1em 0;
-  padding-left: 30px;
-}
-
-.storybook-PresenceIndicator li {
-  margin-bottom: 8px;
-}
-
-.storybook-PresenceIndicator .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #357a14;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
-}
-
-.storybook-PresenceIndicator .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
+.presence-indicator {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 13px;
-  line-height: 20px;
+  color: #4b5563;
 }
 
-.storybook-PresenceIndicator .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
+.presence-label {
+  font-weight: 500;
 }
 
-.storybook-PresenceIndicator .tip-wrapper svg path {
-  fill: #1ea7fd;
+.presence-avatars {
+  display: flex;
+  align-items: center;
+  gap: -4px;
+  position: relative;
+}
+
+.presence-avatar {
+  margin-left: -8px;
+  border-radius: 50%;
+  border: 2px solid white;
+  background-color: white;
+}
+
+.presence-extra {
+  margin-left: 4px;
+  background-color: #e5e7eb;
+  color: #374151;
+  font-size: 12px;
+  border-radius: 999px;
+  padding: 2px 6px;
+  font-weight: 500;
 }

@@ -1,68 +1,49 @@
-.storybook-SearchBar {
-  margin: 0 auto;
-  padding: 48px 20px;
-  max-width: 600px;
-  color: #333;
+.input-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.input-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 8px 12px;
   font-size: 14px;
-  line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  outline: none;
+  transition: border 0.2s ease;
 }
 
-.storybook-SearchBar h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
+.input-field:focus {
+  border-color: #2563eb;
 }
 
-.storybook-SearchBar p {
-  margin: 1em 0;
+.input-field.has-icon {
+  padding-left: 36px;
 }
 
-.storybook-SearchBar a {
-  color: inherit;
+.input-field.has-suffix {
+  padding-right: 36px;
 }
 
-.storybook-SearchBar ul {
-  margin: 1em 0;
-  padding-left: 30px;
+.input-icon {
+  position: absolute;
+  left: 10px;
+  font-size: 14px;
+  color: #6b7280;
+  pointer-events: none;
 }
 
-.storybook-SearchBar li {
-  margin-bottom: 8px;
-}
-
-.storybook-SearchBar .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #357a14;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
-}
-
-.storybook-SearchBar .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 13px;
-  line-height: 20px;
-}
-
-.storybook-SearchBar .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
-}
-
-.storybook-SearchBar .tip-wrapper svg path {
-  fill: #1ea7fd;
+.input-suffix {
+  position: absolute;
+  right: 10px;
+  font-size: 14px;
+  color: #6b7280;
+  cursor: pointer;
 }

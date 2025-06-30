@@ -1,13 +1,81 @@
-import React from "react";
+// src/ui/admin/AlertsPanel.tsx
+import React from 'react';
+import './AlertsPanel.css';
+import { Badge } from 'core/Badge';
+import { Button } from 'core/Button';
 
-import "./AlertsPanel.css";
+export interface AlertItem {
+  id: string;
+  title: string;
+  message: string;
+  severity: 'info' | 'warning' | 'error' | 'success';
+  timestamp?: string;
+  onView?: () => void;
+  onDismiss?: () => void;
+}
 
-type User = {
-  name: string;
+export interface AlertsPanelProps {
+  alerts: AlertItem[];
+  maxHeight?: string;
+}
+
+export const AlertsPanel: React.FC<AlertsPanelProps> = ({
+  alerts,
+  maxHeight = '320px',
+}) => {
+  return (
+    <div className="alerts-panel" style={{ maxHeight }}>
+      {alerts.length === 0 ? (
+        <div className="alerts-empty">🎉 No active alerts</div>
+      ) : (
+        <ul className="alerts-list">
+          {alerts.map((alert) => (
+            <li key={alert.id} className={`alert-item alert-${alert.severity}`}>
+              <div className="alert-header">
+                <span className="alert-title">{alert.title}</span>
+                <Badge
+                  count={alert.severity}
+                  color={getColor(alert.severity)}
+                />
+              </div>
+              <div className="alert-message">{alert.message}</div>
+              <div className="alert-actions">
+                {alert.onView && (
+                  <Button
+                    label="View"
+                    variant="ghost"
+                    size="small"
+                    onClick={alert.onView}
+                  />
+                )}
+                {alert.onDismiss && (
+                  <Button
+                    label="Dismiss"
+                    variant="outline"
+                    size="small"
+                    onClick={alert.onDismiss}
+                  />
+                )}
+              </div>
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
 };
 
-export const AlertsPanel: React.FC = () => {
-  const [user, setUser] = React.useState<User>();
-
-  return <article></article>;
+const getColor = (severity: string) => {
+  switch (severity) {
+    case 'info':
+      return 'blue';
+    case 'warning':
+      return 'yellow';
+    case 'error':
+      return 'red';
+    case 'success':
+      return 'green';
+    default:
+      return 'gray';
+  }
 };

@@ -1,1 +1,1 @@
-export { LogViewer } from './LogViewer';
+export { LogViewer, type LogEntry } from './LogViewer';

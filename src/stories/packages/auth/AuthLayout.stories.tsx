@@ -5,7 +5,7 @@ import { LoginForm } from 'auth/LoginForm';
 import { SignupForm } from 'auth/SignupForm';
 
 export default {
-  title: 'Auth/AuthLayout',
+  title: 'Packages/Auth/AuthLayout',
   component: AuthLayout,
 };
 

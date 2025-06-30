@@ -1,13 +1,36 @@
-import React from "react";
+// src/ui/common/FileList.tsx
+import React from 'react';
+import { FileDownloadLink } from '../FileDownloadLink';
+import './FileList.css';
 
-import "./FileList.css";
+export interface FileListItem {
+  fileName: string;
+  fileUrl: string;
+  download?: boolean;
+}
 
-type User = {
-  name: string;
-};
+export interface FileListProps {
+  files: FileListItem[];
+  maxHeight?: string;
+}
 
-export const FileList: React.FC = () => {
-  const [user, setUser] = React.useState<User>();
+export const FileList: React.FC<FileListProps> = ({
+  files,
+  maxHeight = 'auto',
+}) => {
+  if (!files.length) {
+    return <div className="file-list-empty">No files available.</div>;
+  }
 
-  return <article></article>;
+  return (
+    <div className="file-list-wrapper" style={{ maxHeight }}>
+      <ul className="file-list">
+        {files.map((file, i) => (
+          <li key={i} className="file-list-item">
+            <FileDownloadLink {...file} />
+          </li>
+        ))}
+      </ul>
+    </div>
+  );
 };

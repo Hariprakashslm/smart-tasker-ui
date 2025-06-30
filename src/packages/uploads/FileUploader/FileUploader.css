@@ -1,68 +1,13 @@
-.storybook-FileUploader {
-  margin: 0 auto;
-  padding: 48px 20px;
-  max-width: 600px;
-  color: #333;
+.file-uploader-button {
+  padding: 8px 16px;
+  background-color: #2563eb;
+  color: white;
   font-size: 14px;
-  line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
 }
 
-.storybook-FileUploader h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
-}
-
-.storybook-FileUploader p {
-  margin: 1em 0;
-}
-
-.storybook-FileUploader a {
-  color: inherit;
-}
-
-.storybook-FileUploader ul {
-  margin: 1em 0;
-  padding-left: 30px;
-}
-
-.storybook-FileUploader li {
-  margin-bottom: 8px;
-}
-
-.storybook-FileUploader .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #357a14;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
-}
-
-.storybook-FileUploader .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 13px;
-  line-height: 20px;
-}
-
-.storybook-FileUploader .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
-}
-
-.storybook-FileUploader .tip-wrapper svg path {
-  fill: #1ea7fd;
+.file-uploader-button:hover {
+  background-color: #1d4ed8;
 }

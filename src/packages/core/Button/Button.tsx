@@ -13,10 +13,12 @@ export interface ButtonProps {
   onClick?: () => void;
   disabled?: boolean;
   type?: 'button' | 'submit' | 'reset' | undefined;
+  variant?: string;
 }
 
 /** Primary UI component for user interaction */
 export const Button = ({
+  variant = '',
   primary = false,
   size = 'medium',
   backgroundColor,

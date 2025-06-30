@@ -4,7 +4,7 @@ import { KanbanBoard } from 'boards/KanbanBoard';
 import type { TaskCardProps } from 'tasks/TaskCard';
 
 export default {
-  title: 'Boards/KanbanBoard',
+  title: 'Packages/Boards/KanbanBoard',
   component: KanbanBoard,
 };
 

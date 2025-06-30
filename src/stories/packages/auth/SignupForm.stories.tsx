@@ -4,7 +4,7 @@ import { SignupForm } from 'auth/SignupForm';
 import { OAuthProvider } from 'auth/OAuthButtons';
 
 export default {
-  title: 'Auth/SignupForm',
+  title: 'Packages/Auth/SignupForm',
   component: SignupForm,
 };
 

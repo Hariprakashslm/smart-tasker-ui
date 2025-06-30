@@ -1,68 +1,66 @@
-.storybook-Header {
-  margin: 0 auto;
-  padding: 48px 20px;
-  max-width: 600px;
-  color: #333;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/* src/ui/layout/Header.css */
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 24px;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.storybook-Header h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
+.app-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #111827;
 }
 
-.storybook-Header p {
-  margin: 1em 0;
+.app-center {
+  flex: 1;
+  margin: 0 24px;
+  max-width: 400px;
 }
 
-.storybook-Header a {
-  color: inherit;
+.app-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
 }
 
-.storybook-Header ul {
-  margin: 1em 0;
-  padding-left: 30px;
+.header-icon-wrapper {
+  position: relative;
+  cursor: pointer;
 }
 
-.storybook-Header li {
-  margin-bottom: 8px;
+.header-user {
+  position: relative;
+  cursor: pointer;
 }
 
-.storybook-Header .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #357a14;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
+.header-dropdown {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  border-radius: 6px;
+  z-index: 20;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
 }
 
-.storybook-Header .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 13px;
-  line-height: 20px;
+.header-user:hover .header-dropdown {
+  display: flex;
 }
-
-.storybook-Header .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
-}
-
-.storybook-Header .tip-wrapper svg path {
-  fill: #1ea7fd;
+.app-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
 }

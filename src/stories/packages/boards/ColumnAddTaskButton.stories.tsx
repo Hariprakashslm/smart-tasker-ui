@@ -3,7 +3,7 @@ import React from 'react';
 import { ColumnAddTaskButton } from 'boards/ColumnAddTaskButton';
 
 export default {
-  title: 'Boards/ColumnAddTaskButton',
+  title: 'Packages/Boards/ColumnAddTaskButton',
   component: ColumnAddTaskButton,
 };
 

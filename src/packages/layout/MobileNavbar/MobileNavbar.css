@@ -1,68 +1,31 @@
-.storybook-MobileNavbar {
-  margin: 0 auto;
-  padding: 48px 20px;
-  max-width: 600px;
-  color: #333;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/* src/ui/layout/MobileNavbar.css */
+
+.mobile-navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px;
+  background: #1f2937; /* dark background */
+  color: white;
+  height: 56px;
+  border-bottom: 1px solid #374151;
+  position: sticky;
+  top: 0;
+  z-index: 999;
 }
 
-.storybook-MobileNavbar h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
-}
-
-.storybook-MobileNavbar p {
-  margin: 1em 0;
-}
-
-.storybook-MobileNavbar a {
+.mobile-menu-btn,
+.mobile-avatar-btn {
+  background: none;
+  border: none;
   color: inherit;
+  font-size: 22px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
 }
 
-.storybook-MobileNavbar ul {
-  margin: 1em 0;
-  padding-left: 30px;
-}
-
-.storybook-MobileNavbar li {
-  margin-bottom: 8px;
-}
-
-.storybook-MobileNavbar .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #357a14;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
-}
-
-.storybook-MobileNavbar .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 13px;
-  line-height: 20px;
-}
-
-.storybook-MobileNavbar .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
-}
-
-.storybook-MobileNavbar .tip-wrapper svg path {
-  fill: #1ea7fd;
+.mobile-title {
+  font-size: 16px;
+  font-weight: 600;
 }

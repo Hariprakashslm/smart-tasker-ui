@@ -1,13 +1,47 @@
-import React from "react";
+// src/ui/common/NotificationDropdown.tsx
+import React from 'react';
+import './NotificationDropdown.css';
+import { NotificationItem, NotificationItemProps } from '../NotificationItem';
 
-import "./NotificationDropdown.css";
+export interface NotificationDropdownProps {
+  notifications: NotificationItemProps[];
+  onMarkAllRead?: () => void;
+  onViewAll?: () => void;
+}
 
-type User = {
-  name: string;
-};
+export const NotificationDropdown: React.FC<NotificationDropdownProps> = ({
+  notifications,
+  onMarkAllRead,
+  onViewAll,
+}) => {
+  return (
+    <div className="notification-dropdown">
+      <div className="notification-dropdown-header">
+        <span>Notifications</span>
+        {onMarkAllRead && (
+          <button className="dropdown-action" onClick={onMarkAllRead}>
+            Mark all as read
+          </button>
+        )}
+      </div>
 
-export const NotificationDropdown: React.FC = () => {
-  const [user, setUser] = React.useState<User>();
+      {notifications.length === 0 ? (
+        <div className="notification-empty">🎉 You're all caught up</div>
+      ) : (
+        <div className="notification-list">
+          {notifications.map((n) => (
+            <NotificationItem key={n.id} {...n} />
+          ))}
+        </div>
+      )}
 
-  return <article></article>;
+      {onViewAll && (
+        <div className="notification-footer">
+          <button className="dropdown-action" onClick={onViewAll}>
+            View all notifications
+          </button>
+        </div>
+      )}
+    </div>
+  );
 };

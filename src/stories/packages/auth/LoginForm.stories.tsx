@@ -4,7 +4,7 @@ import { LoginForm } from 'auth/LoginForm';
 import type { OAuthProvider } from 'auth/OAuthButtons';
 
 export default {
-  title: 'Auth/LoginForm',
+  title: 'Packages/Auth/LoginForm',
   component: LoginForm,
 };
 

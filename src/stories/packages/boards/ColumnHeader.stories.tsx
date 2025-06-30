@@ -3,7 +3,7 @@ import React from 'react';
 import { ColumnHeader } from 'boards/ColumnHeader';
 
 export default {
-  title: 'Boards/ColumnHeader',
+  title: 'Packages/Boards/ColumnHeader',
   component: ColumnHeader,
 };
 

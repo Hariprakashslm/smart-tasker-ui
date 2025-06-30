@@ -1,13 +1,41 @@
-import React from "react";
+// src/ui/layout/MobileNavbar.tsx
+import React from 'react';
+import './MobileNavbar.css';
+import { Avatar } from 'core/Avatar';
 
-import "./MobileNavbar.css";
+export interface MobileNavbarProps {
+  title?: string;
+  onMenuToggle?: () => void;
+  onAvatarClick?: () => void;
+  user?: {
+    name: string;
+    imageUrl?: string;
+  };
+}
 
-type User = {
-  name: string;
-};
+export const MobileNavbar: React.FC<MobileNavbarProps> = ({
+  title = 'Smart Tasker',
+  onMenuToggle,
+  onAvatarClick,
+  user,
+}) => {
+  return (
+    <div className="mobile-navbar">
+      <button
+        className="mobile-menu-btn"
+        onClick={onMenuToggle}
+        aria-label="Menu"
+      >
+        ☰
+      </button>
 
-export const MobileNavbar: React.FC = () => {
-  const [user, setUser] = React.useState<User>();
+      <span className="mobile-title">{title}</span>
 
-  return <article></article>;
+      {user && (
+        <button onClick={onAvatarClick} className="mobile-avatar-btn">
+          <Avatar name={user.name} src={user.imageUrl} size={'small'} />
+        </button>
+      )}
+    </div>
+  );
 };

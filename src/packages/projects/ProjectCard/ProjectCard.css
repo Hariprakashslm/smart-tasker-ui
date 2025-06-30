@@ -1,68 +1,53 @@
-.storybook-ProjectCard {
-  margin: 0 auto;
-  padding: 48px 20px;
-  max-width: 600px;
-  color: #333;
+/* src/ui/projects/ProjectCard.css */
+
+.project-card {
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  padding: 16px;
+  background-color: #fff;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  transition: box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+}
+
+.project-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.project-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.project-desc {
   font-size: 14px;
-  line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: #4b5563;
 }
 
-.storybook-ProjectCard h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
+.project-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
-.storybook-ProjectCard p {
-  margin: 1em 0;
+.project-owner {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #374151;
 }
 
-.storybook-ProjectCard a {
-  color: inherit;
-}
-
-.storybook-ProjectCard ul {
-  margin: 1em 0;
-  padding-left: 30px;
-}
-
-.storybook-ProjectCard li {
-  margin-bottom: 8px;
-}
-
-.storybook-ProjectCard .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #357a14;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
-}
-
-.storybook-ProjectCard .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 13px;
-  line-height: 20px;
-}
-
-.storybook-ProjectCard .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
-}
-
-.storybook-ProjectCard .tip-wrapper svg path {
-  fill: #1ea7fd;
+.project-actions {
+  display: flex;
+  gap: 8px;
 }

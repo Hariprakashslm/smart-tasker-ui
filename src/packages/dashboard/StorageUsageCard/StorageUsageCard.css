@@ -1,68 +1,54 @@
-.storybook-StorageUsageCard {
-  margin: 0 auto;
-  padding: 48px 20px;
-  max-width: 600px;
-  color: #333;
+/* src/packages/dashboard/StorageUsageCard.css */
+
+.storage-usage-card {
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #ffffff;
+  width: 100%;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.storage-label {
   font-size: 14px;
-  line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 600;
+  color: #111827;
+  margin-bottom: 6px;
 }
 
-.storybook-StorageUsageCard h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
-}
-
-.storybook-StorageUsageCard p {
-  margin: 1em 0;
-}
-
-.storybook-StorageUsageCard a {
-  color: inherit;
-}
-
-.storybook-StorageUsageCard ul {
-  margin: 1em 0;
-  padding-left: 30px;
-}
-
-.storybook-StorageUsageCard li {
+.storage-summary {
+  font-size: 13px;
+  color: #4b5563;
   margin-bottom: 8px;
 }
 
-.storybook-StorageUsageCard .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #357a14;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
+.storage-bar {
+  background-color: #f3f4f6;
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 
-.storybook-StorageUsageCard .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 13px;
-  line-height: 20px;
+.storage-fill {
+  height: 100%;
+  transition: width 0.4s ease;
 }
 
-.storybook-StorageUsageCard .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
+.bg-green {
+  background-color: #10b981;
 }
 
-.storybook-StorageUsageCard .tip-wrapper svg path {
-  fill: #1ea7fd;
+.bg-yellow {
+  background-color: #f59e0b;
+}
+
+.bg-red {
+  background-color: #ef4444;
+}
+
+.storage-percent {
+  font-size: 12px;
+  text-align: right;
+  color: #6b7280;
+  margin-top: 6px;
 }

@@ -1,68 +1,22 @@
-.storybook-FilterPanel {
-  margin: 0 auto;
-  padding: 48px 20px;
-  max-width: 600px;
-  color: #333;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/* src/ui/common/FilterPanel.css */
+
+.filter-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+  background-color: #fff;
+  padding: 16px;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
 }
 
-.storybook-FilterPanel h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
+.filter-panel > * {
+  flex: 1;
+  min-width: 160px;
 }
 
-.storybook-FilterPanel p {
-  margin: 1em 0;
-}
-
-.storybook-FilterPanel a {
-  color: inherit;
-}
-
-.storybook-FilterPanel ul {
-  margin: 1em 0;
-  padding-left: 30px;
-}
-
-.storybook-FilterPanel li {
-  margin-bottom: 8px;
-}
-
-.storybook-FilterPanel .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #357a14;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
-}
-
-.storybook-FilterPanel .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 13px;
-  line-height: 20px;
-}
-
-.storybook-FilterPanel .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
-}
-
-.storybook-FilterPanel .tip-wrapper svg path {
-  fill: #1ea7fd;
+.filter-actions {
+  display: flex;
+  gap: 10px;
 }

@@ -1,1 +1,4 @@
-export { NotificationItem } from './NotificationItem';
+export {
+  NotificationItem,
+  type NotificationItemProps,
+} from './NotificationItem';

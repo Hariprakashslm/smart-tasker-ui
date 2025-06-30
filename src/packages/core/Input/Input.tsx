@@ -1,3 +1,4 @@
+// src/ui/core/Input.tsx
 import React from 'react';
 import './Input.css';
 
@@ -10,6 +11,8 @@ export interface InputProps {
   disabled?: boolean;
   required?: boolean;
   error?: string;
+  icon?: React.ReactNode; // NEW: Left icon
+  suffix?: React.ReactNode; // NEW: Right icon or button
 }
 
 export const Input: React.FC<InputProps> = ({
@@ -21,6 +24,8 @@ export const Input: React.FC<InputProps> = ({
   disabled = false,
   required = false,
   error,
+  icon,
+  suffix,
 }) => {
   return (
     <div className={`input-wrapper ${disabled ? 'input-disabled' : ''}`}>
@@ -30,14 +35,22 @@ export const Input: React.FC<InputProps> = ({
           {required && <span className="input-required">*</span>}
         </label>
       )}
-      <input
-        type={type}
-        className={`input-field ${error ? 'input-error' : ''}`}
-        placeholder={placeholder}
-        value={value}
-        onChange={onChange}
-        disabled={disabled}
-      />
+
+      <div className="input-container">
+        {icon && <span className="input-icon">{icon}</span>}
+        <input
+          type={type}
+          className={`input-field ${icon ? 'has-icon' : ''} ${
+            suffix ? 'has-suffix' : ''
+          } ${error ? 'input-error' : ''}`}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          disabled={disabled}
+        />
+        {suffix && <span className="input-suffix">{suffix}</span>}
+      </div>
+
       {error && <div className="input-error-text">{error}</div>}
     </div>
   );

@@ -1,68 +1,48 @@
-.storybook-LogViewer {
-  margin: 0 auto;
-  padding: 48px 20px;
-  max-width: 600px;
-  color: #333;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/* src/ui/admin/LogViewer.css */
+
+.log-viewer {
+  overflow-y: auto;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  background-color: #f9fafb;
+  padding: 12px;
+  font-family: monospace;
 }
 
-.storybook-LogViewer h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
+.log-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
-.storybook-LogViewer p {
-  margin: 1em 0;
-}
-
-.storybook-LogViewer a {
-  color: inherit;
-}
-
-.storybook-LogViewer ul {
-  margin: 1em 0;
-  padding-left: 30px;
-}
-
-.storybook-LogViewer li {
-  margin-bottom: 8px;
-}
-
-.storybook-LogViewer .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #357a14;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
-}
-
-.storybook-LogViewer .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
+.log-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 0;
+  border-bottom: 1px dashed #e5e7eb;
   font-size: 13px;
-  line-height: 20px;
+  line-height: 1.5;
 }
 
-.storybook-LogViewer .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
+.log-item:last-child {
+  border-bottom: none;
 }
 
-.storybook-LogViewer .tip-wrapper svg path {
-  fill: #1ea7fd;
+.log-time {
+  color: #6b7280;
+  white-space: nowrap;
+  min-width: 140px;
+}
+
+.log-message {
+  flex: 1;
+  white-space: pre-wrap;
+  color: #111827;
+}
+
+.log-empty {
+  text-align: center;
+  color: #6b7280;
+  padding: 20px;
 }

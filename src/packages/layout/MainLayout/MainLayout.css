@@ -1,68 +1,54 @@
-.storybook-MainLayout {
-  margin: 0 auto;
-  padding: 48px 20px;
-  max-width: 600px;
-  color: #333;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/* src/ui/layout/MainLayout.css */
+
+.main-layout {
+  display: flex;
+  min-height: 100vh;
 }
 
-.storybook-MainLayout h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
+/* Sidebar */
+.main-layout-sidebar {
+  width: 220px;
+  background: #1f2937;
+  color: white;
+  display: none;
 }
 
-.storybook-MainLayout p {
-  margin: 1em 0;
+@media (min-width: 768px) {
+  .main-layout-sidebar {
+    display: block;
+  }
 }
 
-.storybook-MainLayout a {
-  color: inherit;
+/* Show on mobile toggle */
+.main-layout-sidebar.open {
+  display: block;
+  position: absolute;
+  z-index: 50;
+  height: 100vh;
 }
 
-.storybook-MainLayout ul {
-  margin: 1em 0;
-  padding-left: 30px;
+/* Content Area */
+.main-layout-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background: #f9fafb;
 }
 
-.storybook-MainLayout li {
-  margin-bottom: 8px;
+/* Top mobile bar (only shows below md) */
+.main-layout-mobile-header {
+  display: block;
 }
 
-.storybook-MainLayout .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #357a14;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
+@media (min-width: 768px) {
+  .main-layout-mobile-header {
+    display: none;
+  }
 }
 
-.storybook-MainLayout .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 13px;
-  line-height: 20px;
-}
-
-.storybook-MainLayout .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
-}
-
-.storybook-MainLayout .tip-wrapper svg path {
-  fill: #1ea7fd;
+.main-layout-main {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
 }

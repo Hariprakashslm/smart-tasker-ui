@@ -1,1 +1,1 @@
-export { ProjectList } from './ProjectList';
+export { ProjectList, type ProjectListProps } from './ProjectList';

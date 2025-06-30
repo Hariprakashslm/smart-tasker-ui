@@ -1,68 +1,38 @@
-.storybook-UserTable {
-  margin: 0 auto;
-  padding: 48px 20px;
-  max-width: 600px;
-  color: #333;
+/* src/ui/admin/UserTable.css */
+
+.user-table-wrapper {
+  overflow-x: auto;
+}
+
+.user-table {
+  width: 100%;
+  border-collapse: collapse;
   font-size: 14px;
-  line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
 }
 
-.storybook-UserTable h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
+.user-table th,
+.user-table td {
+  padding: 12px 16px;
+  border-bottom: 1px solid #e5e7eb;
+  text-align: left;
 }
 
-.storybook-UserTable p {
-  margin: 1em 0;
+.user-table th {
+  background-color: #f9fafb;
+  font-weight: 600;
+  color: #374151;
 }
 
-.storybook-UserTable a {
-  color: inherit;
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
-.storybook-UserTable ul {
-  margin: 1em 0;
-  padding-left: 30px;
-}
-
-.storybook-UserTable li {
-  margin-bottom: 8px;
-}
-
-.storybook-UserTable .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #357a14;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
-}
-
-.storybook-UserTable .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 13px;
-  line-height: 20px;
-}
-
-.storybook-UserTable .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
-}
-
-.storybook-UserTable .tip-wrapper svg path {
-  fill: #1ea7fd;
+.user-actions {
+  display: flex;
+  gap: 8px;
 }

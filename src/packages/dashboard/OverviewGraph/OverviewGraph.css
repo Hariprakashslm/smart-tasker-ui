@@ -1,68 +1,16 @@
-.storybook-OverviewGraph {
-  margin: 0 auto;
-  padding: 48px 20px;
-  max-width: 600px;
-  color: #333;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/* src/packages/dashboard/OverviewGraph.css */
+
+.overview-graph {
+  background-color: #fff;
+  padding: 16px;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
-.storybook-OverviewGraph h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
-}
-
-.storybook-OverviewGraph p {
-  margin: 1em 0;
-}
-
-.storybook-OverviewGraph a {
-  color: inherit;
-}
-
-.storybook-OverviewGraph ul {
-  margin: 1em 0;
-  padding-left: 30px;
-}
-
-.storybook-OverviewGraph li {
-  margin-bottom: 8px;
-}
-
-.storybook-OverviewGraph .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #357a14;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
-}
-
-.storybook-OverviewGraph .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 13px;
-  line-height: 20px;
-}
-
-.storybook-OverviewGraph .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
-}
-
-.storybook-OverviewGraph .tip-wrapper svg path {
-  fill: #1ea7fd;
+.overview-title {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: #1f2937;
 }

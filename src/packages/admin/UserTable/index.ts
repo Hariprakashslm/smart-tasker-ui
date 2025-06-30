@@ -1,1 +1,1 @@
-export { UserTable } from './UserTable';
+export { UserTable, type User } from './UserTable';

@@ -1,32 +1,61 @@
-.storybook-header {
+/* src/ui/layout/Header.css */
+
+.app-header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
-  padding: 15px 20px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  padding: 16px 24px;
+  background-color: #fff;
+  border-bottom: 1px solid #e5e7eb;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
-.storybook-header svg {
-  display: inline-block;
-  vertical-align: top;
-}
-
-.storybook-header h1 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 6px 0 6px 10px;
-  font-weight: 700;
+.app-title {
   font-size: 20px;
-  line-height: 1;
+  font-weight: 600;
+  color: #111827;
 }
 
-.storybook-header button + button {
-  margin-left: 10px;
+.app-center {
+  flex: 1;
+  margin: 0 24px;
+  max-width: 400px;
 }
 
-.storybook-header .welcome {
-  margin-right: 10px;
-  color: #333;
-  font-size: 14px;
+.app-actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  position: relative;
+}
+
+.header-icon-wrapper {
+  position: relative;
+  cursor: pointer;
+}
+
+.header-user {
+  position: relative;
+  cursor: pointer;
+}
+
+.header-dropdown {
+  display: none;
+  position: absolute;
+  top: 40px;
+  right: 0;
+  background: white;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  border: 1px solid #eee;
+  border-radius: 6px;
+  z-index: 20;
+  flex-direction: column;
+  gap: 4px;
+  padding: 8px;
+}
+
+.header-user:hover .header-dropdown {
+  display: flex;
 }

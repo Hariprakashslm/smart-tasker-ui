@@ -3,7 +3,7 @@ import React from 'react';
 import { OAuthButtons } from 'auth/OAuthButtons';
 
 export default {
-  title: 'Auth/OAuthButtons',
+  title: 'Packages/Auth/OAuthButtons',
   component: OAuthButtons,
 };
 

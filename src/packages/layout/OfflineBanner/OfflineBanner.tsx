@@ -1,13 +1,28 @@
-import React from "react";
-
-import "./OfflineBanner.css";
-
-type User = {
-  name: string;
-};
+// src/ui/common/OfflineBanner.tsx
+import React, { useEffect, useState } from 'react';
+import './OfflineBanner.css';
 
 export const OfflineBanner: React.FC = () => {
-  const [user, setUser] = React.useState<User>();
+  const [isOffline, setIsOffline] = useState(!navigator.onLine);
 
-  return <article></article>;
+  useEffect(() => {
+    const handleOffline = () => setIsOffline(true);
+    const handleOnline = () => setIsOffline(false);
+
+    window.addEventListener('offline', handleOffline);
+    window.addEventListener('online', handleOnline);
+
+    return () => {
+      window.removeEventListener('offline', handleOffline);
+      window.removeEventListener('online', handleOnline);
+    };
+  }, []);
+
+  if (!isOffline) return null;
+
+  return (
+    <div className="offline-banner">
+      ⚠️ You're currently offline. Changes may not be saved.
+    </div>
+  );
 };

@@ -4,7 +4,7 @@ import { BoardColumn } from 'boards/BoardColumn';
 import type { TaskCardProps } from 'tasks/TaskCard';
 
 export default {
-  title: 'Boards/BoardColumn',
+  title: 'Packages/Boards/BoardColumn',
   component: BoardColumn,
 };
 

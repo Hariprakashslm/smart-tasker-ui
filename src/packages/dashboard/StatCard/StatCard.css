@@ -1,68 +1,59 @@
-.storybook-StatCard {
-  margin: 0 auto;
-  padding: 48px 20px;
-  max-width: 600px;
-  color: #333;
+/* src/packages/dashboard/StatCard.css */
+
+.stat-card {
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  transition: box-shadow 0.2s ease;
+  cursor: default;
+}
+
+.stat-card.clickable:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  cursor: pointer;
+}
+
+.stat-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
   font-size: 14px;
-  line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: 500;
+  color: #374151;
 }
 
-.storybook-StatCard h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
+.stat-icon {
+  font-size: 20px;
 }
 
-.storybook-StatCard p {
-  margin: 1em 0;
+.stat-value {
+  font-size: 28px;
+  font-weight: bold;
+  color: #111827;
+  margin-top: 6px;
 }
 
-.storybook-StatCard a {
-  color: inherit;
+.stat-desc {
+  font-size: 12px;
+  color: #6b7280;
+  margin-top: 4px;
 }
 
-.storybook-StatCard ul {
-  margin: 1em 0;
-  padding-left: 30px;
+.stat-card.success {
+  border-color: #d1fae5;
+  background-color: #ecfdf5;
+  color: #047857;
 }
 
-.storybook-StatCard li {
-  margin-bottom: 8px;
+.stat-card.warning {
+  border-color: #fde68a;
+  background-color: #fffbea;
+  color: #92400e;
 }
 
-.storybook-StatCard .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #357a14;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
-}
-
-.storybook-StatCard .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 13px;
-  line-height: 20px;
-}
-
-.storybook-StatCard .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
-}
-
-.storybook-StatCard .tip-wrapper svg path {
-  fill: #1ea7fd;
+.stat-card.error {
+  border-color: #fecaca;
+  background-color: #fef2f2;
+  color: #b91c1c;
 }

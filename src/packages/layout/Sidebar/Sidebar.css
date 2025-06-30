@@ -1,68 +1,53 @@
-.storybook-Sidebar {
-  margin: 0 auto;
-  padding: 48px 20px;
-  max-width: 600px;
-  color: #333;
-  font-size: 14px;
-  line-height: 24px;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+/* src/ui/layout/Sidebar.css */
+
+.sidebar {
+  width: 220px;
+  min-height: 100vh;
+  background-color: #1f2937; /* Tailwind slate-800 */
+  color: #f9fafb;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
 }
 
-.storybook-Sidebar h2 {
-  display: inline-block;
-  vertical-align: top;
-  margin: 0 0 4px;
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 1;
+.sidebar-header {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 24px;
+  text-align: center;
 }
 
-.storybook-Sidebar p {
-  margin: 1em 0;
+.sidebar-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
-.storybook-Sidebar a {
-  color: inherit;
+.sidebar-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: none;
+  border: none;
+  color: #d1d5db; /* Tailwind slate-300 */
+  text-align: left;
+  padding: 10px;
+  font-size: 15px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.2s ease;
 }
 
-.storybook-Sidebar ul {
-  margin: 1em 0;
-  padding-left: 30px;
+.sidebar-link:hover {
+  background-color: #374151; /* Tailwind slate-700 */
+  color: #fff;
 }
 
-.storybook-Sidebar li {
-  margin-bottom: 8px;
+.sidebar-link.active {
+  background-color: #2563eb;
+  color: white;
 }
 
-.storybook-Sidebar .tip {
-  display: inline-block;
-  vertical-align: top;
-  margin-right: 10px;
-  border-radius: 1em;
-  background: #e7fdd8;
-  padding: 4px 12px;
-  color: #357a14;
-  font-weight: 700;
-  font-size: 11px;
-  line-height: 12px;
-}
-
-.storybook-Sidebar .tip-wrapper {
-  margin-top: 40px;
-  margin-bottom: 40px;
-  font-size: 13px;
-  line-height: 20px;
-}
-
-.storybook-Sidebar .tip-wrapper svg {
-  display: inline-block;
-  vertical-align: top;
-  margin-top: 3px;
-  margin-right: 4px;
-  width: 12px;
-  height: 12px;
-}
-
-.storybook-Sidebar .tip-wrapper svg path {
-  fill: #1ea7fd;
+.sidebar-icon {
+  font-size: 16px;
 }

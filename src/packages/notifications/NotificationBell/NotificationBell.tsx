@@ -1,13 +1,29 @@
-import React from "react";
+// src/ui/common/NotificationBell.tsx
+import React from 'react';
+import './NotificationBell.css';
 
-import "./NotificationBell.css";
+export interface NotificationBellProps {
+  count?: number; // number of unread notifications
+  onClick?: () => void;
+  tooltip?: string;
+}
 
-type User = {
-  name: string;
-};
-
-export const NotificationBell: React.FC = () => {
-  const [user, setUser] = React.useState<User>();
-
-  return <article></article>;
+export const NotificationBell: React.FC<NotificationBellProps> = ({
+  count = 0,
+  onClick,
+  tooltip = 'Notifications',
+}) => {
+  return (
+    <button
+      className="notification-bell"
+      onClick={onClick}
+      title={tooltip}
+      aria-label="Notifications"
+    >
+      <span className="bell-icon">🔔</span>
+      {count > 0 && (
+        <span className="notification-badge">{count > 99 ? '99+' : count}</span>
+      )}
+    </button>
+  );
 };
