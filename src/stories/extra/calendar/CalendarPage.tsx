@@ -6,6 +6,7 @@ import {
   dateFnsLocalizer,
   Event as CalendarEvent,
 } from 'react-big-calendar';
+
 import { format } from 'date-fns/format';
 import { parse } from 'date-fns/parse';
 import { startOfWeek } from 'date-fns/startOfWeek';
@@ -41,10 +42,11 @@ const events: CalendarEvent[] = [
 ];
 
 const CalendarPage: React.FC = () => {
+  const Cal: any = Calendar as unknown as React.FC;
   return (
     <div className="calendar-page">
       <h2 className="calendar-title">Task Calendar</h2>
-      <Calendar
+      <Cal
         localizer={localizer}
         events={events}
         startAccessor="start"

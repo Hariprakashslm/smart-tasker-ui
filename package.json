@@ -1,6 +1,6 @@
 {
   "name": "@centralized-ui/smart-tasker-ui",
-  "version": "0.2.9",
+  "version": "0.2.11",
   "description": "Reusable React component library for Smart Tasker UI",
   "author": "Hari Prakash",
   "license": "MIT",
@@ -16,7 +16,10 @@
     }
   },
   "files": [
-    "dist"
+    "dist",
+    "src",
+    "styles",
+    "*.css"
   ],
   "repository": {
     "type": "git",
@@ -37,7 +40,8 @@
     "react": "^18.2.0",
     "react-big-calendar": "^1.19.4",
     "react-dom": "^18.2.0",
-    "recharts": "^3.0.2"
+    "recharts": "^3.0.2",
+    "vite-plugin-css-injected-by-js": "^3.5.2"
   },
   "devDependencies": {
     "@eslint/js": "^9.9.0",
