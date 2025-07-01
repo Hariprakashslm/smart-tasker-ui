@@ -1,7 +1,7 @@
 // src/packages/collaboration/TypingIndicator.tsx
 import React from 'react';
 import './TypingIndicator.css';
-import { Avatar } from 'core/components/Avatar';
+import { Avatar } from 'core/Avatar';
 
 export interface TypingUser {
   id: string;

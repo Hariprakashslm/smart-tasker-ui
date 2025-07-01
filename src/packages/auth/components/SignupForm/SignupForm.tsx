@@ -1,10 +1,10 @@
 // src/ui/auth/SignupForm.tsx
 import React, { useState } from 'react';
 import './SignupForm.css';
-import { Input } from 'core/components/Input';
-import { Button } from 'core/components/Button';
-import { OAuthButtons, OAuthProvider } from 'auth/components/OAuthButtons';
-import { Divider } from 'core/components/Divider';
+import { Input } from 'core/Input';
+import { Button } from 'core/Button';
+import { OAuthButtons, OAuthProvider } from 'auth/OAuthButtons';
+import { Divider } from 'core/Divider';
 
 export interface SignupFormProps {
   onSubmit: (data: { name: string; email: string; password: string }) => void;

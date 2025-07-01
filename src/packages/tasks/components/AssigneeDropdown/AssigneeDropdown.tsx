@@ -1,6 +1,6 @@
 // src/ui/tasks/AssigneeDropdown.tsx
 import React from 'react';
-import { Select, SelectOption } from 'core/components/Select';
+import { Select, SelectOption } from 'core/Select';
 export interface Assignee {
   id: string;
   name: string;

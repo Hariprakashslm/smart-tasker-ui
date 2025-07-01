@@ -1,6 +1,6 @@
 // src/ui-stories/layout/MainLayout.stories.tsx
 import React from 'react';
-import { MainLayout } from 'layout/components/MainLayout';
+import { MainLayout } from 'layout/MainLayout';
 
 export default {
   title: 'Packages/Layout/MainLayout',

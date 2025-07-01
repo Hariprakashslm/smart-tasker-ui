@@ -2,12 +2,12 @@
 import React, { useState, useEffect } from 'react';
 import './TaskForm.css';
 
-import { Input } from 'core/components/Input';
-import { TextArea } from 'core/components/Textarea';
-import { AssigneeDropdown } from 'tasks/components/AssigneeDropdown';
-import { LabelSelector } from 'tasks/components/LabelSelector';
-import { DueDatePicker } from 'tasks/components/DueDatePicker';
-import { Button } from 'core/components/Button';
+import { Input } from 'core/Input';
+import { TextArea } from 'core/Textarea';
+import { AssigneeDropdown } from 'tasks/AssigneeDropdown';
+import { LabelSelector } from 'tasks/LabelSelector';
+import { DueDatePicker } from 'tasks/DueDatePicker';
+import { Button } from 'core/Button';
 
 export interface TaskFormData {
   title: string;

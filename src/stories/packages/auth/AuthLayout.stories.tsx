@@ -1,8 +1,8 @@
 // src/ui-stories/auth/AuthLayout.stories.tsx
 import React from 'react';
-import { AuthLayout } from 'auth/components/AuthLayout';
-import { LoginForm } from 'auth/components/LoginForm';
-import { SignupForm } from 'auth/components/SignupForm';
+import { AuthLayout } from 'auth/AuthLayout';
+import { LoginForm } from 'auth/LoginForm';
+import { SignupForm } from 'auth/SignupForm';
 
 export default {
   title: 'Packages/Auth/AuthLayout',

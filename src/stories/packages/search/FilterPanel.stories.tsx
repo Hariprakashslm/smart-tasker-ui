@@ -1,6 +1,6 @@
 // src/ui-stories/common/FilterPanel.stories.tsx
 import React, { useState } from 'react';
-import { FilterPanel } from 'search/components/FilterPanel';
+import { FilterPanel } from 'search/FilterPanel';
 
 export default {
   title: 'Packages/Search/FilterPanel',

@@ -1,6 +1,6 @@
 // src/ui-stories/common/FileDownloadLink.stories.tsx
 import React from 'react';
-import { FileDownloadLink } from 'uploads/components/FileDownloadLink';
+import { FileDownloadLink } from 'uploads/FileDownloadLink';
 
 export default {
   title: 'Packages/Uploads/FileDownloadLink',

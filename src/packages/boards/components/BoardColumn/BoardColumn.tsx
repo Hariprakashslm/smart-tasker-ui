@@ -2,8 +2,8 @@
 import React from 'react';
 import './BoardColumn.css';
 
-import { TaskCard, TaskCardProps } from 'tasks/components/TaskCard';
-import { ColumnAddTaskButton } from 'boards/components/ColumnAddTaskButton';
+import { TaskCard, TaskCardProps } from 'tasks/TaskCard';
+import { ColumnAddTaskButton } from 'boards/ColumnAddTaskButton';
 type TaskStatus = 'todo' | 'in-progress' | 'done';
 export interface BoardColumnProps {
   title: string;

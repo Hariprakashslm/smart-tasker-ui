@@ -1,8 +1,8 @@
 // src/ui/tasks/LabelSelector.tsx
 import React from 'react';
-import { Select } from 'core/components/Select';
-import { Badge } from 'core/components/Badge';
-import { Checkbox } from 'core/components/Checkbox';
+import { Select } from 'core/Select';
+import { Badge } from 'core/Badge';
+import { Checkbox } from 'core/Checkbox';
 
 export interface LabelOption {
   label: string;

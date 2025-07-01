@@ -1,6 +1,6 @@
 // src/ui-stories/packages/collaboration/LiveUpdateBanner.stories.tsx
 import React from 'react';
-import { LiveUpdateBanner } from 'collaboration/components/LiveUpdateBanner';
+import { LiveUpdateBanner } from 'collaboration/LiveUpdateBanner';
 
 export default {
   title: 'Packages/Collaboration/LiveUpdateBanner',

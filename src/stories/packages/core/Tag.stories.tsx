@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Tag } from 'core/components/Tag';
+import { Tag } from 'core/Tag';
 
 const meta: Meta<typeof Tag> = {
   title: 'Packages/Core/Tag',

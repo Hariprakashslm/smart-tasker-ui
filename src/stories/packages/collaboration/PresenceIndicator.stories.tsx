@@ -1,6 +1,6 @@
 // src/ui-stories/packages/collaboration/PresenceIndicator.stories.tsx
 import React from 'react';
-import { PresenceIndicator } from 'collaboration/components/PresenceIndicator';
+import { PresenceIndicator } from 'collaboration/PresenceIndicator';
 
 export default {
   title: 'Packages/Collaboration/PresenceIndicator',

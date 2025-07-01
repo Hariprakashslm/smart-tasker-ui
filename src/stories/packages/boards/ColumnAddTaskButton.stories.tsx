@@ -1,6 +1,6 @@
 // src/ui-stories/boards/ColumnAddTaskButton.stories.tsx
 import React from 'react';
-import { ColumnAddTaskButton } from 'boards/components/ColumnAddTaskButton';
+import { ColumnAddTaskButton } from 'boards/ColumnAddTaskButton';
 
 export default {
   title: 'Packages/Boards/ColumnAddTaskButton',

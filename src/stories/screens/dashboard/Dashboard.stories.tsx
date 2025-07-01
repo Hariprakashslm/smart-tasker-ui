@@ -1,39 +1,10 @@
-// src/ui-stories/common/FileDownloadLink.stories.tsx
+// src/ui-stories/pages/dashboard/DashboardOverview.stories.tsx
 import React from 'react';
-import { FileDownloadLink } from 'uploads/components/FileDownloadLink';
+import { DashboardOverview } from 'screens/dashboard/DashboardOverview';
 
 export default {
-  title: 'Packages/Uploads/FileDownloadLink',
-  component: FileDownloadLink,
+  title: 'Pages/DashboardOverview',
+  component: DashboardOverview,
 };
 
-export const ViewPDF = () => (
-  <FileDownloadLink
-    fileName="report.pdf"
-    fileUrl="https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf"
-  />
-);
-
-export const DownloadImage = () => (
-  <FileDownloadLink
-    fileName="logo.png"
-    fileUrl="https://via.placeholder.com/150"
-    download
-  />
-);
-
-export const ViewTextFile = () => (
-  <FileDownloadLink
-    fileName="notes.txt"
-    fileUrl="https://example.com/notes.txt"
-  />
-);
-
-export const LongFileName = () => (
-  <div style={{ maxWidth: 240 }}>
-    <FileDownloadLink
-      fileName="very_long_file_name_that_needs_to_be_truncated_because_it_does_not_fit.txt"
-      fileUrl="https://example.com/longname.txt"
-    />
-  </div>
-);
+export const Default = () => <DashboardOverview />;

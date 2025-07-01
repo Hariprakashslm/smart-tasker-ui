@@ -1,7 +1,7 @@
 // src/ui/common/FilePreview.tsx
 import React from 'react';
 import './FilePreview.css';
-import { Button } from 'core/components/Button';
+import { Button } from 'core/Button';
 
 export interface FilePreviewProps {
   fileName: string;

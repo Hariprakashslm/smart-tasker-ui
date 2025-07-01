@@ -1,6 +1,6 @@
 // src/ui-stories/common/ThemeToggle.stories.tsx
 import React from 'react';
-import { ThemeToggle } from 'layout/components/ThemeToggle';
+import { ThemeToggle } from 'layout/ThemeToggle';
 
 export default {
   title: 'Packages/Layout/ThemeToggle',

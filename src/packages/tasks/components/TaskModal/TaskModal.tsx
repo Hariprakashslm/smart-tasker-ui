@@ -2,15 +2,15 @@
 import React, { useState } from 'react';
 import './TaskModal.css';
 
-import { Modal } from 'core/components/Modal';
-import { Input } from 'core/components/Input';
-import { TextArea } from 'core/components/Textarea';
-import { Button } from 'core/components/Button';
-import { AssigneeDropdown } from 'tasks/components/AssigneeDropdown';
-import { LabelSelector } from 'tasks/components/LabelSelector';
-import { DueDatePicker } from 'tasks/components/DueDatePicker';
-import { AttachmentPreview } from 'tasks/components/AttachmentPreview';
-import { CommentBox } from 'tasks/components/CommentBox';
+import { Modal } from 'core/Modal';
+import { Input } from 'core/Input';
+import { TextArea } from 'core/Textarea';
+import { Button } from 'core/Button';
+import { AssigneeDropdown } from 'tasks/AssigneeDropdown';
+import { LabelSelector } from 'tasks/LabelSelector';
+import { DueDatePicker } from 'tasks/DueDatePicker';
+import { AttachmentPreview } from 'tasks/AttachmentPreview';
+import { CommentBox } from 'tasks/CommentBox';
 
 export interface TaskModalProps {
   isOpen: boolean;

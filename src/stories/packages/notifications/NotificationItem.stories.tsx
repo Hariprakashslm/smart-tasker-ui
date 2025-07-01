@@ -1,6 +1,6 @@
 // src/ui-stories/common/NotificationItem.stories.tsx
 import React from 'react';
-import { NotificationItem } from 'notifications/components/NotificationItem';
+import { NotificationItem } from 'notifications/NotificationItem';
 
 export default {
   title: 'Packages/Notifications/NotificationItem',

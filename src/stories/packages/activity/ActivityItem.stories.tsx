@@ -1,6 +1,6 @@
 // src/ui-stories/tasks/ActivityItem.stories.tsx
 import React from 'react';
-import { ActivityItem } from 'activity/components/ActivityItem';
+import { ActivityItem } from 'activity/ActivityItem';
 
 export default {
   title: 'Packages/Activity/ActivityItem',

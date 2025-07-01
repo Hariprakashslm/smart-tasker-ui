@@ -1,6 +1,6 @@
 // src/ui/common/SearchBar.tsx
 import React from 'react';
-import { Input } from 'core/components/Input';
+import { Input } from 'core/Input';
 import './SearchBar.css';
 export interface SearchBarProps {
   value: string;

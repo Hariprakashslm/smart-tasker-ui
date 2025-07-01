@@ -1,7 +1,7 @@
 // src/ui/auth/ForgotPassword.tsx
 import React, { useState } from 'react';
-import { Input } from 'core/components/Input';
-import { Button } from 'core/components/Button';
+import { Input } from 'core/Input';
+import { Button } from 'core/Button';
 import { AuthLayout } from '../AuthLayout';
 import './ForgotPassword.css';
 

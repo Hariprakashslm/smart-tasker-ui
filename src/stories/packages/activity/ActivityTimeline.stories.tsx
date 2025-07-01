@@ -1,6 +1,6 @@
 // src/ui-stories/tasks/ActivityTimeline.stories.tsx
 import React from 'react';
-import { ActivityTimeline } from 'activity/components/ActivityTimeline';
+import { ActivityTimeline } from 'activity/ActivityTimeline';
 
 export default {
   title: 'Packages/Activity/ActivityTimeline',

@@ -1,6 +1,6 @@
 // src/ui-stories/tasks/TaskHistory.stories.tsx
 import React from 'react';
-import { TaskHistory, HistoryItem } from 'tasks/components/TaskHistory';
+import { TaskHistory, HistoryItem } from 'tasks/TaskHistory';
 
 export default {
   title: 'Packages/Tasks/TaskHistory',

@@ -1,6 +1,6 @@
 // src/ui-stories/tasks/DueDateInput.stories.tsx
 import React, { useState } from 'react';
-import { DueDatePicker } from 'tasks/components/DueDatePicker';
+import { DueDatePicker } from 'tasks/DueDatePicker';
 
 export default {
   title: 'Packages/Tasks/DueDatePicker',

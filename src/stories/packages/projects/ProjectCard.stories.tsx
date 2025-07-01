@@ -1,6 +1,6 @@
 // src/ui-stories/projects/ProjectCard.stories.tsx
 import React from 'react';
-import { ProjectCard } from 'projects/components/ProjectCard';
+import { ProjectCard } from 'projects/ProjectCard';
 
 export default {
   title: 'Packages/Projects/ProjectCard',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Drawer } from 'core/components/Drawer';
+import { Drawer } from 'core/Drawer';
 import { useState } from 'react';
 
 const meta: Meta<typeof Drawer> = {

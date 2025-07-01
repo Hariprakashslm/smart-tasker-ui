@@ -1,7 +1,7 @@
 // src/ui/admin/LogViewer.tsx
 import React from 'react';
 import './LogViewer.css';
-import { Badge } from 'core/components/Badge';
+import { Badge } from 'core/Badge';
 
 export interface LogEntry {
   id: string;

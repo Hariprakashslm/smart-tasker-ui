@@ -1,9 +1,9 @@
 // src/ui/projects/ProjectCard.tsx
 import React from 'react';
 import './ProjectCard.css';
-import { Avatar } from 'core/components/Avatar';
-import { Badge } from 'core/components/Badge';
-import { Button } from 'core/components/Button';
+import { Avatar } from 'core/Avatar';
+import { Badge } from 'core/Badge';
+import { Button } from 'core/Button';
 
 export interface ProjectCardProps {
   name: string;

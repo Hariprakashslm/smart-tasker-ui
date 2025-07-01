@@ -1,6 +1,6 @@
 // src/ui-stories/auth/ResetPassword.stories.tsx
 import React from 'react';
-import { ResetPassword } from 'auth/components/ResetPassword';
+import { ResetPassword } from 'auth/ResetPassword';
 
 export default {
   title: 'Auth/ResetPassword',

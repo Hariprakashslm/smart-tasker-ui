@@ -1,10 +1,10 @@
 // src/ui/auth/LoginForm.tsx
 import React, { useState } from 'react';
 import './LoginForm.css';
-import { Input } from 'core/components/Input';
-import { Button } from 'core/components/Button';
-import { OAuthButtons, OAuthProvider } from 'auth/components/OAuthButtons';
-import { Divider } from 'core/components/Divider';
+import { Input } from 'core/Input';
+import { Button } from 'core/Button';
+import { OAuthButtons, OAuthProvider } from 'auth/OAuthButtons';
+import { Divider } from 'core/Divider';
 
 export interface LoginFormProps {
   onSubmit: (data: { email: string; password: string }) => void;

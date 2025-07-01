@@ -1,6 +1,6 @@
 // src/ui-stories/tasks/CommentBox.stories.tsx
 import React from 'react';
-import { CommentBox } from 'tasks/components/CommentBox';
+import { CommentBox } from 'tasks/CommentBox';
 
 export default {
   title: 'Packages/Tasks/CommentBox',

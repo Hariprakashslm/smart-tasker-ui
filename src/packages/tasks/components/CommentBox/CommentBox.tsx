@@ -1,8 +1,8 @@
 // src/ui/tasks/CommentBox.tsx
 import React, { useState } from 'react';
 import './CommentBox.css';
-import { TextArea } from 'core/components/Textarea';
-import { Button } from 'core/components/Button';
+import { TextArea } from 'core/Textarea';
+import { Button } from 'core/Button';
 
 export interface CommentBoxProps {
   onSubmit: (text: string) => void;

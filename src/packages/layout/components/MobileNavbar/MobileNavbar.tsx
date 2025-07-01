@@ -1,7 +1,7 @@
 // src/ui/layout/MobileNavbar.tsx
 import React from 'react';
 import './MobileNavbar.css';
-import { Avatar } from 'core/components/Avatar';
+import { Avatar } from 'core/Avatar';
 
 export interface MobileNavbarProps {
   title?: string;

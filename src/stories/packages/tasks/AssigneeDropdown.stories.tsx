@@ -1,6 +1,6 @@
 // src/ui-stories/tasks/AssigneeDropdown.stories.tsx
 import React, { useState } from 'react';
-import { AssigneeDropdown, Assignee } from 'tasks/components/AssigneeDropdown';
+import { AssigneeDropdown, Assignee } from 'tasks/AssigneeDropdown';
 
 export default {
   title: 'Packages/Tasks/AssigneeDropdown',

@@ -1,8 +1,8 @@
 // src/packages/collaboration/PresenceIndicator.tsx
 import React from 'react';
 import './PresenceIndicator.css';
-import { Avatar } from 'core/components/Avatar';
-import { Tooltip } from 'core/components/Tooltip';
+import { Avatar } from 'core/Avatar';
+import { Tooltip } from 'core/Tooltip';
 
 export interface PresenceUser {
   id: string;

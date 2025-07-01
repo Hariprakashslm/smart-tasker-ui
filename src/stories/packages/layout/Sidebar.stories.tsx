@@ -1,6 +1,6 @@
 // src/ui-stories/layout/Sidebar.stories.tsx
 import React, { useState } from 'react';
-import { Sidebar } from 'layout/components/Sidebar';
+import { Sidebar } from 'layout/Sidebar';
 
 export default {
   title: 'Packages/Layout/Sidebar',

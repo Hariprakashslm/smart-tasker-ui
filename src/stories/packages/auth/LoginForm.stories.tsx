@@ -1,7 +1,7 @@
 // src/ui-stories/auth/LoginForm.stories.tsx
 import React from 'react';
-import { LoginForm } from 'auth/components/LoginForm';
-import type { OAuthProvider } from 'auth/components/OAuthButtons';
+import { LoginForm } from 'auth/LoginForm';
+import type { OAuthProvider } from 'auth/OAuthButtons';
 
 export default {
   title: 'Packages/Auth/LoginForm',
