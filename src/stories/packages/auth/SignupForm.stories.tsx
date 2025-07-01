@@ -1,7 +1,7 @@
 // src/ui-stories/auth/SignupForm.stories.tsx
 import React from 'react';
-import { SignupForm } from 'auth/SignupForm';
-import { OAuthProvider } from 'auth/OAuthButtons';
+import { SignupForm } from 'auth/components/SignupForm';
+import { OAuthProvider } from 'auth/components/OAuthButtons';
 
 export default {
   title: 'Packages/Auth/SignupForm',

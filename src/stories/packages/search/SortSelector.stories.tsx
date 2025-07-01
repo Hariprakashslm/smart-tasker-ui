@@ -1,6 +1,6 @@
 // src/ui-stories/common/SortSelector.stories.tsx
 import React, { useState } from 'react';
-import { SortSelector } from 'search/SortSelector';
+import { SortSelector } from 'search/components/SortSelector';
 
 export default {
   title: 'Packages/Search/SortSelector',

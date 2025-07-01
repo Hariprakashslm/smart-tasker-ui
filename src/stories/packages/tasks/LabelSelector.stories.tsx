@@ -1,6 +1,6 @@
 // src/ui-stories/tasks/LabelSelector.stories.tsx
 import React, { useState } from 'react';
-import { LabelSelector, LabelOption } from 'tasks/LabelSelector';
+import { LabelSelector, LabelOption } from 'tasks/components/LabelSelector';
 
 export default {
   title: 'Packages/Tasks/LabelSelector',

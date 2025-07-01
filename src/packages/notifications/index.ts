@@ -1,4 +1,4 @@
-export { EmailPreferenceToggle } from './EmailPreferenceToggle';
-export { NotificationBell } from './NotificationBell';
-export { NotificationDropdown } from './NotificationDropdown';
-export { NotificationItem } from './NotificationItem';
+export { EmailPreferenceToggle } from './components/EmailPreferenceToggle';
+export { NotificationBell } from './components/NotificationBell';
+export { NotificationDropdown } from './components/NotificationDropdown';
+export { NotificationItem } from './components/NotificationItem';

@@ -1,6 +1,6 @@
 // src/ui-stories/admin/UserTable.stories.tsx
 import React from 'react';
-import { UserTable, User } from 'admin/UserTable';
+import { UserTable, User } from 'admin/components/UserTable';
 
 export default {
   title: 'Packages/Admin/UserTable',

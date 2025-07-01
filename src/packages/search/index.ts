@@ -1,3 +1,3 @@
-export { FilterPanel } from './FilterPanel';
-export { SearchBar } from './SearchBar';
-export { SortSelector } from './SortSelector';
+export { FilterPanel } from './components/FilterPanel';
+export { SearchBar } from './components/SearchBar';
+export { SortSelector } from './components/SortSelector';

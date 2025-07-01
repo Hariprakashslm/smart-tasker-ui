@@ -1,6 +1,6 @@
 // src/ui-stories/settings/EmailPreferenceToggle.stories.tsx
 import React, { useState } from 'react';
-import { EmailPreferenceToggle } from 'notifications/EmailPreferenceToggle';
+import { EmailPreferenceToggle } from 'notifications/components/EmailPreferenceToggle';
 
 export default {
   title: 'Packages/Notifications/EmailPreferenceToggle',

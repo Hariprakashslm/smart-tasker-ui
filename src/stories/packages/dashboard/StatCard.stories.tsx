@@ -1,6 +1,6 @@
 // src/ui-stories/packages/dashboard/StatCard.stories.tsx
 import React from 'react';
-import { StatCard } from 'dashboard/StatCard';
+import { StatCard } from 'dashboard/components/StatCard';
 
 export default {
   title: 'Packages/Dashboard/StatCard',

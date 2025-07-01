@@ -1,6 +1,6 @@
 // src/ui-stories/boards/ColumnHeader.stories.tsx
 import React from 'react';
-import { ColumnHeader } from 'boards/ColumnHeader';
+import { ColumnHeader } from 'boards/components/ColumnHeader';
 
 export default {
   title: 'Packages/Boards/ColumnHeader',

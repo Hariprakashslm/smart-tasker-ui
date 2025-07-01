@@ -1,6 +1,6 @@
 // src/ui-stories/layout/Header.stories.tsx
 import React from 'react';
-import { Header } from 'layout/Header';
+import { Header } from 'layout/components/Header';
 
 export default {
   title: 'Packages/Layout/Header',

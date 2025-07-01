@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CreateProjectModal } from 'projects/CreateProjectModal';
+import { CreateProjectModal } from 'projects/components/CreateProjectModal';
 
 export default {
   title: 'Packages/Projects/CreateProjectModal',

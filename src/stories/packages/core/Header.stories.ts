@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from '@storybook/react';
 import { fn } from '@storybook/test';
 
-import { Header } from 'core/header';
+import { Header } from 'core/components/header';
 
 const meta = {
   title: 'Packages/Core/Header',

@@ -1,7 +1,7 @@
 // src/ui-stories/boards/BoardColumn.stories.tsx
 import React from 'react';
-import { BoardColumn } from 'boards/BoardColumn';
-import type { TaskCardProps } from 'tasks/TaskCard';
+import { BoardColumn } from 'boards/components/BoardColumn';
+import type { TaskCardProps } from 'tasks/components/TaskCard';
 
 export default {
   title: 'Packages/Boards/BoardColumn',

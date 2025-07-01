@@ -1,6 +1,6 @@
 // src/ui-stories/common/OfflineBanner.stories.tsx
 import React, { useState } from 'react';
-import { OfflineBanner } from 'layout/OfflineBanner';
+import { OfflineBanner } from 'layout/components/OfflineBanner';
 
 export default {
   title: 'Packages/Layout/OfflineBanner',

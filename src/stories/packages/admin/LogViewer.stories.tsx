@@ -1,6 +1,6 @@
 // src/ui-stories/admin/LogViewer.stories.tsx
 import React from 'react';
-import { LogViewer, LogEntry } from 'admin/LogViewer';
+import { LogViewer, LogEntry } from 'admin/components/LogViewer';
 
 export default {
   title: 'Packages/Admin/LogViewer',

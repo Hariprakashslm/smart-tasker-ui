@@ -1,4 +1,4 @@
-export { AlertsPanel } from './AlertsPanel';
-export { ErrorRateGraph } from './ErrorRateGraph';
-export { LogViewer } from './LogViewer';
-export { UserTable } from './UserTable';
+export { AlertsPanel } from './components/AlertsPanel';
+export { ErrorRateGraph } from './components/ErrorRateGraph';
+export { LogViewer } from './components/LogViewer';
+export { UserTable } from './components/UserTable';

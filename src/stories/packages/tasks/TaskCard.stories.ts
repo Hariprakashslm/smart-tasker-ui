@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { TaskCard } from 'tasks/TaskCard';
+import { TaskCard } from 'tasks/components/TaskCard';
 
 const meta: Meta<typeof TaskCard> = {
   title: 'Packages/Tasks/TaskCard',

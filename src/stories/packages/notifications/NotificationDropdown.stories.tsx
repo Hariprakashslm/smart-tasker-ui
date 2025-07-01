@@ -1,6 +1,6 @@
 // src/ui-stories/common/NotificationDropdown.stories.tsx
 import React, { useState } from 'react';
-import { NotificationDropdown } from 'notifications/NotificationDropdown';
+import { NotificationDropdown } from 'notifications/components/NotificationDropdown';
 
 export default {
   title: 'Packages/Notifications/NotificationDropdown',

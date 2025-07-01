@@ -1,6 +1,9 @@
 // src/ui-stories/tasks/AttachmentPreview.stories.tsx
 import React from 'react';
-import { AttachmentPreview, Attachment } from 'tasks/AttachmentPreview';
+import {
+  AttachmentPreview,
+  Attachment,
+} from 'tasks/components/AttachmentPreview';
 
 export default {
   title: 'Packages/Tasks/AttachmentPreview',

@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { EmptyState } from 'core/EmptyState';
+import { EmptyState } from 'core/components/EmptyState';
 
 const meta: Meta<typeof EmptyState> = {
   title: 'Packages/Core/EmptyState',

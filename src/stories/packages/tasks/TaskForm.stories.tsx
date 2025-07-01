@@ -1,6 +1,6 @@
 // src/ui-stories/tasks/TaskForm.stories.tsx
 import React from 'react';
-import { TaskForm } from 'tasks/TaskForm';
+import { TaskForm } from 'tasks/components/TaskForm';
 
 export default {
   title: 'Packages/Tasks/TaskForm',

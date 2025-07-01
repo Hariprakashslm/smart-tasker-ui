@@ -1,6 +1,6 @@
 // src/ui-stories/packages/dashboard/StorageUsageCard.stories.tsx
 import React from 'react';
-import { StorageUsageCard } from 'dashboard/StorageUsageCard';
+import { StorageUsageCard } from 'dashboard/components/StorageUsageCard';
 
 export default {
   title: 'Packages/Dashboard/StorageUsageCard',

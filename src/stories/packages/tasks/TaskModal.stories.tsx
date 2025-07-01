@@ -1,6 +1,6 @@
 // src/ui-stories/tasks/TaskModal.stories.tsx
 import React, { useState } from 'react';
-import { TaskModal } from 'tasks/TaskModal';
+import { TaskModal } from 'tasks/components/TaskModal';
 
 export default {
   title: 'Packages/Tasks/TaskModal',

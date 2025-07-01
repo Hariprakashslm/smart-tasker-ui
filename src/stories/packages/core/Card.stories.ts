@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from '@storybook/react';
-import { Card } from 'core/Card';
+import { Card } from 'core/components/Card';
 
 const meta: Meta<typeof Card> = {
   title: 'Packages/Core/Card',

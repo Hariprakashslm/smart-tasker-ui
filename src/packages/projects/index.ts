@@ -1,3 +1,3 @@
-export { CreateProjectModal } from './CreateProjectModal';
-export { ProjectCard } from './ProjectCard';
-export { ProjectList } from './ProjectList';
+export { CreateProjectModal } from './components/CreateProjectModal';
+export { ProjectCard } from './components/ProjectCard';
+export { ProjectList } from './screens/ProjectList';
