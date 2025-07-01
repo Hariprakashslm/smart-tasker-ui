@@ -1,6 +1,6 @@
 // src/ui-stories/boards/KanbanBoard.stories.tsx
 import React from 'react';
-import { KanbanBoard } from 'boards/KanbanBoard';
+import { KanbanBoard } from 'screens/boards/KanbanBoard';
 import type { TaskCardProps } from 'tasks/TaskCard';
 
 export default {

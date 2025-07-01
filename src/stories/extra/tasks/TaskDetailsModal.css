@@ -1,0 +1,28 @@
+.task-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.task-details-meta {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  flex-wrap: wrap;
+  font-size: 14px;
+}
+
+.task-assignee {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.task-due {
+  color: #6b7280;
+}
+
+.task-description {
+  font-size: 14px;
+  color: #374151;
+}

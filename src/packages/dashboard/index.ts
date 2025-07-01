@@ -1,4 +1,4 @@
-export { OverviewGraph } from './OverviewGraph';
-export { StatCard } from './StatCard';
-export { StorageUsageCard } from './StorageUsageCard';
-export { TaskCompletionChart } from './TaskCompletionChart';
+export { OverviewGraph } from './components/OverviewGraph';
+export { StatCard } from './components/StatCard';
+export { StorageUsageCard } from './components/StorageUsageCard';
+export { TaskCompletionChart } from './components/TaskCompletionChart';

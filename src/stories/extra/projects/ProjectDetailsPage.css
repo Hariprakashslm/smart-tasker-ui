@@ -1,0 +1,31 @@
+/* src/pages/projects/ProjectDetailsPage.css */
+
+.project-details-page {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.project-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #111827;
+}
+
+.project-description {
+  font-size: 14px;
+  color: #4b5563;
+  margin-bottom: 8px;
+}
+
+.kanban-board {
+  display: flex;
+  gap: 16px;
+  overflow-x: auto;
+  padding: 8px 0;
+}
+
+.project-files {
+  margin-top: 24px;
+}

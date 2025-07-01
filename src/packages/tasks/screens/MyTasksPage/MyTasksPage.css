@@ -1,0 +1,28 @@
+/* src/pages/tasks/MyTasksPage.css */
+
+.my-tasks-page {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.my-tasks-title {
+  font-size: 24px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.my-tasks-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.my-tasks-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}

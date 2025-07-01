@@ -7,5 +7,4 @@ export * as core from './core';
 export * as dashboard from './dashboard';
 export * as layout from './layout';
 export * as notifications from './notifications';
-export * as page from './page';
 export * as projects from './projects';

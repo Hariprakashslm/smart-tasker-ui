@@ -1,4 +1,4 @@
-export { AuthLayout } from './AuthLayout';
-export { LoginForm } from './LoginForm';
-export { OAuthButtons } from './OAuthButtons';
-export { SignupForm } from './SignupForm';
+export { AuthLayout } from './components/AuthLayout';
+export { LoginForm } from './components/LoginForm';
+export { OAuthButtons } from './components/OAuthButtons';
+export { SignupForm } from './components/SignupForm';

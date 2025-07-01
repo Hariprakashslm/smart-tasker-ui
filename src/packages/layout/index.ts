@@ -1,6 +1,6 @@
-export { Header } from './Header';
-export { MainLayout } from './MainLayout';
-export { MobileNavbar } from './MobileNavbar';
-export { OfflineBanner } from './OfflineBanner';
-export { Sidebar } from './Sidebar';
-export { ThemeToggle } from './ThemeToggle';
+export { Header } from './components/Header';
+export { MainLayout } from './components/MainLayout';
+export { MobileNavbar } from './components/MobileNavbar';
+export { OfflineBanner } from './components/OfflineBanner';
+export { Sidebar } from './components/Sidebar';
+export { ThemeToggle } from './components/ThemeToggle';

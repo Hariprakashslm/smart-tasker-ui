@@ -1,4 +1,4 @@
-export { FileDownloadLink } from './FileDownloadLink';
-export { FilePreview } from './FilePreview';
-export { FileUploader } from './FileUploader';
-export { FileList } from './FileList';
+export { FileDownloadLink } from './components/FileDownloadLink';
+export { FilePreview } from './components/FilePreview';
+export { FileUploader } from './components/FileUploader';
+export { FileList } from './components/FileList';

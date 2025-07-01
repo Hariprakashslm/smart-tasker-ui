@@ -1,4 +1,4 @@
-export { BoardColumn } from './BoardColumn';
-export { ColumnAddTaskButton } from './ColumnAddTaskButton';
-export { ColumnHeader } from './ColumnHeader';
-export { KanbanBoard } from './KanbanBoard';
+export { BoardColumn } from './components/BoardColumn';
+export { ColumnAddTaskButton } from './components/ColumnAddTaskButton';
+export { ColumnHeader } from './components/ColumnHeader';
+export { KanbanBoard } from './screens/KanbanBoard';
