@@ -65,12 +65,12 @@ export default defineConfig({
         __dirname,
         'src/packages/dashboard/screens'
       ),
-      // 'projects/screens': path.resolve(
-      //   __dirname,
-      //   'src/packages/projects/screens'
-      // ),
-      // 'boards/screens': path.resolve(__dirname, 'src/packages/boards/screens'),
-      // 'tasks/screens': path.resolve(__dirname, 'src/packages/tasks/screens'),
+      'screens/projects': path.resolve(
+        __dirname,
+        'src/packages/projects/screens'
+      ),
+      'screens/boards': path.resolve(__dirname, 'src/packages/boards/screens'),
+      'screens/tasks': path.resolve(__dirname, 'src/packages/tasks/screens'),
       // 'uploads/screens': path.resolve(
       //   __dirname,
       //   'src/packages/uploads/screens'

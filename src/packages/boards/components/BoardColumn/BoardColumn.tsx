@@ -9,6 +9,7 @@ export interface BoardColumnProps {
   title: string;
   status: 'todo' | 'in-progress' | 'done';
   tasks: TaskCardProps[];
+  columnId?: string;
   onTaskClick?: (taskId: string) => void;
   onAddTask?: (status: TaskStatus) => void;
 }
@@ -19,6 +20,7 @@ export const BoardColumn: React.FC<BoardColumnProps> = ({
   tasks,
   onTaskClick,
   onAddTask,
+  columnId,
 }) => {
   return (
     <div className="board-column">

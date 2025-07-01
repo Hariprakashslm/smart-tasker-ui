@@ -32,10 +32,10 @@
       // "core/screens/*": ["./src/packages/core/screens/*"],
       // "auth/screens/*": ["./src/packages/auth/screens/*"],
       // "layout/screens/*": ["./src/packages/layout/screens/*"],
-      "screens/dashboard/*": ["./src/packages/dashboard/screens/*"]
-      // "projects/screens/*": ["./src/packages/projects/screens/*"],
-      // "boards/screens/*": ["./src/packages/boards/screens/*"],
-      // "tasks/screens/*": ["./src/packages/tasks/screens/*"],
+      "screens/dashboard/*": ["./src/packages/dashboard/screens/*"],
+      "screens/projects/*": ["./src/packages/projects/screens/*"],
+      "screens/boards/*": ["./src/packages/boards/screens/*"],
+      "screens/tasks/*": ["./src/packages/tasks/screens/*"]
       // "uploads/screens/*": ["./src/packages/uploads/screens/*"],
       // "notifications/screens/*": ["./src/packages/notifications/screens/*"],
       // "activity/screens/*": ["./src/packages/activity/screens/*"],

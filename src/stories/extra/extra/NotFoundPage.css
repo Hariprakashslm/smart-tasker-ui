@@ -1,0 +1,45 @@
+.not-found-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fafafa;
+  padding: 32px;
+  text-align: center;
+}
+
+.not-found-content {
+  max-width: 400px;
+  background: #fff;
+  padding: 32px;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.not-found-code {
+  font-size: 64px;
+  font-weight: bold;
+  color: #ff4d4f;
+  margin: 0;
+}
+
+.not-found-message {
+  font-size: 16px;
+  margin: 16px 0 24px;
+  color: #666;
+}
+
+.not-found-button {
+  background: #007bff;
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.not-found-button:hover {
+  background-color: #0056b3;
+}

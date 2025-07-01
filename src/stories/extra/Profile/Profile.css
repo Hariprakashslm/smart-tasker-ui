@@ -1,0 +1,59 @@
+.profile-container {
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 24px;
+  background-color: #fff;
+  max-width: 600px;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.profile-info {
+  flex: 1;
+}
+
+.profile-name {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+}
+
+.profile-email {
+  font-size: 14px;
+  color: #666;
+  margin: 4px 0;
+}
+
+.profile-role {
+  font-size: 14px;
+  color: #999;
+}
+
+.profile-bio {
+  font-size: 14px;
+  color: #444;
+  line-height: 1.5;
+}
+
+.profile-edit-btn {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: #007bff;
+  color: #fff;
+  padding: 6px 12px;
+  font-size: 13px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.profile-edit-btn:hover {
+  background-color: #0056b3;
+}

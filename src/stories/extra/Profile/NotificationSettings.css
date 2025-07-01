@@ -1,0 +1,45 @@
+.notification-settings {
+  padding: 24px;
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid #eee;
+  max-width: 600px;
+}
+
+.notification-title {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.notification-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.notification-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 12px;
+}
+
+.notification-label-group {
+  flex: 1;
+}
+
+.notification-label {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.notification-description {
+  font-size: 13px;
+  color: #666;
+}
+
+.notification-toggle {
+  transform: scale(1.2);
+}
