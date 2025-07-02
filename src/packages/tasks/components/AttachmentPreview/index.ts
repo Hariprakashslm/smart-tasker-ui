@@ -1,1 +1,5 @@
-export { AttachmentPreview, type Attachment } from './AttachmentPreview';
+export {
+  AttachmentPreview,
+  type Attachment,
+  type AttachmentPreviewProps,
+} from './AttachmentPreview';

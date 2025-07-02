@@ -3,7 +3,7 @@ import React from 'react';
 import { Select } from '@core/Select';
 import { Badge } from '@core/Badge';
 import { Checkbox } from '@core/Checkbox';
-
+import './LabelSelector.css';
 export interface LabelOption {
   label: string;
   value: string;
@@ -29,7 +29,7 @@ export const LabelSelector: React.FC<LabelSelectorProps> = ({
   };
 
   return (
-    <div style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+    <div style={{ display: 'flex', flexDirection: 'row', gap: '50px' }}>
       {availableLabels.map((label) => (
         <div
           key={label.value}
