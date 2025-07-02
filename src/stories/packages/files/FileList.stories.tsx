@@ -1,9 +1,9 @@
 // src/ui-stories/common/FileList.stories.tsx
 import React from 'react';
-import { FileList } from 'uploads/FileList';
+import { FileList } from 'files/FileList';
 
 export default {
-  title: 'Packages/Uploads/FileList',
+  title: 'Packages/Files/FileList',
   component: FileList,
 };
 

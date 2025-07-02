@@ -1,11 +1,10 @@
 // src/stories/search/SearchResults.stories.tsx
 import React from 'react';
-import { SearchResults } from './SearchResults';
+import { SearchResults } from '../../../packages/search/components/SearchResults/SearchResults';
 import type { Meta, StoryObj } from '@storybook/react';
-import './SearchResults.css';
 
 const meta: Meta<typeof SearchResults> = {
-  title: 'Search/SearchResults',
+  title: 'Packages/Search/SearchResults',
   component: SearchResults,
 };
 

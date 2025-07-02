@@ -1,4 +1,4 @@
-// src/uploads/FileUploader.tsx
+// src/files/FileUploader.tsx
 import React, { useRef } from 'react';
 import './FileUploader.css';
 

@@ -3,7 +3,7 @@ import React from 'react';
 import './ProjectDetailsPage.css';
 import { BoardColumn, BoardColumnProps } from 'boards/BoardColumn';
 import { PresenceIndicator } from 'collaboration/PresenceIndicator';
-import { FileList } from 'uploads/FileList';
+import { FileList } from 'files/FileList';
 
 const ProjectDetailsPage: React.FC = () => {
   const project = {

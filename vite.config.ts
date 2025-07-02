@@ -46,7 +46,7 @@ export default defineConfig({
       projects: path.resolve(__dirname, 'src/packages/projects/components'),
       boards: path.resolve(__dirname, 'src/packages/boards/components'),
       tasks: path.resolve(__dirname, 'src/packages/tasks/components'),
-      uploads: path.resolve(__dirname, 'src/packages/uploads/components'),
+      files: path.resolve(__dirname, 'src/packages/files/components'),
       notifications: path.resolve(
         __dirname,
         'src/packages/notifications/components'
@@ -73,9 +73,9 @@ export default defineConfig({
       ),
       'screens/boards': path.resolve(__dirname, 'src/packages/boards/screens'),
       'screens/tasks': path.resolve(__dirname, 'src/packages/tasks/screens'),
-      // 'uploads/screens': path.resolve(
+      // 'files/screens': path.resolve(
       //   __dirname,
-      //   'src/packages/uploads/screens'
+      //   'src/packages/files/screens'
       // ),
       // 'notifications/screens': path.resolve(
       //   __dirname,

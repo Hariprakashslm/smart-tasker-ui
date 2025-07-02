@@ -3,7 +3,7 @@ import React from 'react';
 import { ForgotPassword } from 'auth/ForgotPassword';
 
 export default {
-  title: 'Auth/ForgotPassword',
+  title: 'Packages/Auth/ForgotPassword',
   component: ForgotPassword,
 };
 

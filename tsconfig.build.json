@@ -22,7 +22,7 @@
       "projects/*": ["./src/packages/projects/components/*"],
       "boards/*": ["./src/packages/boards/components/*"],
       "tasks/*": ["./src/packages/tasks/components/*"],
-      "uploads/*": ["./src/packages/uploads/components/*"],
+      "files/*": ["./src/packages/files/components/*"],
       "notifications/*": ["./src/packages/notifications/components/*"],
       "activity/*": ["./src/packages/activity/components/*"],
       "search/*": ["./src/packages/search/components/*"],
@@ -36,7 +36,7 @@
       "screens/projects/*": ["./src/packages/projects/screens/*"],
       "screens/boards/*": ["./src/packages/boards/screens/*"],
       "screens/tasks/*": ["./src/packages/tasks/screens/*"]
-      // "uploads/screens/*": ["./src/packages/uploads/screens/*"],
+      // "files/screens/*": ["./src/packages/files/screens/*"],
       // "notifications/screens/*": ["./src/packages/notifications/screens/*"],
       // "activity/screens/*": ["./src/packages/activity/screens/*"],
       // "search/screens/*": ["./src/packages/search/screens/*"],

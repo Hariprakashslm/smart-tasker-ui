@@ -1,11 +1,10 @@
 // src/stories/files/FileManager.stories.tsx
 import React from 'react';
-import { FileManager } from './FileManager';
+import { FileManager } from 'files/FileManager';
 import type { Meta, StoryObj } from '@storybook/react';
-import './FileManager.css';
 
 const meta: Meta<typeof FileManager> = {
-  title: 'Files/FileManager',
+  title: 'Packages/Files/FileManager',
   component: FileManager,
 };
 

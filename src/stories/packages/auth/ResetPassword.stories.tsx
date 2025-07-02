@@ -3,7 +3,7 @@ import React from 'react';
 import { ResetPassword } from 'auth/ResetPassword';
 
 export default {
-  title: 'Auth/ResetPassword',
+  title: 'Packages/Auth/ResetPassword',
   component: ResetPassword,
 };
 
