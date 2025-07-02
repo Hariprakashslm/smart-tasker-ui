@@ -2,11 +2,11 @@
 import React from 'react';
 import './Header.css';
 
-import { Avatar } from 'core/Avatar';
-import { Input } from 'core/Input';
-import { Badge } from 'core/Badge';
-import { Button } from 'core/Button';
-import { ThemeToggle } from 'layout/ThemeToggle';
+import { Avatar } from '@core/Avatar';
+import { Input } from '@core/Input';
+import { Badge } from '@core/Badge';
+import { Button } from '@core/Button';
+import { ThemeToggle } from '@layout/ThemeToggle';
 
 export interface HeaderProps {
   title?: string;

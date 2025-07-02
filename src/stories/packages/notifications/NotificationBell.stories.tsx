@@ -1,6 +1,6 @@
 // src/ui-stories/common/NotificationBell.stories.tsx
 import React, { useState } from 'react';
-import { NotificationBell } from 'notifications/NotificationBell';
+import { NotificationBell } from '@notifications/NotificationBell';
 
 export default {
   title: 'Packages/Notifications/NotificationBell',

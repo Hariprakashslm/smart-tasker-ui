@@ -1,8 +1,8 @@
 // src/ui/projects/CreateProjectModal.tsx
 import React, { useState, useEffect } from 'react';
-import { Modal } from 'core/Modal';
-import { Input } from 'core/Input';
-import { Button } from 'core/Button';
+import { Modal } from '@core/Modal';
+import { Input } from '@core/Input';
+import { Button } from '@core/Button';
 
 export interface CreateProjectModalProps {
   isOpen: boolean;

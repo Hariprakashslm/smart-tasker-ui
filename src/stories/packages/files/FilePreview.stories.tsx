@@ -1,6 +1,6 @@
 // src/ui-stories/common/FilePreview.stories.tsx
 import React from 'react';
-import { FilePreview } from 'files/FilePreview';
+import { FilePreview } from '@files/FilePreview';
 
 export default {
   title: 'Packages/Files/FilePreview',

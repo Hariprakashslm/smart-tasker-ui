@@ -1,6 +1,6 @@
 // src/ui-stories/packages/dashboard/TaskCompletionChart.stories.tsx
 import React from 'react';
-import { TaskCompletionChart } from 'dashboard/TaskCompletionChart';
+import { TaskCompletionChart } from '@dashboard/TaskCompletionChart';
 
 export default {
   title: 'Packages/Dashboard/TaskCompletionChart',

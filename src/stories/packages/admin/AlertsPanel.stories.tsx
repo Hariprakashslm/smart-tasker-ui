@@ -1,6 +1,6 @@
 // src/ui-stories/admin/AlertsPanel.stories.tsx
 import React from 'react';
-import { AlertsPanel, AlertItem } from 'admin/AlertsPanel';
+import { AlertsPanel, AlertItem } from '@admin/AlertsPanel';
 
 export default {
   title: 'Packages/Admin/AlertsPanel',

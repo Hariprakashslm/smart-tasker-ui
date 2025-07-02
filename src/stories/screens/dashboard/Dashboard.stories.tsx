@@ -1,9 +1,9 @@
 // src/ui-stories/pages/dashboard/DashboardOverview.stories.tsx
 import React from 'react';
-import { DashboardOverview } from 'screens/dashboard/DashboardOverview';
+import { DashboardOverview } from '@screens/dashboard/DashboardOverview';
 
 export default {
-  title: 'Pages/DashboardOverview',
+  title: 'Pages/Dashboard/DashboardOverview',
   component: DashboardOverview,
 };
 

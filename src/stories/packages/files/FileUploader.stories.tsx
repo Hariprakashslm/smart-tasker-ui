@@ -1,6 +1,6 @@
 // src/ui-stories/files/FileUploader.stories.tsx
 import React from 'react';
-import { FileUploader } from 'files/FileUploader';
+import { FileUploader } from '@files/FileUploader';
 
 export default {
   title: 'Packages/Files/FileUploader',

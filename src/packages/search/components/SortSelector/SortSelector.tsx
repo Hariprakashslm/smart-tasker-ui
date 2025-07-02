@@ -1,6 +1,6 @@
 // src/ui/common/SortSelector.tsx
 import React from 'react';
-import { Select, SelectOption } from 'core/Select';
+import { Select, SelectOption } from '@core/Select';
 import './SortSelector.css';
 
 export interface SortOption extends SelectOption {

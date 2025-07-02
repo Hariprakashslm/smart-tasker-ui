@@ -1,6 +1,6 @@
 // src/ui-stories/admin/ErrorRateGraph.stories.tsx
 import React from 'react';
-import { ErrorRateGraph, ErrorRatePoint } from 'admin/ErrorRateGraph';
+import { ErrorRateGraph, ErrorRatePoint } from '@admin/ErrorRateGraph';
 
 export default {
   title: 'Packages/Admin/ErrorRateGraph',

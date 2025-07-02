@@ -1,6 +1,6 @@
 // src/ui-stories/packages/collaboration/TypingIndicator.stories.tsx
 import React from 'react';
-import { TypingIndicator } from 'collaboration/TypingIndicator';
+import { TypingIndicator } from '@collaboration/TypingIndicator';
 
 export default {
   title: 'Packages/Collaboration/TypingIndicator',

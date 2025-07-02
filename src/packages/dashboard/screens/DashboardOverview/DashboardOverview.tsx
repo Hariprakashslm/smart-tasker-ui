@@ -5,8 +5,8 @@ import { StatCard, StatCardProps } from '../../components/StatCard';
 import { OverviewGraph } from '../../components/OverviewGraph';
 import { TaskCompletionChart } from '../../components/TaskCompletionChart';
 import { StorageUsageCard } from '../../components/StorageUsageCard';
-import { PresenceIndicator } from 'collaboration/PresenceIndicator';
-import { TypingIndicator } from 'collaboration/TypingIndicator';
+import { PresenceIndicator } from '@collaboration/PresenceIndicator';
+import { TypingIndicator } from '@collaboration/TypingIndicator';
 
 export const DashboardOverview: React.FC = () => {
   const taskStats: StatCardProps[] = [

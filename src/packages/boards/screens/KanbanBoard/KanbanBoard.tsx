@@ -2,8 +2,8 @@
 import React from 'react';
 import './KanbanBoard.css';
 
-import { BoardColumn } from 'boards/BoardColumn';
-import type { TaskCardProps } from 'tasks/TaskCard';
+import { BoardColumn } from '@boards/BoardColumn';
+import type { TaskCardProps } from '@tasks/TaskCard';
 
 type TaskStatus = 'todo' | 'in-progress' | 'done';
 export interface KanbanBoardProps {

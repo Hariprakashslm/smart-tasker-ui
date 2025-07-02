@@ -1,8 +1,8 @@
 // src/ui/admin/AlertsPanel.tsx
 import React from 'react';
 import './AlertsPanel.css';
-import { Badge } from 'core/Badge';
-import { Button } from 'core/Button';
+import { Badge } from '@core/Badge';
+import { Button } from '@core/Button';
 
 export interface AlertItem {
   id: string;

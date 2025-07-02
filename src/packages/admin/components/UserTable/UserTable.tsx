@@ -1,9 +1,9 @@
 // src/ui/admin/UserTable.tsx
 import React from 'react';
 import './UserTable.css';
-import { Avatar } from 'core/Avatar';
-import { Button } from 'core/Button';
-import { Badge } from 'core/Badge';
+import { Avatar } from '@core/Avatar';
+import { Button } from '@core/Button';
+import { Badge } from '@core/Badge';
 
 export interface User {
   id: string;

@@ -1,8 +1,8 @@
 // src/pages/tasks/MyTasksPage.tsx
 import React, { useState } from 'react';
 import './MyTasksPage.css';
-import { TaskCard } from 'tasks/TaskCard';
-import { FilterPanel } from 'search/FilterPanel';
+import { TaskCard } from '@tasks/TaskCard';
+import { FilterPanel } from '@search/FilterPanel';
 
 export const MyTasksPage: React.FC = () => {
   const [search, setSearch] = useState('');

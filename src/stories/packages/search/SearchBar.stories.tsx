@@ -1,6 +1,6 @@
 // src/ui-stories/common/SearchBar.stories.tsx
 import React, { useState } from 'react';
-import { SearchBar } from 'search/SearchBar';
+import { SearchBar } from '@search/SearchBar';
 
 export default {
   title: 'Packages/Search/SearchBar',

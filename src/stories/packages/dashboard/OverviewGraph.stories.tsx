@@ -1,6 +1,6 @@
 // src/ui-stories/packages/dashboard/OverviewGraph.stories.tsx
 import React from 'react';
-import { OverviewGraph } from 'dashboard/OverviewGraph';
+import { OverviewGraph } from '@dashboard/OverviewGraph';
 
 export default {
   title: 'Packages/Dashboard/OverviewGraph',

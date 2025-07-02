@@ -2,10 +2,10 @@
 import React from 'react';
 import './Header.css';
 
-import { Avatar } from 'core/Avatar';
-import { Input } from 'core/Input';
-import { Badge } from 'core/Badge';
-import { Button } from 'core/Button';
+import { Avatar } from '@core/Avatar';
+import { Input } from '@core/Input';
+import { Badge } from '@core/Badge';
+import { Button } from '@core/Button';
 
 interface HeaderProps {
   title?: string;

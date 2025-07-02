@@ -1,8 +1,8 @@
 // src/packages/collaboration/LiveUpdateBanner.tsx
 import React from 'react';
 import './LiveUpdateBanner.css';
-import { Button } from 'core/Button';
-import { Badge } from 'core/Badge';
+import { Button } from '@core/Button';
+import { Badge } from '@core/Badge';
 
 export interface LiveUpdateBannerProps {
   message: string;

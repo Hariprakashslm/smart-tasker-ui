@@ -1,8 +1,8 @@
 // src/ui/auth/ResetPassword.tsx
 import React, { useState } from 'react';
 import './ResetPassword.css';
-import { Input } from 'core/Input';
-import { Button } from 'core/Button';
+import { Input } from '@core/Input';
+import { Button } from '@core/Button';
 import { AuthLayout } from '../AuthLayout';
 
 export interface ResetPasswordProps {

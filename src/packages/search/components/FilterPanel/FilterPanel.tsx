@@ -2,8 +2,8 @@
 import React from 'react';
 import './FilterPanel.css';
 import { SearchBar } from '../SearchBar';
-import { Select, SelectOption } from 'core/Select';
-import { Button } from 'core/Button';
+import { Select, SelectOption } from '@core/Select';
+import { Button } from '@core/Button';
 
 export interface FilterPanelProps {
   search: string;

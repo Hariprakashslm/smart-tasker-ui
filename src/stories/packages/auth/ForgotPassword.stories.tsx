@@ -1,6 +1,6 @@
 // src/ui-stories/auth/ForgotPassword.stories.tsx
 import React from 'react';
-import { ForgotPassword } from 'auth/ForgotPassword';
+import { ForgotPassword } from '@auth/ForgotPassword';
 
 export default {
   title: 'Packages/Auth/ForgotPassword',

@@ -1,10 +1,10 @@
 import React from 'react';
 import './TaskCard.css';
 
-import { Checkbox } from 'core/Checkbox';
-import { Badge } from 'core/Badge';
-import { Avatar } from 'core/Avatar';
-import { Tooltip } from 'core/Tooltip';
+import { Checkbox } from '@core/Checkbox';
+import { Badge } from '@core/Badge';
+import { Avatar } from '@core/Avatar';
+import { Tooltip } from '@core/Tooltip';
 
 export interface TaskCardProps {
   title: string;

@@ -1,7 +1,7 @@
 // src/ui/boards/ColumnAddTaskButton.tsx
 import React from 'react';
 import './ColumnAddTaskButton.css';
-import { Button } from 'core/Button';
+import { Button } from '@core/Button';
 
 type TaskStatus = 'todo' | 'in-progress' | 'done';
 export interface ColumnAddTaskButtonProps {

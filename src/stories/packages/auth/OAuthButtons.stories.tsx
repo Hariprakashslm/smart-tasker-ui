@@ -1,6 +1,6 @@
 // src/ui-stories/auth/OAuthButtons.stories.tsx
 import React from 'react';
-import { OAuthButtons } from 'auth/OAuthButtons';
+import { OAuthButtons } from '@auth/OAuthButtons';
 
 export default {
   title: 'Packages/Auth/OAuthButtons',

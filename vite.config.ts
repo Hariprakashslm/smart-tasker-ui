@@ -38,59 +38,41 @@ export default defineConfig({
   },
   resolve: {
     alias: {
-      core: path.resolve(__dirname, 'src/packages/core/components'),
-      page: path.resolve(__dirname, 'src/packages/page/components'),
-      auth: path.resolve(__dirname, 'src/packages/auth/components'),
-      layout: path.resolve(__dirname, 'src/packages/layout/components'),
-      dashboard: path.resolve(__dirname, 'src/packages/dashboard/components'),
-      projects: path.resolve(__dirname, 'src/packages/projects/components'),
-      boards: path.resolve(__dirname, 'src/packages/boards/components'),
-      tasks: path.resolve(__dirname, 'src/packages/tasks/components'),
-      files: path.resolve(__dirname, 'src/packages/files/components'),
-      notifications: path.resolve(
+      '@core': path.resolve(__dirname, 'src/packages/core/components'),
+      '@page': path.resolve(__dirname, 'src/packages/page/components'),
+      '@auth': path.resolve(__dirname, 'src/packages/auth/components'),
+      '@layout': path.resolve(__dirname, 'src/packages/layout/components'),
+      '@dashboard': path.resolve(
+        __dirname,
+        'src/packages/dashboard/components'
+      ),
+      '@projects': path.resolve(__dirname, 'src/packages/projects/components'),
+      '@boards': path.resolve(__dirname, 'src/packages/boards/components'),
+      '@tasks': path.resolve(__dirname, 'src/packages/tasks/components'),
+      '@files': path.resolve(__dirname, 'src/packages/files/components'),
+      '@notifications': path.resolve(
         __dirname,
         'src/packages/notifications/components'
       ),
-      activity: path.resolve(__dirname, 'src/packages/activity/components'),
-      search: path.resolve(__dirname, 'src/packages/search/components'),
-      collaboration: path.resolve(
+      '@activity': path.resolve(__dirname, 'src/packages/activity/components'),
+      '@search': path.resolve(__dirname, 'src/packages/search/components'),
+      '@collaboration': path.resolve(
         __dirname,
         'src/packages/collaboration/components'
       ),
-      admin: path.resolve(__dirname, 'src/packages/admin/components'),
-
-      // 'core/screens': path.resolve(__dirname, 'src/packages/core/screens'),
-      // 'page/screens': path.resolve(__dirname, 'src/packages/page/screens'),
-      // 'auth/screens': path.resolve(__dirname, 'src/packages/auth/screens'),
-      // 'layout/screens': path.resolve(__dirname, 'src/packages/layout/screens'),
-      'screens/dashboard': path.resolve(
+      '@admin': path.resolve(__dirname, 'src/packages/admin/components'),
+      '@screens/dashboard': path.resolve(
         __dirname,
         'src/packages/dashboard/screens'
       ),
-      'screens/projects': path.resolve(
+      '@screens/projects': path.resolve(
         __dirname,
         'src/packages/projects/screens'
       ),
-      'screens/boards': path.resolve(__dirname, 'src/packages/boards/screens'),
-      'screens/tasks': path.resolve(__dirname, 'src/packages/tasks/screens'),
-      // 'files/screens': path.resolve(
-      //   __dirname,
-      //   'src/packages/files/screens'
-      // ),
-      // 'notifications/screens': path.resolve(
-      //   __dirname,
-      //   'src/packages/notifications/screens'
-      // ),
-      // 'activity/screens': path.resolve(
-      //   __dirname,
-      //   'src/packages/activity/screens'
-      // ),
-      // 'search/screens': path.resolve(__dirname, 'src/packages/search/screens'),
-      // 'collaboration/screens': path.resolve(
-      //   __dirname,
-      //   'src/packages/collaboration/screens'
-      // ),
-      // 'admin/screens': path.resolve(__dirname, 'src/packages/admin/screens'),
+      '@screens/boards': path.resolve(__dirname, 'src/packages/boards/screens'),
+      '@screens/tasks': path.resolve(__dirname, 'src/packages/tasks/screens'),
+      '@screens/admin': path.resolve(__dirname, 'src/packages/admin/screens'),
+      '@screens/common': path.resolve(__dirname, 'src/packages/common/screens'),
     },
   },
 });

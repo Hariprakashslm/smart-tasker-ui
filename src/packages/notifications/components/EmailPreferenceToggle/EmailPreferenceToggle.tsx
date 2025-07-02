@@ -1,7 +1,7 @@
 // src/ui/settings/EmailPreferenceToggle.tsx
 import React from 'react';
 import './EmailPreferenceToggle.css';
-import { Checkbox } from 'core/Checkbox'; // or Switch if available
+import { Checkbox } from '@core/Checkbox'; // or Switch if available
 
 export interface EmailPreferenceToggleProps {
   label: string;

@@ -1,6 +1,6 @@
 // src/ui-stories/layout/MobileNavbar.stories.tsx
 import React from 'react';
-import { MobileNavbar } from 'layout/MobileNavbar';
+import { MobileNavbar } from '@layout/MobileNavbar';
 
 export default {
   title: 'Packages/Layout/MobileNavbar',
