@@ -39,7 +39,7 @@ export const TaskCard: React.FC<TaskCardProps> = ({
       <div className="task-header">
         <Checkbox checked={completed} onChange={onToggleComplete} />
         <div className="task-title">{title}</div>
-        <Badge count={status} type={statusVariantMap[status]} />
+        <Badge text={status} type={statusVariantMap[status]} />
       </div>
 
       {description && <p className="task-desc">{description}</p>}

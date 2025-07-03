@@ -2,7 +2,7 @@ import React from 'react';
 import './Badge.css';
 
 export interface BadgeProps {
-  count?: number | string;
+  text?: number | string;
   type?: 'success' | 'error' | 'warning' | 'info' | 'default';
   showDot?: boolean;
   children?: React.ReactNode;
@@ -10,13 +10,13 @@ export interface BadgeProps {
 }
 
 export const Badge: React.FC<BadgeProps> = ({
-  count,
+  text,
   type = 'default',
   showDot = false,
   children,
   color,
 }) => {
-  const isHidden = !count && !showDot;
+  const isHidden = !text && !showDot;
 
   return (
     <div className="badge-wrapper">
@@ -26,7 +26,7 @@ export const Badge: React.FC<BadgeProps> = ({
           className={`badge ${type} ${showDot ? 'dot' : ''}`}
           style={color ? { backgroundColor: color } : {}}
         >
-          {!showDot && count}
+          {!showDot && text}
         </span>
       )}
     </div>

@@ -22,7 +22,7 @@ export const LiveUpdateBanner: React.FC<LiveUpdateBannerProps> = ({
   return (
     <div className={`live-update-banner ${variant} ${fixed ? 'fixed' : ''}`}>
       <span className="live-update-badge">
-        <Badge count={variant.toUpperCase()} color={variant} />
+        <Badge text={variant.toUpperCase()} color={variant} />
       </span>
       <span className="live-update-text">{message}</span>
       {actionLabel && onAction && (

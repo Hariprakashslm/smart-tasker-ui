@@ -33,17 +33,14 @@ export const AlertsPanel: React.FC<AlertsPanelProps> = ({
             <li key={alert.id} className={`alert-item alert-${alert.severity}`}>
               <div className="alert-header">
                 <span className="alert-title">{alert.title}</span>
-                <Badge
-                  count={alert.severity}
-                  color={getColor(alert.severity)}
-                />
+                <Badge text={alert.severity} color={getColor(alert.severity)} />
               </div>
               <div className="alert-message">{alert.message}</div>
               <div className="alert-actions">
                 {alert.onView && (
                   <Button
                     label="View"
-                    variant="ghost"
+                    variant="outlined"
                     size="small"
                     onClick={alert.onView}
                   />
@@ -51,7 +48,7 @@ export const AlertsPanel: React.FC<AlertsPanelProps> = ({
                 {alert.onDismiss && (
                   <Button
                     label="Dismiss"
-                    variant="outline"
+                    variant="outlined"
                     size="small"
                     onClick={alert.onDismiss}
                   />

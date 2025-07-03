@@ -28,7 +28,7 @@ export const LogViewer: React.FC<LogViewerProps> = ({
           {logs.map((log) => (
             <li key={log.id} className="log-item">
               <span className="log-time">{formatTime(log.timestamp)}</span>
-              <Badge count={log.level} color={getBadgeColor(log.level)} />
+              <Badge text={log.level} color={getBadgeColor(log.level)} />
               <span className="log-message">{log.message}</span>
             </li>
           ))}

@@ -39,7 +39,7 @@ export const LabelSelector: React.FC<LabelSelectorProps> = ({
             checked={selectedLabels.includes(label.value)}
             onChange={() => toggleLabel(label.value)}
           />
-          <Badge count={label.label} color={label.color || 'gray'} />
+          <Badge text={label.label} color={label.color || 'gray'} />
         </div>
       ))}
     </div>

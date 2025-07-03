@@ -44,7 +44,7 @@ export const Header: React.FC<HeaderProps> = ({
         <div className="header-icon-wrapper" onClick={onNotificationClick}>
           <span className="header-icon">🔔</span>
           {unreadNotifications > 0 && (
-            <Badge count={unreadNotifications} type="error" />
+            <Badge text={unreadNotifications} type="error" />
           )}
         </div>
 

@@ -54,7 +54,7 @@ export const TaskDetailsModal: React.FC<TaskDetailsModalProps> = ({
     <Modal isOpen={isOpen} onClose={onClose} title={task.title}>
       <div className="task-details">
         <div className="task-details-meta">
-          <Badge count={task.status} type={badgeType} />
+          <Badge text={task.status} type={badgeType} />
           {task.dueDate && <div className="task-due">📅 {task.dueDate}</div>}
           {task.assignee && (
             <div className="task-assignee">

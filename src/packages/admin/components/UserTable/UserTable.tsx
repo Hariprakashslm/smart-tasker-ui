@@ -52,7 +52,7 @@ export const UserTable: React.FC<UserTableProps> = ({
               </td>
               <td>{user.email}</td>
               <td>
-                <Badge count={user.role} color={getRoleColor(user.role)} />
+                <Badge text={user.role} color={getRoleColor(user.role)} />
               </td>
               {(onEdit || onDelete || onView) && (
                 <td>
@@ -60,7 +60,7 @@ export const UserTable: React.FC<UserTableProps> = ({
                     {onView && (
                       <Button
                         label="View"
-                        variant="ghost"
+                        variant="outlined"
                         size="small"
                         onClick={() => onView(user)}
                       />
@@ -68,7 +68,7 @@ export const UserTable: React.FC<UserTableProps> = ({
                     {onEdit && (
                       <Button
                         label="Edit"
-                        variant="outline"
+                        variant="outlined"
                         size="small"
                         onClick={() => onEdit(user)}
                       />
@@ -76,7 +76,7 @@ export const UserTable: React.FC<UserTableProps> = ({
                     {onDelete && (
                       <Button
                         label="Delete"
-                        variant="danger"
+                        variant="outlined"
                         size="small"
                         onClick={() => onDelete(user)}
                       />

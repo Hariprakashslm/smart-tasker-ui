@@ -37,7 +37,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
     <div className="project-card" onClick={onClick}>
       <div className="project-header">
         <h3 className="project-title">{name}</h3>
-        <Badge count={status} color={statusColor} />
+        <Badge text={status} color={statusColor} />
       </div>
 
       {description && <p className="project-desc">{description}</p>}
