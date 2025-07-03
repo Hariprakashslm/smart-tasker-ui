@@ -1,4 +1,5 @@
 // src/components/Button.tsx
+import { Spinner } from '@core/Spinner';
 import './Button.css';
 
 export interface ButtonProps {
@@ -16,6 +17,7 @@ export interface ButtonProps {
   type?: 'button' | 'submit' | 'reset';
   /** Style variant: contained | outlined | text */
   variant?: 'contained' | 'outlined' | 'text';
+  isLoading?: boolean;
 }
 
 /** Primary UI component for user interaction */
@@ -27,6 +29,7 @@ export const Button = ({
   label,
   type = 'button',
   disabled = false,
+  isLoading = false,
   ...props
 }: ButtonProps) => {
   const baseClass = 'storybook-button';
@@ -44,7 +47,7 @@ export const Button = ({
       style={backgroundColor ? { backgroundColor } : {}}
       {...props}
     >
-      {label}
+      {!isLoading ? label : <Spinner size="small" label="Saving..." />}
     </button>
   );
 };

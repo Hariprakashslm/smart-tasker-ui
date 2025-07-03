@@ -9,6 +9,7 @@ export interface CommentBoxProps {
   userAvatarUrl?: string;
   placeholder?: string;
   disabled?: boolean;
+  isSubmitting?: boolean;
 }
 
 export const CommentBox: React.FC<CommentBoxProps> = ({
@@ -16,6 +17,7 @@ export const CommentBox: React.FC<CommentBoxProps> = ({
   userAvatarUrl,
   placeholder = 'Write a comment...',
   disabled = false,
+  isSubmitting = false,
 }) => {
   const [text, setText] = useState('');
 
@@ -46,6 +48,7 @@ export const CommentBox: React.FC<CommentBoxProps> = ({
             onClick={handleSubmit}
             disabled={!text.trim() || disabled}
             label="Comment"
+            isLoading={isSubmitting}
           ></Button>
         </div>
       </div>

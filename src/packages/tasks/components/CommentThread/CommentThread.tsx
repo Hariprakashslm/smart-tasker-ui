@@ -23,7 +23,7 @@ export const CommentThread: React.FC<CommentThreadProps> = ({
   onNewComment,
 }) => {
   const [comments, setComments] = useState<CommentItem[]>(initialComments);
-
+  const [isSubmitting, setIsSubmitting] = useState<boolean>(false);
   const handleAddComment = async (text: string) => {
     const newComment: CommentItem = {
       id: `${Date.now()}`,
@@ -32,8 +32,9 @@ export const CommentThread: React.FC<CommentThreadProps> = ({
       text,
       timestamp: new Date().toLocaleString(),
     };
-
+    setIsSubmitting(true);
     await onNewComment?.(newComment);
+    setIsSubmitting(false);
     setComments([...comments, newComment]);
   };
 
@@ -43,6 +44,7 @@ export const CommentThread: React.FC<CommentThreadProps> = ({
         <CommentBox
           onSubmit={handleAddComment}
           userAvatarUrl={currentUserAvatarUrl}
+          isSubmitting={isSubmitting}
         />
         {comments.map((comment) => (
           <div key={comment.id} className="comment-item">

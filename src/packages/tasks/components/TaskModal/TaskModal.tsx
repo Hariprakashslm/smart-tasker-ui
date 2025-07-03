@@ -10,7 +10,8 @@ import { AssigneeDropdown } from '@tasks/AssigneeDropdown';
 import { LabelSelector } from '@tasks/LabelSelector';
 import { DueDatePicker } from '@tasks/DueDatePicker';
 import { AttachmentPreview } from '@tasks/AttachmentPreview';
-import { CommentBox } from '@tasks/CommentBox';
+import { TabItem, Tabs } from '@core/Tabs';
+import { CommentItem, CommentThread } from '@tasks/CommentThread';
 
 export interface TaskModalProps {
   isOpen: boolean;
@@ -40,7 +41,7 @@ export interface TaskModalProps {
     dueDate: string;
   }) => void;
 
-  onAddComment?: (text: string) => void;
+  onAddComment?: (comment: CommentItem) => Promise<void>;
 }
 
 export const TaskModal: React.FC<TaskModalProps> = ({
@@ -52,19 +53,29 @@ export const TaskModal: React.FC<TaskModalProps> = ({
   onSave,
   onAddComment,
 }) => {
+  const demoTabs: TabItem[] = [
+    {
+      key: 'attachments',
+      title: 'Attachments',
+    },
+    {
+      key: 'comments',
+      title: 'Comments',
+    },
+  ];
   const [title, setTitle] = useState(initialData.title);
   const [description, setDescription] = useState(initialData.description);
   const [assignee, setAssignee] = useState<string | null>(initialData.assignee);
   const [labels, setLabels] = useState<string[]>(initialData.labels);
   const [dueDate, setDueDate] = useState(initialData.dueDate);
-
+  const [activeTab, setActiveTab] = useState<string>(demoTabs[0]?.key);
   const handleSave = () => {
     onSave({ title, description, assignee, labels, dueDate });
     onClose();
   };
 
   return (
-    <Modal isOpen={isOpen} onClose={onClose} title="Edit Task">
+    <Modal isOpen={isOpen} onClose={onClose} title="Edit Task" size="large">
       <div className="task-modal-body">
         <Input
           label="Title"
@@ -88,17 +99,18 @@ export const TaskModal: React.FC<TaskModalProps> = ({
         />
         <DueDatePicker value={dueDate} onChange={setDueDate} />
 
-        {initialData.attachments?.length > 0 && (
+        <Tabs tabs={demoTabs} onChange={setActiveTab} />
+        {activeTab === 'attachments' && initialData.attachments?.length > 0 && (
           <div>
             <label className="task-label">Attachments</label>
             <AttachmentPreview attachments={initialData.attachments} />
           </div>
         )}
 
-        {onAddComment && (
+        {activeTab === 'comments' && onAddComment && (
           <div>
             <label className="task-label">Comment</label>
-            <CommentBox onSubmit={onAddComment} />
+            <CommentThread initialComments={[]} onNewComment={onAddComment} />
           </div>
         )}
 
