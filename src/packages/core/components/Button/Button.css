@@ -1,30 +1,118 @@
+/* src/components/Button.css */
+
+/* Theme variables */
+:root {
+  --primary-color: #1976d2;
+  --primary-hover: #1565c0;
+  --secondary-color: #f1f1f1;
+  --secondary-hover: #e0e0e0;
+  --text-color: #333;
+  --white: #ffffff;
+  --radius: 50px;
+  --transition: all 0.3s ease;
+  --shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+}
+
+/* Base button */
 .storybook-button {
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: var(--radius);
   cursor: pointer;
-  border: 0;
-  border-radius: 3em;
-  font-weight: 700;
-  line-height: 1;
-  font-family: "Nunito Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  user-select: none;
+  transition: var(--transition);
+  box-shadow: var(--shadow);
+  text-decoration: none;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
 }
-.storybook-button--primary {
-  background-color: #555ab9;
-  color: white;
-}
-.storybook-button--secondary {
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
-  background-color: transparent;
-  color: #333;
-}
+
+/* Size variations */
 .storybook-button--small {
-  padding: 10px 16px;
-  font-size: 12px;
+  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
 }
+
 .storybook-button--medium {
-  padding: 11px 20px;
-  font-size: 14px;
+  font-size: 1rem;
+  padding: 0.75rem 1.5rem;
 }
+
 .storybook-button--large {
-  padding: 12px 24px;
-  font-size: 16px;
+  font-size: 1.15rem;
+  padding: 1rem 2rem;
+}
+
+/* Variants */
+.storybook-button--primary.storybook-button--contained {
+  background: var(--primary-color);
+  color: var(--white);
+}
+
+.storybook-button--secondary.storybook-button--contained {
+  background: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.storybook-button--outlined {
+  background: transparent;
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+}
+
+.storybook-button--text {
+  background: transparent;
+  color: var(--primary-color);
+  box-shadow: none;
+}
+
+/* Hover/focus/active interactions */
+.storybook-button:hover:not(:disabled),
+.storybook-button:focus-visible:not(:disabled) {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+.storybook-button--contained:hover {
+  background: var(--primary-hover);
+}
+
+.storybook-button--outlined:hover {
+  background: rgba(25, 118, 210, 0.1);
+}
+
+.storybook-button--text:hover {
+  text-decoration: underline;
+}
+
+/* Ripple effect for fun */
+.storybook-button::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.1);
+  z-index: 0;
+  opacity: 0;
+  transition: opacity 0.3s;
+  border-radius: inherit;
+}
+
+.storybook-button:hover::before {
+  opacity: 1;
+}
+
+/* Disabled state */
+.storybook-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  pointer-events: none;
+  transform: none;
+  box-shadow: none;
 }

@@ -1,53 +1,74 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import { fn } from '@storybook/test';
+// src/components/Button.stories.tsx
+import React from 'react';
+import { Meta, StoryObj } from '@storybook/react';
+import { Button, ButtonProps } from '@core/Button';
 
-import { Button } from 'core/Button';
-
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories#default-export
-const meta = {
-  title: 'Packages/Core/button',
+const meta: Meta<typeof Button> = {
+  title: 'Components/Button',
   component: Button,
-  parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
-    layout: 'centered',
-  },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ['autodocs'],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
   argTypes: {
     backgroundColor: { control: 'color' },
-  },
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
-  args: { onClick: fn() },
-} satisfies Meta<typeof Button>;
-
-export default meta;
-type Story = StoryObj<typeof meta>;
-
-// More on writing stories with args: https://storybook.js.org/docs/writing-stories/args
-export const Primary: Story = {
-  args: {
-    primary: true,
-    label: 'button',
+    size: {
+      control: 'select',
+      options: ['small', 'medium', 'large'],
+    },
+    variant: {
+      control: 'select',
+      options: ['contained', 'outlined', 'text'],
+    },
+    type: {
+      control: 'select',
+      options: ['button', 'submit', 'reset'],
+    },
   },
 };
 
-export const Secondary: Story = {
+export default meta;
+type Story = StoryObj<typeof Button>;
+
+export const Primary: Story = {
   args: {
-    label: 'button',
+    label: 'Primary Button',
+    primary: true,
+    variant: 'contained',
+    size: 'medium',
+  },
+};
+
+export const Outlined: Story = {
+  args: {
+    label: 'Outlined Button',
+    primary: false,
+    variant: 'outlined',
+    size: 'medium',
+  },
+};
+
+export const Text: Story = {
+  args: {
+    label: 'Text Button',
+    variant: 'text',
+    size: 'medium',
+    primary: false,
   },
 };
 
 export const Large: Story = {
   args: {
+    label: 'Large Button',
     size: 'large',
-    label: 'button',
+    primary: true,
+    variant: 'contained',
   },
 };
 
-export const Small: Story = {
+export const Disabled: Story = {
   args: {
-    size: 'small',
-    label: 'button',
+    label: 'Disabled',
+    size: 'medium',
+    primary: false,
+    disabled: true,
+    variant: 'contained',
   },
 };

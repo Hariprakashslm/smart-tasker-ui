@@ -1,3 +1,4 @@
+// src/components/Button.tsx
 import './Button.css';
 
 export interface ButtonProps {
@@ -12,30 +13,35 @@ export interface ButtonProps {
   /** Optional click handler */
   onClick?: () => void;
   disabled?: boolean;
-  type?: 'button' | 'submit' | 'reset' | undefined;
-  variant?: string;
+  type?: 'button' | 'submit' | 'reset';
+  /** Style variant: contained | outlined | text */
+  variant?: 'contained' | 'outlined' | 'text';
 }
 
 /** Primary UI component for user interaction */
 export const Button = ({
-  variant = '',
+  variant = 'contained',
   primary = false,
   size = 'medium',
   backgroundColor,
   label,
-  type,
+  type = 'button',
+  disabled = false,
   ...props
 }: ButtonProps) => {
-  const mode = primary
+  const baseClass = 'storybook-button';
+  const sizeClass = `storybook-button--${size}`;
+  const themeClass = primary
     ? 'storybook-button--primary'
     : 'storybook-button--secondary';
+  const variantClass = `storybook-button--${variant}`;
+
   return (
     <button
-      type={type || 'button'}
-      className={['storybook-button', `storybook-button--${size}`, mode].join(
-        ' '
-      )}
-      style={{ backgroundColor }}
+      type={type}
+      disabled={disabled}
+      className={[baseClass, sizeClass, themeClass, variantClass].join(' ')}
+      style={backgroundColor ? { backgroundColor } : {}}
       {...props}
     >
       {label}

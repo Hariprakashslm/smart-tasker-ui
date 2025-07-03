@@ -266,6 +266,7 @@ __metadata:
   resolution: "@centralized-ui/smart-tasker-ui@workspace:."
   dependencies:
     "@eslint/js": "npm:^9.9.0"
+    "@hookform/resolvers": "npm:^5.1.1"
     "@storybook/addon-essentials": "npm:^8.5.6"
     "@storybook/addon-interactions": "npm:^8.5.6"
     "@storybook/addon-links": "npm:^8.5.6"
@@ -292,6 +293,7 @@ __metadata:
     react: "npm:^18.2.0"
     react-big-calendar: "npm:^1.19.4"
     react-dom: "npm:^18.2.0"
+    react-hook-form: "npm:^7.59.0"
     recharts: "npm:^3.0.2"
     storybook: "npm:^8.5.6"
     tailwindcss: "npm:^4.1.11"
@@ -301,6 +303,7 @@ __metadata:
     vite: "npm:^5.4.1"
     vite-plugin-css-injected-by-js: "npm:^3.5.2"
     vite-plugin-dts: "npm:^4.5.4"
+    zod: "npm:^3.25.71"
   languageName: unknown
   linkType: soft
 
@@ -760,6 +763,17 @@ __metadata:
     "@eslint/core": "npm:^0.15.1"
     levn: "npm:^0.4.1"
   checksum: 10c0/c61888eb8757abc0d25a53c1832f85521c2f347126c475eb32d3596be3505e8619e0ceddee7346d195089a2eb1633b61e6127a5772b8965a85eb9f55b8b1cebe
+  languageName: node
+  linkType: hard
+
+"@hookform/resolvers@npm:^5.1.1":
+  version: 5.1.1
+  resolution: "@hookform/resolvers@npm:5.1.1"
+  dependencies:
+    "@standard-schema/utils": "npm:^0.3.0"
+  peerDependencies:
+    react-hook-form: ^7.55.0
+  checksum: 10c0/74601ba4abb3159bbaa25175af9459a2c0337a28d8c0a5be95c7ae7b0a76ddafcf63c03eea8561fd099fe80b226194ad09e3824c53b9beda38393ff9fd264a03
   languageName: node
   linkType: hard
 
@@ -6225,6 +6239,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-hook-form@npm:^7.59.0":
+  version: 7.59.0
+  resolution: "react-hook-form@npm:7.59.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17 || ^18 || ^19
+  checksum: 10c0/6be30ce65121f4be0f491c2929142e2d9a390a8802f58fb7a41ab978ab8daa6fcd2c442258dbd1b053e6864a83c8f4b1d83de9c95f0efdf5c2120d3c21bd838e
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -7776,5 +7799,12 @@ __metadata:
   version: 2.1.2
   resolution: "yoctocolors-cjs@npm:2.1.2"
   checksum: 10c0/a0e36eb88fea2c7981eab22d1ba45e15d8d268626e6c4143305e2c1628fa17ebfaa40cd306161a8ce04c0a60ee0262058eab12567493d5eb1409780853454c6f
+  languageName: node
+  linkType: hard
+
+"zod@npm:^3.25.71":
+  version: 3.25.71
+  resolution: "zod@npm:3.25.71"
+  checksum: 10c0/ccb251859609e6eed04b83f96ad7b2b7a189ca78b47176cde2c368102a5416b9c472e91b3fd96ceaa5043b2e513b3aec39fd99c36686ad2ad84f6c440afca53a
   languageName: node
   linkType: hard
