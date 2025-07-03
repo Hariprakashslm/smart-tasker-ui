@@ -42,6 +42,7 @@ export const CommentBox: React.FC<CommentBoxProps> = ({
 
         <div className="comment-actions">
           <Button
+            primary
             onClick={handleSubmit}
             disabled={!text.trim() || disabled}
             label="Comment"
