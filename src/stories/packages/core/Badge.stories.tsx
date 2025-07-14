@@ -6,7 +6,7 @@ const meta: Meta<typeof Badge> = {
   component: Badge,
   tags: ['autodocs'],
   argTypes: {
-    count: { control: 'text' },
+    text: { control: 'text' },
     type: {
       control: 'select',
       options: ['success', 'error', 'warning', 'info', 'default'],
@@ -21,7 +21,7 @@ type Story = StoryObj<typeof Badge>;
 
 export const WithNumber: Story = {
   args: {
-    count: 5,
+    text: 5,
     type: 'success',
     children: <button className="badge-btn">Notifications</button>,
   },
@@ -37,7 +37,7 @@ export const DotOnly: Story = {
 
 export const CustomContent: Story = {
   args: {
-    count: 'New!',
+    text: 'New!',
     type: 'warning',
     children: <div className="badge-btn">Label</div>,
   },

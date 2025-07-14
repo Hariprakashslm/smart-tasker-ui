@@ -48,7 +48,7 @@ export const LoginForm: React.FC<LoginFormProps> = ({
 
       <div className="login-actions">
         {onCancel && <Button type="button" onClick={onCancel} label="Cancel" />}
-        <Button type="submit" label="Sign In" />
+        <Button type="submit" label="Sign In" variant="outlined" />
       </div>
 
       {showOAuth && oauthProviders.length > 0 && (

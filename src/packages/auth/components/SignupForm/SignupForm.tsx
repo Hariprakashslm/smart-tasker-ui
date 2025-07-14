@@ -56,7 +56,7 @@ export const SignupForm: React.FC<SignupFormProps> = ({
         {onCancel && (
           <Button type="button" onClick={onCancel} label="Cancel"></Button>
         )}
-        <Button type="submit" label="Sign Up"></Button>
+        <Button type="submit" label="Sign Up" variant="outlined"></Button>
       </div>
 
       {showOAuth && oauthProviders.length > 0 && (

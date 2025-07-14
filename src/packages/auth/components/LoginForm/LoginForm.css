@@ -46,3 +46,9 @@
   color: #6b7280;
   padding: 20px;
 }
+
+.login-actions {
+  display: flex;
+  justify-content: end;
+  gap: 10px;
+}
