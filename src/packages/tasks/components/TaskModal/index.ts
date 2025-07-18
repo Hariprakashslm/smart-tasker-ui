@@ -1,9 +1,5 @@
 export { TaskModal } from './TaskModal';
 export * from './components';
 
-export type { 
-  TaskModalProps, 
-  TaskData, 
-  TaskAttachment, 
-  TaskDependency 
-} from './TaskModal';
+export type { TaskModalProps } from './TaskModal';
+export type { TaskData, TaskDependency } from './types';

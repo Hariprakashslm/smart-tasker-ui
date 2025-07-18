@@ -1,6 +1,7 @@
 // src/ui-stories/tasks/TaskModal.stories.tsx
 import React, { useState } from 'react';
-import { TaskModal, TaskData, TaskAttachment, TaskDependency } from '@tasks/TaskModal';
+import { TaskModal, TaskData, TaskDependency } from '@tasks/TaskModal';
+import { Attachment } from '@tasks/TaskModal/types';
 
 export default {
   title: 'Packages/Tasks/TaskModal',
@@ -59,7 +60,7 @@ const availableTasks: TaskDependency[] = [
   { id: 'task-4', title: 'Set up CI/CD pipeline', status: 'todo' },
 ];
 
-const sampleAttachments: TaskAttachment[] = [
+const sampleAttachments: Attachment[] = [
   {
     id: 'att-1',
     name: 'screenshot.png',
@@ -111,7 +112,7 @@ const mockAddComment = async (comment: any): Promise<void> => {
   await new Promise(resolve => setTimeout(resolve, 500));
 };
 
-const mockUploadAttachment = async (file: File): Promise<TaskAttachment> => {
+const mockUploadAttachment = async (file: File): Promise<Attachment> => {
   console.log('Uploading file:', file.name);
   await new Promise(resolve => setTimeout(resolve, 2000));
   

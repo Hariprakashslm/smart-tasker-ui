@@ -46,7 +46,7 @@ export const ResetPassword: React.FC<ResetPasswordProps> = ({
       {success ? (
         <div className="reset-success">
           ✅ Your password has been reset. You can now{' '}
-          <Button variant="link" label="Login" onClick={onLoginRedirect} />
+          <Button variant="text" label="Login" onClick={onLoginRedirect} />
         </div>
       ) : (
         <form className="reset-password-form" onSubmit={handleSubmit}>

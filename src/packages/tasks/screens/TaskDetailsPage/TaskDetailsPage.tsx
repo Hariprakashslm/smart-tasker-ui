@@ -33,14 +33,20 @@ export const TaskDetailsPage: React.FC<TaskDetailsPageProps> = ({
   }
 
   return (
-    <div className={["task-details-page", className].filter(Boolean).join(' ')} style={style}>
+    <div
+      className={['task-details-page', className].filter(Boolean).join(' ')}
+      style={style}
+    >
       <div className="task-details-main">
         <TaskCard
-          title={task.title}
+          title={task.title!}
           description={task.description}
           dueDate={task.dueDate}
           status={task.status}
-          assignee={{ name: allAssignees.find(a => a.id === task.assignee)?.name || '', imageUrl: undefined }}
+          assignee={{
+            name: allAssignees.find((a) => a.id === task.assignee)?.name || '',
+            imageUrl: undefined,
+          }}
           completed={task.status === 'done'}
           onToggleComplete={() => {}}
         />
@@ -49,7 +55,7 @@ export const TaskDetailsPage: React.FC<TaskDetailsPageProps> = ({
         </button>
         <div className="task-details-section">
           <h4>Attachments</h4>
-          <AttachmentPreview attachments={task.attachments} />
+          <AttachmentPreview attachments={task.attachments!} />
         </div>
         <div className="task-details-section">
           <h4>Activity</h4>

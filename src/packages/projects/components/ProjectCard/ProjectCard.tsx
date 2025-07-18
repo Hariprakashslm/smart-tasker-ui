@@ -64,7 +64,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({
           {onDelete && (
             <Button
               size="small"
-              variant="danger"
+              variant="ghost"
               label="Delete"
               onClick={() => {
                 onDelete();

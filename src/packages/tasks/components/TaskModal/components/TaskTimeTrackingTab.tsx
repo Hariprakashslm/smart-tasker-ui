@@ -1,5 +1,5 @@
 import React from 'react';
-import { TaskData } from '../TaskModal';
+import { TaskData } from '../types';
 import './TaskTimeTrackingTab.css';
 
 export interface TaskTimeTrackingTabProps {

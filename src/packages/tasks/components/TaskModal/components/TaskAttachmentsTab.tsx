@@ -1,12 +1,12 @@
 import React, { useRef, useCallback, useState } from 'react';
 import { AttachmentPreview } from '@tasks/AttachmentPreview';
-import { TaskAttachment } from '../TaskModal';
+import { Attachment } from '../types';
 import './TaskAttachmentsTab.css';
 
 export interface TaskAttachmentsTabProps {
-  attachments: TaskAttachment[];
+  attachments: Attachment[];
   mode: 'create' | 'edit' | 'view';
-  onUploadAttachment?: (file: File) => Promise<TaskAttachment>;
+  onUploadAttachment?: (file: File) => Promise<Attachment>;
   onRemoveAttachment?: (attachmentId: string) => Promise<void>;
   maxFileSize?: number;
   allowedFileTypes?: string[];

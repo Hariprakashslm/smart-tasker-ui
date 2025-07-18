@@ -52,8 +52,8 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="header-user">
             <Avatar name={user.name} src={user.imageUrl} />
             <div className="header-dropdown">
-              <Button primary label="Profile" onClick={user.onProfile} />
-              <Button primary label="Logout" onClick={user.onLogout} />
+              <Button label="Profile" onClick={user.onProfile} />
+              <Button label="Logout" onClick={user.onLogout} />
             </div>
           </div>
         )}

@@ -14,37 +14,7 @@ import { TaskHistoryTab } from './components/TaskHistoryTab';
 import { TaskAutoSaveIndicator } from './components/TaskAutoSaveIndicator';
 import { TaskModalActions } from './components/TaskModalActions';
 import { CommentItem } from '@tasks/CommentThread';
-
-export interface TaskAttachment {
-  id: string;
-  name: string;
-  url: string;
-  type: string;
-  size: number;
-  uploadedAt: string;
-}
-
-export interface TaskDependency {
-  id: string;
-  title: string;
-  status: 'todo' | 'in-progress' | 'done';
-}
-
-export interface TaskData {
-  id?: string;
-  title: string;
-  description: string;
-  assignee: string | null;
-  labels: string[];
-  dueDate: string;
-  priority: 'low' | 'medium' | 'high' | 'urgent';
-  status: 'todo' | 'in-progress' | 'done';
-  attachments: TaskAttachment[];
-  dependencies: TaskDependency[];
-  estimatedHours?: number;
-  actualHours?: number;
-  tags: string[];
-}
+import { Attachment, TaskDependency, TaskData } from './types';
 
 export interface TaskModalProps {
   isOpen: boolean;
@@ -61,7 +31,7 @@ export interface TaskModalProps {
   onSave: (data: TaskData) => Promise<void>;
   onDelete?: (taskId: string) => Promise<void>;
   onAddComment?: (comment: CommentItem) => Promise<void>;
-  onUploadAttachment?: (file: File) => Promise<TaskAttachment>;
+  onUploadAttachment?: (file: File) => Promise<Attachment>;
   onRemoveAttachment?: (attachmentId: string) => Promise<void>;
   
   // Configuration

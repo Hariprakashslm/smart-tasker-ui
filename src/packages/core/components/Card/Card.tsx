@@ -21,6 +21,7 @@ export interface CardProps {
   footerClassName?: string;
   ariaLabel?: string;
   role?: string;
+  children?: React.ReactNode;
 }
 
 export const Card: React.FC<CardProps> = ({
@@ -43,6 +44,7 @@ export const Card: React.FC<CardProps> = ({
   footerClassName = '',
   ariaLabel,
   role = 'region',
+  children,
 }) => {
   return (
     <div
@@ -73,6 +75,7 @@ export const Card: React.FC<CardProps> = ({
       <div className="card-body" style={padding ? { padding } : {}}>
         {title && <h3 className={["card-title", titleClassName].filter(Boolean).join(' ')}>{title}</h3>}
         {content && <div className={["card-content", contentClassName].filter(Boolean).join(' ')}>{content}</div>}
+        {children}
       </div>
       {footer && <div className={["card-footer", footerClassName].filter(Boolean).join(' ')}>{footer}</div>}
     </div>

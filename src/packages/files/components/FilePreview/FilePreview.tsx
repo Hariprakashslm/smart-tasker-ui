@@ -33,7 +33,7 @@ export const FilePreview: React.FC<FilePreviewProps> = ({
         </div>
         <Button
           label="Download"
-          variant="outline"
+          variant="outlined"
           size="small"
           onClick={onDownload || (() => window.open(fileUrl, '_blank'))}
         />

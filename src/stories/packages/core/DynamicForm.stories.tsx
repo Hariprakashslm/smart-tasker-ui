@@ -68,7 +68,6 @@ const fields: FormField[] = [
 
 const mockButtons: ButtonProps[] = [
   {
-    primary: true,
     label: 'Save Changes',
     size: 'medium',
     type: 'submit',
@@ -77,7 +76,6 @@ const mockButtons: ButtonProps[] = [
     disabled: false,
   },
   {
-    primary: false,
     label: 'Reset Form',
     size: 'medium',
     type: 'reset',

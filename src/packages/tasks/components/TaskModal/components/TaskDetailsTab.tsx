@@ -5,7 +5,7 @@ import { Select } from '@core/Select';
 import { AssigneeDropdown } from '@tasks/AssigneeDropdown';
 import { LabelSelector } from '@tasks/LabelSelector';
 import { DueDatePicker } from '@tasks/DueDatePicker';
-import { TaskData } from '../TaskModal';
+import { TaskData } from '../types';
 import './TaskDetailsTab.css';
 
 export interface TaskDetailsTabProps {

@@ -2,7 +2,7 @@ import React from 'react';
 import { Badge } from '@core/Badge';
 import { Button } from '@core/Button';
 import { Select } from '@core/Select';
-import { TaskDependency } from '../TaskModal';
+import { TaskDependency } from '../types';
 import './TaskDependenciesTab.css';
 
 export interface TaskDependenciesTabProps {

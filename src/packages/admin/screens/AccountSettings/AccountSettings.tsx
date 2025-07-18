@@ -49,7 +49,6 @@ export const AccountSettings: React.FC<AccountSettingsProps> = ({
 
   const mockButtons: ButtonProps[] = [
     {
-      primary: true,
       label: 'Save Changes',
       size: 'medium',
       type: 'submit',
@@ -58,7 +57,6 @@ export const AccountSettings: React.FC<AccountSettingsProps> = ({
       disabled: false,
     },
     {
-      primary: false,
       label: 'Deactivate Account',
       size: 'small',
       type: 'reset',

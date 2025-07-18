@@ -56,7 +56,7 @@ export const ForgotPassword: React.FC<ForgotPasswordProps> = ({
           {onBackToLogin && (
             <div className="back-to-login">
               <Button
-                variant="link"
+                variant="text"
                 type="button"
                 onClick={onBackToLogin}
                 label="Back to Login"
