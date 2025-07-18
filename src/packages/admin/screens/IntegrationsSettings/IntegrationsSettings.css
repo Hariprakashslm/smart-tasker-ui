@@ -1,0 +1,113 @@
+.integrations-settings-page {
+  padding: 2.5rem 2rem;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.integrations-settings-page h1 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+.integrations-section, .settings-section {
+  background: var(--color-surface, #fff);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.07);
+  padding: 2rem 2.5rem;
+  margin-bottom: 2rem;
+}
+.integrations-section h2, .settings-section h2 {
+  font-size: 1.2rem;
+  margin-bottom: 1.2rem;
+}
+.integrations-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.integration-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.7rem 0;
+  border-bottom: 1px solid #e5e7eb;
+}
+.integration-info {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+.integration-icon {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  background: #f3f4f6;
+  object-fit: contain;
+}
+.integration-name {
+  font-size: 1.1rem;
+  font-weight: 500;
+}
+.connect-btn, .disconnect-btn {
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.connect-btn {
+  background: #10b981;
+  color: #fff;
+}
+.connect-btn:hover {
+  background: #059669;
+}
+.disconnect-btn {
+  background: #ef4444;
+  color: #fff;
+}
+.disconnect-btn:hover {
+  background: #b91c1c;
+}
+.settings-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+.settings-list label {
+  font-size: 1rem;
+  color: #23232a;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+}
+.settings-list select {
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #d1d5db;
+  font-size: 1rem;
+}
+@media (prefers-color-scheme: dark) {
+  .integrations-settings-page {
+    background: var(--color-bg-dark, #18181b);
+    color: #f3f4f6;
+  }
+  .integrations-section, .settings-section {
+    background: var(--color-surface-dark, #23232a);
+    color: #f3f4f6;
+  }
+  .integration-icon {
+    background: #18181b;
+  }
+  .settings-list label {
+    color: #f3f4f6;
+  }
+  .settings-list select {
+    background: #18181b;
+    color: #f3f4f6;
+    border-color: #27272a;
+  }
+} 
