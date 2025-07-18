@@ -1,14 +1,29 @@
 <p align="center">
-  <a href="https://www.chromatic.com/">
-    <img alt="Chromatic" src="https://avatars2.githubusercontent.com/u/24584319?s=200&v=4" width="60" />
-  </a>
+  <img alt="Smart Tasker UI" src="https://via.placeholder.com/200x80/3b82f6/ffffff?text=Smart+Tasker+UI" width="200" />
 </p>
 
 <h1 align="center">
-  Chromatic's Intro to Storybook React template
+  Smart Tasker UI - React Component Library
 </h1>
 
-This template ships with the main React and Storybook configuration files you'll need to get up and running fast.
+<p align="center">
+  A comprehensive, accessible, and customizable React component library for building modern task management applications.
+</p>
+
+<p align="center">
+  <a href="https://github.com/your-username/centralized-ui/actions">
+    <img alt="CI/CD Status" src="https://github.com/your-username/centralized-ui/workflows/CI%2FCD%20Pipeline/badge.svg" />
+  </a>
+  <a href="https://www.npmjs.com/package/@centralized-ui/smart-tasker-ui">
+    <img alt="npm version" src="https://img.shields.io/npm/v/@centralized-ui/smart-tasker-ui.svg" />
+  </a>
+  <a href="https://bundlephobia.com/result?p=@centralized-ui/smart-tasker-ui">
+    <img alt="bundle size" src="https://img.shields.io/bundlephobia/min/@centralized-ui/smart-tasker-ui" />
+  </a>
+  <a href="https://github.com/your-username/centralized-ui/blob/main/LICENSE">
+    <img alt="license" src="https://img.shields.io/npm/l/@centralized-ui/smart-tasker-ui.svg" />
+  </a>
+</p>
 
 ## 🚅 Quick start
 

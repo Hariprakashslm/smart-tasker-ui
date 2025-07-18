@@ -1,0 +1,35 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "@core/*": ["src/packages/core/components/*"],
+      "@auth/*": ["src/packages/auth/components/*"],
+      "@layout/*": ["src/packages/layout/components/*"],
+      "@dashboard/*": ["src/packages/dashboard/components/*"],
+      "@projects/*": ["src/packages/projects/components/*"],
+      "@boards/*": ["src/packages/boards/components/*"],
+      "@tasks/*": ["src/packages/tasks/components/*"],
+      "@files/*": ["src/packages/files/components/*"],
+      "@notifications/*": ["src/packages/notifications/components/*"],
+      "@activity/*": ["src/packages/activity/components/*"],
+      "@search/*": ["src/packages/search/components/*"],
+      "@collaboration/*": ["src/packages/collaboration/components/*"],
+      "@admin/*": ["src/packages/admin/components/*"],
+      "@screens/dashboard/*": ["src/packages/dashboard/screens/*"],
+      "@screens/projects/*": ["src/packages/projects/screens/*"],
+      "@screens/boards/*": ["src/packages/boards/screens/*"],
+      "@screens/tasks/*": ["src/packages/tasks/screens/*"],
+      "@screens/admin/*": ["src/packages/admin/screens/*"],
+      "@screens/common/*": ["src/packages/common/screens/*"],
+      "@screens/notifications/*": ["src/packages/notifications/screens/*"],
+      "@screens/files/*": ["src/packages/files/screens/*"],
+      "@screens/search/*": ["src/packages/search/screens/*"],
+      "@screens/auth/*": ["src/packages/auth/screens/*"],
+      "@types/*": ["src/types/*"],
+      "@utils/*": ["src/utils/*"],
+      "@hooks/*": ["src/hooks/*"],
+      "@constants/*": ["src/constants/*"]
+    }
+  }
+}

@@ -17,9 +17,7 @@ export const BasicDrawer: Story = {
     return (
       <>
         <button onClick={() => setOpen(true)}>Open Drawer</button>
-        <Drawer isOpen={open} onClose={() => setOpen(false)} title="My Drawer">
-          <p>This is the drawer content.</p>
-        </Drawer>
+        <Drawer isOpen={open} onClose={() => setOpen(false)} title="My Drawer" content={<p>This is the drawer content.</p>} />
       </>
     );
   },
@@ -36,9 +34,8 @@ export const LeftDrawer: Story = {
           onClose={() => setOpen(false)}
           position="left"
           title="Left Side"
-        >
-          <p>Drawer from left side.</p>
-        </Drawer>
+          content={<p>Drawer from left side.</p>}
+        />
       </>
     );
   },
@@ -55,9 +52,8 @@ export const CustomSizeDrawer: Story = {
           onClose={() => setOpen(false)}
           size="800px"
           title="Wide Drawer"
-        >
-          <p>This is a wide drawer (800px).</p>
-        </Drawer>
+          content={<p>This is a wide drawer (800px).</p>}
+        />
       </>
     );
   },

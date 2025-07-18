@@ -1,0 +1,28 @@
+.task-details-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.task-modal-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-modal-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+.task-modal-meta-item {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 768px) {
+  .task-modal-meta {
+    grid-template-columns: 1fr;
+  }
+} 

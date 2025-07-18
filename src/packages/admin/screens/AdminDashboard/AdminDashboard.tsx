@@ -33,10 +33,12 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       {/* Stats */}
       <div className="dashboard-stats">
         {stats.map((stat, index) => (
-          <Card key={index}>
-            <span className="stat-count">{stat.count}</span>
-            <Badge color={stat.color || 'gray'}>{stat.label}</Badge>
-          </Card>
+          <Card key={index} content={
+            <>
+              <span className="stat-count">{stat.count}</span>
+              <Badge color={stat.color || 'gray'}>{stat.label}</Badge>
+            </>
+          } />
         ))}
       </div>
 
@@ -44,17 +46,19 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       <div className="dashboard-activities">
         <h2 className="activity-title">Recent Activity</h2>
         {activities.map((activity, index) => (
-          <Card key={index}>
-            <Tooltip content={activity.user}>
-              <Avatar name={activity.user} src={activity.avatarUrl} />
-            </Tooltip>
-            <div className="activity-content">
-              <p className="activity-text">
-                <strong>{activity.user}</strong> {activity.action}
-              </p>
-              <p className="activity-time">{activity.timestamp}</p>
-            </div>
-          </Card>
+          <Card key={index} content={
+            <>
+              <Tooltip content={activity.user}>
+                <Avatar name={activity.user} src={activity.avatarUrl} />
+              </Tooltip>
+              <div className="activity-content">
+                <p className="activity-text">
+                  <strong>{activity.user}</strong> {activity.action}
+                </p>
+                <p className="activity-time">{activity.timestamp}</p>
+              </div>
+            </>
+          } />
         ))}
       </div>
     </div>

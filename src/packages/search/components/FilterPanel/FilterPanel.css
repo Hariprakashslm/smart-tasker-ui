@@ -2,21 +2,185 @@
 
 .filter-panel {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  align-items: flex-end;
+  flex-direction: column;
+  gap: 0;
+  align-items: stretch;
   background-color: #fff;
-  padding: 16px;
+  padding: 24px 24px 16px 24px;
   border: 1px solid #e5e7eb;
-  border-radius: 8px;
+  border-radius: 16px;
+  box-shadow: 0 2px 8px rgba(30, 64, 175, 0.06);
+  position: relative;
+  transition: background 0.2s;
 }
 
-.filter-panel > * {
-  flex: 1;
-  min-width: 160px;
+.filter-panel-dark {
+  background: #181e2a;
+  border-color: #232b3a;
+  color: #e5e7eb;
+}
+
+.filter-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+  min-height: 24px;
+}
+
+.filter-badge {
+  background: #e0e7ef;
+  color: #2563eb;
+  border-radius: 999px;
+  padding: 3px 12px 3px 10px;
+  font-size: 0.95rem;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  box-shadow: 0 1px 2px rgba(30, 64, 175, 0.04);
+  transition: background 0.2s, color 0.2s;
+}
+.filter-panel-dark .filter-badge {
+  background: #232b3a;
+  color: #60a5fa;
+}
+
+.filter-badge-remove {
+  background: none;
+  border: none;
+  color: #888;
+  font-size: 1.1em;
+  margin-left: 4px;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0 4px;
+  transition: background 0.2s, color 0.2s;
+}
+.filter-badge-remove:hover,
+.filter-badge-remove:focus {
+  background: #c7d2fe;
+  color: #1e40af;
+}
+.filter-panel-dark .filter-badge-remove:hover,
+.filter-panel-dark .filter-badge-remove:focus {
+  background: #334155;
+  color: #60a5fa;
+}
+
+.filter-main-row {
+  display: flex;
+  gap: 20px;
+  align-items: flex-end;
+  margin-bottom: 0;
+  flex-wrap: wrap;
+}
+
+.filter-more-btn {
+  background: #f1f5f9;
+  color: #2563eb;
+  border: none;
+  border-radius: 999px;
+  padding: 8px 18px;
+  font-size: 1rem;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  box-shadow: 0 1px 2px rgba(30, 64, 175, 0.04);
+  transition: background 0.2s, color 0.2s;
+  outline: none;
+  position: relative;
+}
+.filter-more-btn:hover,
+.filter-more-btn:focus {
+  background: #e0e7ef;
+  color: #1e40af;
+}
+.filter-panel-dark .filter-more-btn {
+  background: #232b3a;
+  color: #60a5fa;
+}
+.filter-panel-dark .filter-more-btn:hover,
+.filter-panel-dark .filter-more-btn:focus {
+  background: #334155;
+  color: #93c5fd;
+}
+
+.filter-count-badge {
+  background: #2563eb;
+  color: #fff;
+  border-radius: 999px;
+  font-size: 0.85em;
+  padding: 2px 8px;
+  margin-left: 2px;
+  font-weight: 600;
+}
+.filter-panel-dark .filter-count-badge {
+  background: #60a5fa;
+  color: #181e2a;
+}
+
+.filter-chevron {
+  margin-left: 6px;
+  font-size: 1.1em;
+  transition: transform 0.3s;
+  display: inline-block;
+}
+.filter-chevron.open {
+  transform: rotate(180deg);
+}
+
+.filter-advanced {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.3s cubic-bezier(.4,0,.2,1);
+  display: flex;
+  gap: 20px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 2px;
+}
+.filter-advanced.expanded {
+  max-height: 200px;
+  margin-top: 18px;
+  margin-bottom: 0;
+}
+
+.filter-divider {
+  width: 100%;
+  height: 1px;
+  background: #f1f5f9;
+  margin: 18px 0 10px 0;
+  border: none;
+  transition: background 0.2s;
+}
+.filter-panel-dark .filter-divider {
+  background: #232b3a;
 }
 
 .filter-actions {
   display: flex;
-  gap: 10px;
+  gap: 12px;
+  justify-content: flex-end;
+  width: 100%;
+  margin-top: 0;
+}
+
+.filter-actions .core-button {
+  min-width: 100px;
+  font-weight: 500;
+  border-radius: 8px;
+  transition: background 0.2s, color 0.2s;
+}
+
+.filter-actions .core-button:hover,
+.filter-actions .core-button:focus {
+  background: #2563eb;
+  color: #fff;
+}
+.filter-panel-dark .filter-actions .core-button:hover,
+.filter-panel-dark .filter-actions .core-button:focus {
+  background: #60a5fa;
+  color: #181e2a;
 }

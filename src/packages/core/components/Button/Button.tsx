@@ -1,53 +1,112 @@
-// src/components/Button.tsx
+import React from 'react';
 import { Spinner } from '@core/Spinner';
 import './Button.css';
 
 export interface ButtonProps {
-  /** Is this the principal call to action on the button? */
-  primary?: boolean;
-  /** What background color to use */
-  backgroundColor?: string;
-  /** How large should the button be? */
-  size?: 'small' | 'medium' | 'large';
-  /** Button contents */
   label: string;
-  /** Optional click handler */
+  variant?: 'contained' | 'outlined' | 'text' | 'ghost';
+  color?: 'primary' | 'danger' | 'success' | 'warning' | 'default' | string;
+  size?: 'small' | 'medium' | 'large';
   onClick?: () => void;
   disabled?: boolean;
-  type?: 'button' | 'submit' | 'reset';
-  /** Style variant: contained | outlined | text */
-  variant?: 'contained' | 'outlined' | 'text';
   isLoading?: boolean;
+  startIcon?: React.ReactNode;
+  endIcon?: React.ReactNode;
+  fullWidth?: boolean;
+  rounded?: boolean;
+  borderRadius?: number | string;
+  spinner?: React.ReactNode;
+  className?: string;
+  style?: React.CSSProperties;
+  ariaLabel?: string;
+  type?: 'button' | 'submit' | 'reset';
+  form?: string;
+  autoFocus?: boolean;
+  tabIndex?: number;
 }
 
-/** Primary UI component for user interaction */
-export const Button = ({
-  variant = 'contained',
-  primary = false,
-  size = 'medium',
-  backgroundColor,
+const COLOR_CLASS_MAP = {
+  primary: 'storybook-button--primary',
+  danger: 'storybook-button--danger',
+  success: 'storybook-button--success',
+  warning: 'storybook-button--warning',
+  default: 'storybook-button--default',
+};
+
+export const Button = React.memo(({
   label,
-  type = 'button',
+  variant = 'contained',
+  color = 'primary',
+  size = 'medium',
+  onClick,
   disabled = false,
   isLoading = false,
+  startIcon,
+  endIcon,
+  fullWidth = false,
+  rounded = false,
+  borderRadius,
+  spinner,
+  className = '',
+  style = {},
+  ariaLabel,
+  type = 'button',
+  form,
+  autoFocus,
+  tabIndex,
   ...props
 }: ButtonProps) => {
   const baseClass = 'storybook-button';
   const sizeClass = `storybook-button--${size}`;
-  const themeClass = primary
-    ? 'storybook-button--primary'
-    : 'storybook-button--secondary';
+  const colorClass = COLOR_CLASS_MAP[color as keyof typeof COLOR_CLASS_MAP] || '';
   const variantClass = `storybook-button--${variant}`;
+  const widthClass = fullWidth ? 'storybook-button--full-width' : '';
+  const roundedClass = rounded ? 'storybook-button--rounded' : '';
+
+  // Allow custom color override
+  const customColor =
+    color && !COLOR_CLASS_MAP[color as keyof typeof COLOR_CLASS_MAP]
+      ? { '--btn-main': color } as React.CSSProperties
+      : {};
+  // Allow custom border radius
+  const customRadius = borderRadius ? { borderRadius } : {};
 
   return (
     <button
       type={type}
-      disabled={disabled}
-      className={[baseClass, sizeClass, themeClass, variantClass].join(' ')}
-      style={backgroundColor ? { backgroundColor } : {}}
+      disabled={disabled || isLoading}
+      className={[
+        baseClass,
+        sizeClass,
+        colorClass,
+        variantClass,
+        widthClass,
+        roundedClass,
+        className
+      ].filter(Boolean).join(' ')}
+      aria-label={ariaLabel || label}
+      aria-disabled={disabled || isLoading}
+      onClick={onClick}
+      form={form}
+      autoFocus={autoFocus}
+      tabIndex={tabIndex}
+      style={{ ...customColor, ...customRadius, ...style }}
       {...props}
     >
-      {!isLoading ? label : <Spinner size="small" label="Saving..." />}
+      {isLoading && (
+        <span className="storybook-button__spinner">
+          {spinner || <Spinner size="small" label="Loading..." />}
+        </span>
+      )}
+      {!isLoading && startIcon && (
+        <span className="storybook-button__icon storybook-button__icon--start">{startIcon}</span>
+      )}
+      {!isLoading && <span className="storybook-button__label">{label}</span>}
+      {!isLoading && endIcon && (
+        <span className="storybook-button__icon storybook-button__icon--end">{endIcon}</span>
+      )}
     </button>
   );
-};
+});
+
+Button.displayName = 'Button';

@@ -1,27 +1,32 @@
 /* src/components/Button.css */
-
-/* Theme variables */
 :root {
   --primary-color: #1976d2;
   --primary-hover: #1565c0;
-  --secondary-color: #f1f1f1;
-  --secondary-hover: #e0e0e0;
+  --danger-color: #dc3545;
+  --danger-hover: #c82333;
+  --success-color: #28a745;
+  --success-hover: #218838;
+  --warning-color: #ffc107;
+  --warning-hover: #e0a800;
+  --default-color: #444;
+  --default-hover: #222;
+  --white: #fff;
   --text-color: #333;
-  --white: #ffffff;
-  --radius: 50px;
-  --transition: all 0.3s ease;
-  --shadow: 0 6px 14px rgba(0, 0, 0, 0.1);
+  --radius: 6px;
+  --radius-pill: 50px;
+  --transition: all 0.18s cubic-bezier(.4,0,.2,1);
+  --shadow: 0 2px 8px rgba(0,0,0,0.08);
 }
 
-/* Base button */
 .storybook-button {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 0.5rem;
   font-family: 'Segoe UI', sans-serif;
   font-weight: 600;
   font-size: 1rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.65rem 1.5rem;
   border: none;
   border-radius: var(--radius);
   cursor: pointer;
@@ -32,63 +37,140 @@
   position: relative;
   overflow: hidden;
   z-index: 1;
+  min-height: 40px;
+  background: var(--white);
+  color: var(--primary-color);
+}
+
+.storybook-button--rounded {
+  border-radius: var(--radius-pill);
 }
 
 /* Size variations */
 .storybook-button--small {
   font-size: 0.85rem;
-  padding: 0.5rem 1rem;
+  padding: 0.4rem 1rem;
+  min-height: 32px;
 }
-
 .storybook-button--medium {
   font-size: 1rem;
-  padding: 0.75rem 1.5rem;
+  padding: 0.65rem 1.5rem;
+  min-height: 40px;
 }
-
 .storybook-button--large {
   font-size: 1.15rem;
   padding: 1rem 2rem;
+  min-height: 48px;
 }
+
+.storybook-button--full-width {
+  width: 100%;
+}
+
+/* Color classes */
+.storybook-button--primary { --btn-main: var(--primary-color); --btn-hover: var(--primary-hover); }
+.storybook-button--danger { --btn-main: var(--danger-color); --btn-hover: var(--danger-hover); }
+.storybook-button--success { --btn-main: var(--success-color); --btn-hover: var(--success-hover); }
+.storybook-button--warning { --btn-main: var(--warning-color); --btn-hover: var(--warning-hover); }
+.storybook-button--default { --btn-main: var(--default-color); --btn-hover: var(--default-hover); }
 
 /* Variants */
-.storybook-button--primary.storybook-button--contained {
-  background: var(--primary-color);
+.storybook-button--contained {
+  background: var(--btn-main);
   color: var(--white);
+  border: none;
 }
-
-.storybook-button--secondary.storybook-button--contained {
-  background: var(--secondary-color);
-  color: var(--text-color);
+.storybook-button--contained:hover:not(:disabled),
+.storybook-button--contained:focus-visible:not(:disabled) {
+  background: var(--btn-hover);
+  color: var(--white);
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
 }
 
 .storybook-button--outlined {
   background: transparent;
-  color: var(--primary-color);
-  border: 2px solid var(--primary-color);
+  color: var(--btn-main);
+  border: 2px solid var(--btn-main);
+  box-shadow: none;
+}
+.storybook-button--outlined:hover:not(:disabled),
+.storybook-button--outlined:focus-visible:not(:disabled) {
+  background: rgba(25, 118, 210, 0.07);
+  color: var(--btn-hover);
+  border-color: var(--btn-hover);
 }
 
 .storybook-button--text {
   background: transparent;
-  color: var(--primary-color);
+  color: var(--btn-main);
+  border: none;
   box-shadow: none;
 }
-
-/* Hover/focus/active interactions */
-.storybook-button:hover:not(:disabled),
-.storybook-button:focus-visible:not(:disabled) {
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
-}
-
-.storybook-button--contained:hover {
-  background: var(--primary-hover);
-}
-
-.storybook-button--outlined:hover {
-  background: rgba(25, 118, 210, 0.1);
-}
-
-.storybook-button--text:hover {
+.storybook-button--text:hover:not(:disabled),
+.storybook-button--text:focus-visible:not(:disabled) {
+  background: rgba(25, 118, 210, 0.07);
+  color: var(--btn-hover);
   text-decoration: underline;
+}
+
+.storybook-button--ghost {
+  background: transparent;
+  color: var(--btn-main);
+  border: 1px solid transparent;
+  box-shadow: none;
+}
+.storybook-button--ghost:hover:not(:disabled),
+.storybook-button--ghost:focus-visible:not(:disabled) {
+  background: rgba(25, 118, 210, 0.07);
+  border-color: var(--btn-main);
+  color: var(--btn-hover);
+}
+
+/* Icon styles */
+.storybook-button__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.15em;
+  line-height: 1;
+}
+.storybook-button__icon--start {
+  margin-right: 0.35em;
+}
+.storybook-button__icon--end {
+  margin-left: 0.35em;
+}
+.storybook-button__label {
+  display: flex;
+  align-items: center;
+  line-height: 1.2;
+}
+
+/* Spinner overlay for loading */
+.storybook-button__spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 0.5em;
+}
+
+/* Disabled state */
+.storybook-button:disabled,
+.storybook-button[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+  pointer-events: none;
+  box-shadow: none;
+  background: #f5f5f5 !important;
+  color: #aaa !important;
+  border-color: #eee !important;
+}
+
+/* Focus styles for accessibility */
+.storybook-button:focus-visible {
+  outline: 2px solid var(--btn-main);
+  outline-offset: 2px;
+  z-index: 2;
 }
 
 /* Ripple effect for fun */
@@ -96,22 +178,32 @@
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.08);
   z-index: 0;
   opacity: 0;
-  transition: opacity 0.3s;
+  transition: opacity 0.18s;
   border-radius: inherit;
 }
-
 .storybook-button:hover::before {
   opacity: 1;
 }
 
-/* Disabled state */
-.storybook-button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-  pointer-events: none;
-  transform: none;
-  box-shadow: none;
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .storybook-button {
+    border: 2px solid currentColor;
+  }
+  .storybook-button--contained {
+    border-color: transparent;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .storybook-button {
+    transition: none;
+  }
+  .storybook-button:hover {
+    transform: none;
+  }
 }

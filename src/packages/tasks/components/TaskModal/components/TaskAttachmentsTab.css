@@ -1,0 +1,102 @@
+.task-attachments-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.task-attachments-list h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.task-upload-area {
+  border: 2px dashed #ddd;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  background: #fafafa;
+}
+
+.task-upload-area:hover {
+  border-color: #1976d2;
+  background: rgba(25, 118, 210, 0.05);
+}
+
+.task-upload-area.drag-over {
+  border-color: #1976d2;
+  background: rgba(25, 118, 210, 0.1);
+  transform: scale(1.02);
+}
+
+.task-upload-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.task-upload-icon {
+  font-size: 2rem;
+  color: #666;
+}
+
+.task-upload-area:hover .task-upload-icon {
+  color: #1976d2;
+}
+
+.task-upload-hint {
+  font-size: 0.875rem;
+  color: #666;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .task-upload-area {
+    padding: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .task-upload-area {
+    padding: 1rem;
+  }
+  
+  .task-upload-icon {
+    font-size: 1.5rem;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .task-upload-area {
+    background: #2d3748;
+    border-color: #4a5568;
+  }
+  
+  .task-upload-area:hover {
+    background: rgba(25, 118, 210, 0.2);
+  }
+  
+  .task-attachments-list h4 {
+    color: #e2e8f0;
+  }
+  
+  .task-upload-hint {
+    color: #a0aec0;
+  }
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .task-upload-area {
+    transition: none;
+  }
+  
+  .task-upload-area:hover {
+    transform: none;
+  }
+} 

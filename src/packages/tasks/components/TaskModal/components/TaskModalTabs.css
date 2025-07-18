@@ -1,0 +1,7 @@
+.task-modal-tabs {
+  margin-bottom: 1rem;
+}
+
+.task-modal-tabs .storybook-tabs {
+  border-bottom: 1px solid #e9ecef;
+} 

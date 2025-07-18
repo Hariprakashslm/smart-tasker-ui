@@ -1,13 +1,24 @@
 import React, { useEffect } from 'react';
 import './Drawer.css';
+import { AttachmentPreview } from '@tasks/AttachmentPreview';
 
 export interface DrawerProps {
   isOpen: boolean;
   onClose: () => void;
   position?: 'left' | 'right';
   size?: 'small' | 'medium' | 'large' | string;
-  children: React.ReactNode;
+  width?: string | number;
+  content: React.ReactNode;
   title?: string;
+  header?: React.ReactNode;
+  attachments?: any[];
+  onRemove?: (attachment: any) => void;
+  className?: string;
+  style?: React.CSSProperties;
+  closeIcon?: React.ReactNode;
+  ariaLabel?: string;
+  overlayClassName?: string;
+  overlayStyle?: React.CSSProperties;
 }
 
 export const Drawer: React.FC<DrawerProps> = ({
@@ -15,8 +26,18 @@ export const Drawer: React.FC<DrawerProps> = ({
   onClose,
   position = 'right',
   size = 'medium',
-  children,
+  width,
+  content,
   title,
+  header,
+  attachments,
+  onRemove,
+  className = '',
+  style = {},
+  closeIcon,
+  ariaLabel = 'Drawer',
+  overlayClassName = '',
+  overlayStyle = {},
 }) => {
   useEffect(() => {
     const handleEsc = (e: KeyboardEvent) => {
@@ -32,22 +53,39 @@ export const Drawer: React.FC<DrawerProps> = ({
     large: '700px',
   };
 
-  const drawerWidth = sizeMap[size] || size;
+  const drawerWidth = width || sizeMap[size] || size;
 
   return (
     <>
-      {isOpen && <div className="drawer-overlay" onClick={onClose} />}
+      {isOpen && (
+        <div
+          className={["drawer-overlay", overlayClassName].filter(Boolean).join(' ')}
+          onClick={onClose}
+          style={overlayStyle}
+        />
+      )}
       <div
-        className={`drawer drawer-${position} ${isOpen ? 'drawer-open' : ''}`}
-        style={{ width: drawerWidth }}
+        className={[
+          'drawer',
+          `drawer-${position}`,
+          isOpen ? 'drawer-open' : '',
+          className,
+        ].filter(Boolean).join(' ')}
+        style={{ width: drawerWidth, ...style }}
+        aria-label={ariaLabel}
+        role="dialog"
+        aria-modal="true"
       >
         <div className="drawer-header">
-          {title && <h3>{title}</h3>}
-          <button className="drawer-close" onClick={onClose}>
-            ×
+          {header ? header : title && <h3>{title}</h3>}
+          <button className="drawer-close" onClick={onClose} aria-label="Close drawer">
+            {closeIcon || '×'}
           </button>
         </div>
-        <div className="drawer-body">{children}</div>
+        <div className="drawer-body">
+          {content}
+          {attachments && <AttachmentPreview attachments={attachments} onRemove={onRemove} />}
+        </div>
       </div>
     </>
   );

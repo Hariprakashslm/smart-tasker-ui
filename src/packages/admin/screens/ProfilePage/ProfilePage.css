@@ -1,0 +1,123 @@
+.profile-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-bg, #f7f8fa);
+}
+.profile-card {
+  background: var(--color-surface, #fff);
+  border-radius: 16px;
+  box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  padding: 2.5rem 3rem;
+  min-width: 340px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+.profile-avatar img {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #6366f1;
+  background: #e0e7ff;
+}
+.profile-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+.profile-info h2 {
+  margin: 0;
+  font-size: 1.4rem;
+}
+.profile-info p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 1rem;
+}
+.profile-info input {
+  margin-bottom: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 1rem;
+  width: 200px;
+}
+.profile-info input:focus {
+  border-color: #6366f1;
+  outline: none;
+}
+.profile-edit, .profile-save, .profile-cancel {
+  background: #6366f1;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  margin: 0.25rem;
+  transition: background 0.2s;
+}
+.profile-edit:hover, .profile-save:hover, .profile-cancel:hover {
+  background: #4f46e5;
+}
+.profile-cancel {
+  background: #d1d5db;
+  color: #23232a;
+}
+.profile-cancel:hover {
+  background: #9ca3af;
+}
+.profile-preferences {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+.profile-preferences label {
+  font-size: 1rem;
+  color: #23232a;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+@media (prefers-color-scheme: dark) {
+  .profile-page {
+    background: var(--color-bg-dark, #18181b);
+  }
+  .profile-card {
+    background: var(--color-surface-dark, #23232a);
+    color: #f3f4f6;
+  }
+  .profile-info input {
+    background: #18181b;
+    color: #f3f4f6;
+    border-color: #27272a;
+  }
+  .profile-info input:focus {
+    border-color: #818cf8;
+  }
+  .profile-edit, .profile-save {
+    background: #818cf8;
+    color: #18181b;
+  }
+  .profile-edit:hover, .profile-save:hover {
+    background: #6366f1;
+    color: #fff;
+  }
+  .profile-cancel {
+    background: #27272a;
+    color: #f3f4f6;
+  }
+  .profile-cancel:hover {
+    background: #52525b;
+  }
+  .profile-preferences label {
+    color: #f3f4f6;
+  }
+} 

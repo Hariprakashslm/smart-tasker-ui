@@ -11,7 +11,7 @@ const meta: Meta<typeof Modal> = {
     title: { control: 'text' },
     size: {
       control: 'select',
-      options: ['small', 'medium', 'large', 'full'],
+      options: ['small', 'medium', 'large'],
     },
     onClose: { action: 'closed' },
   },
@@ -24,7 +24,7 @@ export const Default: Story = {
   args: {
     isOpen: true,
     title: 'Simple Modal',
-    children: 'This is a basic modal content.',
+    content: 'This is a basic modal content.',
     footer: <button>OK</button>,
   },
 };
@@ -48,7 +48,7 @@ export const Interactive: Story = {
   },
   args: {
     title: 'Modal Title',
-    children: 'This modal opens and closes with state.',
+    content: 'This modal opens and closes with state.',
     footer: (
       <>
         <button onClick={() => alert('Cancel')}>Cancel</button>
@@ -63,7 +63,7 @@ export const LargeModal: Story = {
     isOpen: true,
     title: 'Large Modal',
     size: 'large',
-    children: (
+    content: (
       <p>
         This modal is large. Lorem ipsum dolor sit amet, consectetur adipiscing
         elit. Pellentesque at arcu ut nisi laoreet maximus.

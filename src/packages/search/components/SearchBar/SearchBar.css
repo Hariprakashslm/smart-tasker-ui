@@ -10,18 +10,23 @@
   align-items: center;
 }
 
+.searchbar-icon {
+  font-size: 1.1rem;
+  color: #a0aec0;
+  transition: color 0.2s;
+}
+
 .input-field {
-  width: 100%;
-  padding: 8px 12px;
-  font-size: 14px;
-  border: 1px solid #d1d5db;
-  border-radius: 6px;
-  outline: none;
-  transition: border 0.2s ease;
+  border-radius: 999px !important;
+  box-shadow: 0 1px 4px rgba(30, 64, 175, 0.04);
+  background: #f9fafb;
+  transition: border 0.2s, box-shadow 0.2s;
 }
 
 .input-field:focus {
   border-color: #2563eb;
+  box-shadow: 0 0 0 2px rgba(37, 99, 235, 0.15);
+  background: #fff;
 }
 
 .input-field.has-icon {
@@ -46,4 +51,25 @@
   font-size: 14px;
   color: #6b7280;
   cursor: pointer;
+}
+
+.searchbar-clear-btn {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  color: #a0aec0;
+  cursor: pointer;
+  padding: 2px 6px;
+  border-radius: 50%;
+  transition: background 0.2s, color 0.2s;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.searchbar-clear-btn:hover,
+.searchbar-clear-btn:focus {
+  background: #e0e7ef;
+  color: #2563eb;
 }

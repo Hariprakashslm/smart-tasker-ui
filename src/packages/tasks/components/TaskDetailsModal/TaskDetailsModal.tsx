@@ -50,36 +50,36 @@ export const TaskDetailsModal: React.FC<TaskDetailsModalProps> = ({
       ? 'warning'
       : 'default';
 
-  return (
-    <Modal isOpen={isOpen} onClose={onClose} title={task.title}>
-      <div className="task-details">
-        <div className="task-details-meta">
-          <Badge text={task.status} type={badgeType} />
-          {task.dueDate && <div className="task-due">📅 {task.dueDate}</div>}
-          {task.assignee && (
-            <div className="task-assignee">
-              <Avatar name={task.assignee.name} src={task.assignee.imageUrl} />
-              <span>{task.assignee.name}</span>
-            </div>
-          )}
-        </div>
-
-        {task.description && (
-          <p className="task-description">{task.description}</p>
+  const modalBody = (
+    <div className="task-details">
+      <div className="task-details-meta">
+        <Badge text={task.status} type={badgeType} />
+        {task.dueDate && <div className="task-due">📅 {task.dueDate}</div>}
+        {task.assignee && (
+          <div className="task-assignee">
+            <Avatar name={task.assignee.name} src={task.assignee.imageUrl} />
+            <span>{task.assignee.name}</span>
+          </div>
         )}
-
-        {task?.attachments && task?.attachments.length > 0 && (
-          <AttachmentPreview attachments={task.attachments} />
-        )}
-
-        {/* <CommentBox  
-        
-        initialComments={task.comments || []}
-        
-        /> */}
-
-        <CommentBox onSubmit={() => {}} />
       </div>
-    </Modal>
+
+      {task.description && (
+        <p className="task-description">{task.description}</p>
+      )}
+
+      {task?.attachments && task?.attachments.length > 0 && (
+        <AttachmentPreview attachments={task.attachments} />
+      )}
+
+      {/* <CommentBox  
+      initialComments={task.comments || []}
+      /> */}
+
+      <CommentBox onSubmit={() => {}} />
+    </div>
+  );
+
+  return (
+    <Modal isOpen={isOpen} onClose={onClose} title={task.title} content={modalBody} />
   );
 };

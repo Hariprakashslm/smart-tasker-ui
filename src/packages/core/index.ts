@@ -14,6 +14,7 @@ export { Modal } from './components/Modal';
 export { ProgressBar } from './components/ProgressBar';
 export { RadioButton } from './components/RadioButton';
 export { Select } from './components/Select';
+export type { SelectOption } from './components/Select';
 export { Spinner } from './components/Spinner';
 export { Switch } from './components/Switch';
 export { Tag } from './components/Tag';

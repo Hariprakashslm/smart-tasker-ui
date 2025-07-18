@@ -38,34 +38,36 @@ export const CreateProjectModal: React.FC<CreateProjectModalProps> = ({
     onClose();
   };
 
-  return (
-    <Modal title="Create New Project" isOpen={isOpen} onClose={onClose}>
+  const modalBody = (
+    <div
+      className="create-project-content"
+      style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
+    >
+      <Input
+        label="Project Name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+        required
+        error={error}
+      />
+
+      <Input
+        label="Description"
+        placeholder="(optional)"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
+
       <div
-        className="create-project-content"
-        style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}
+        style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px' }}
       >
-        <Input
-          label="Project Name"
-          value={name}
-          onChange={(e) => setName(e.target.value)}
-          required
-          error={error}
-        />
-
-        <Input
-          label="Description"
-          placeholder="(optional)"
-          value={description}
-          onChange={(e) => setDescription(e.target.value)}
-        />
-
-        <div
-          style={{ display: 'flex', justifyContent: 'flex-end', gap: '12px' }}
-        >
-          <Button variant="outline" label="Cancel" onClick={onClose} />
-          <Button label="Create" onClick={handleSubmit} />
-        </div>
+        <Button variant="outlined" label="Cancel" onClick={onClose} />
+        <Button label="Create" onClick={handleSubmit} />
       </div>
-    </Modal>
+    </div>
+  );
+
+  return (
+    <Modal title="Create New Project" isOpen={isOpen} onClose={onClose} content={modalBody} />
   );
 };

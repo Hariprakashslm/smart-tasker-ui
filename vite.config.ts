@@ -73,6 +73,13 @@ export default defineConfig({
       '@screens/tasks': path.resolve(__dirname, 'src/packages/tasks/screens'),
       '@screens/admin': path.resolve(__dirname, 'src/packages/admin/screens'),
       '@screens/common': path.resolve(__dirname, 'src/packages/common/screens'),
+      '@screens/notifications': path.resolve(
+        __dirname,
+        'src/packages/notifications/screens'
+      ),
+      '@screens/files': path.resolve(__dirname, 'src/packages/files/screens'),
+      '@screens/search': path.resolve(__dirname, 'src/packages/search/screens'),
+      '@screens/auth': path.resolve(__dirname, 'src/packages/auth/screens'),
     },
   },
 });

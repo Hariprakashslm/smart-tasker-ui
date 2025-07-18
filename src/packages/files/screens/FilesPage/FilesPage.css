@@ -1,0 +1,36 @@
+.files-page {
+  padding: 2rem;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+.files-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.files-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #222;
+}
+
+.upload-btn {
+  background: #60a5fa;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.upload-btn:hover {
+  background: #2563eb;
+} 

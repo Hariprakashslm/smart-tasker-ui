@@ -1,0 +1,103 @@
+.task-time-tracking-tab {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.task-time-tracking-tab h4 {
+  margin: 0 0 1rem 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.task-time-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 1rem;
+}
+
+.task-time-stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.task-time-label {
+  font-size: 0.875rem;
+  color: #666;
+  margin-bottom: 0.25rem;
+}
+
+.task-time-value {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.task-time-progress {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f8f9fa;
+  border-radius: 8px;
+  border: 1px solid #e9ecef;
+}
+
+.task-time-progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e9ecef;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.task-time-progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #28a745, #20c997);
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+.task-time-progress-text {
+  font-size: 0.875rem;
+  color: #666;
+  text-align: center;
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .task-time-stats {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .task-time-stat,
+  .task-time-progress {
+    background: #2d3748;
+    border-color: #4a5568;
+  }
+  
+  .task-time-tracking-tab h4 {
+    color: #e2e8f0;
+  }
+  
+  .task-time-value {
+    color: #e2e8f0;
+  }
+  
+  .task-time-label,
+  .task-time-progress-text {
+    color: #a0aec0;
+  }
+  
+  .task-time-progress-bar {
+    background: #4a5568;
+  }
+} 

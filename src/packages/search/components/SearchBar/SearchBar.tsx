@@ -21,20 +21,17 @@ export const SearchBar: React.FC<SearchBarProps> = ({
       value={value}
       onChange={(e) => onChange(e.target.value)}
       placeholder={placeholder}
-      icon={<span style={{ fontSize: 14 }}>🔍</span>}
+      icon={<span className="searchbar-icon" aria-hidden="true">🔎</span>}
+      aria-label="Search"
       suffix={
         value && onClear ? (
           <button
             onClick={onClear}
-            style={{
-              background: 'none',
-              border: 'none',
-              fontSize: 14,
-              cursor: 'pointer',
-              color: '#888',
-            }}
+            className="searchbar-clear-btn"
+            aria-label="Clear search"
+            type="button"
           >
-            ✖
+            <span aria-hidden="true">✕</span>
           </button>
         ) : undefined
       }

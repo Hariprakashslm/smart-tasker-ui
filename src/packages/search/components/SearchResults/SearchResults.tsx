@@ -27,11 +27,11 @@ export const SearchResults: React.FC<SearchResultsProps> = ({
 
       {isLoading ? (
         <div className="search-loading">Searching...</div>
-      ) : results.length === 0 ? (
+      ) : results?.length === 0 ? (
         <div className="search-empty">No results found.</div>
       ) : (
         <ul className="search-list">
-          {results.map((item) => (
+          {results?.map((item) => (
             <li key={item.id} className="search-item" onClick={item.onClick}>
               <div className="search-item-type">{item.type.toUpperCase()}</div>
               <div className="search-item-title">{item.title}</div>

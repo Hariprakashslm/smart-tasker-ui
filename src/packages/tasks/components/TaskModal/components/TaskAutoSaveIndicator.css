@@ -1,0 +1,16 @@
+.task-auto-save-indicator {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  background: rgba(25, 118, 210, 0.1);
+  border: 1px solid rgba(25, 118, 210, 0.2);
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: #1976d2;
+}
+
+.task-auto-save-indicator span {
+  font-weight: 500;
+} 
