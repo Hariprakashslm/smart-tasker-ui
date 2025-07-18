@@ -39,7 +39,10 @@
       "@types/*": ["./src/types/*"],
       "@utils/*": ["./src/utils/*"],
       "@hooks/*": ["./src/hooks/*"],
-      "@constants/*": ["./src/constants/*"]
+      "@constants/*": ["./src/constants/*"],
+      "@screens/files/*": ["src/packages/files/screens/*"],
+      "@screens/search/*": ["src/packages/search/screens/*"],
+      "@screens/auth/*": ["src/packages/auth/screens/*"]
     },
     "strict": true,
     "skipLibCheck": true,

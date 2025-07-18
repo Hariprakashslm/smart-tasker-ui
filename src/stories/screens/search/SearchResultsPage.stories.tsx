@@ -1,6 +1,7 @@
 import React from 'react';
-import { SearchResultsPage, SearchResultsPageProps } from '@screens/search/SearchResultsPage';
+import { SearchResultsPage } from '@screens/search/SearchResultsPage';
 import { Meta, StoryObj } from '@storybook/react';
+import { SearchItem } from '@/packages/search/components/SearchResults';
 
 const meta: Meta<typeof SearchResultsPage> = {
   title: 'Screens/Search/SearchResultsPage',
@@ -10,7 +11,7 @@ export default meta;
 
 type Story = StoryObj<typeof SearchResultsPage>;
 
-const mockResults = [
+const mockResults: SearchItem[] = [
   {
     id: '1',
     title: 'Fix login bug',
@@ -38,7 +39,8 @@ export const Default: Story = {
     filters: { status: 'open' },
     sort: 'relevance',
     onQueryChange: (q: string) => alert('Query: ' + q),
-    onFilterChange: (f: Record<string, string | boolean>) => alert('Filter: ' + JSON.stringify(f)),
+    onFilterChange: (f: Record<string, string | boolean>) =>
+      alert('Filter: ' + JSON.stringify(f)),
     onSortChange: (s: string) => alert('Sort: ' + s),
     onResultClick: (item: { title: string }) => alert('Clicked: ' + item.title),
   },
@@ -57,4 +59,4 @@ export const NoResults: Story = {
     query: 'beta',
     results: [],
   },
-}; 
+};

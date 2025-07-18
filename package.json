@@ -1,6 +1,6 @@
 {
   "name": "@centralized-ui/smart-tasker-ui",
-  "version": "0.3.11",
+  "version": "0.3.12",
   "description": "Reusable React component library for Smart Tasker UI",
   "author": "Hari Prakash",
   "license": "MIT",

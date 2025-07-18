@@ -1,6 +1,7 @@
 import React from 'react';
 import { FilesPage, FilesPageProps } from '@screens/files/FilesPage';
 import { Meta, StoryObj } from '@storybook/react';
+import { FileItem } from '@/packages/files/components/FileManager';
 
 const meta: Meta<typeof FilesPage> = {
   title: 'Screens/Files/FilesPage',
@@ -10,7 +11,7 @@ export default meta;
 
 type Story = StoryObj<typeof FilesPage>;
 
-const mockFiles = [
+const mockFiles: FileItem[] = [
   {
     id: '1',
     name: 'Project Plan.docx',

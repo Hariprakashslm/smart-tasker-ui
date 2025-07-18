@@ -14,7 +14,6 @@ export * as search from './search';
 export * as tasks from './tasks';
 
 // Shared utilities and types
-export * from '../types';
 export * from '../utils';
 export * from '../hooks';
 export * from '../constants';
