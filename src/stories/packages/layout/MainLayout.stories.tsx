@@ -22,7 +22,9 @@ export const Default = () => {
     { label: 'Settings', path: '/settings', icon: '⚙️' },
   ];
 
-  const onNavigate = (path: string) => {};
+  const onNavigate = (path: string) => {
+    alert(path);
+  };
 
   return (
     <MainLayout

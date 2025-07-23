@@ -1,6 +1,6 @@
 {
   "name": "@centralized-ui/smart-tasker-ui",
-  "version": "0.3.15",
+  "version": "0.3.16",
   "description": "Reusable React component library for Smart Tasker UI",
   "author": "Hari Prakash",
   "license": "MIT",
@@ -44,7 +44,8 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
     "analyze": "node scripts/analyze-bundle.js",
-    "storybook:build": "storybook build -o storybook-static"
+    "storybook:build": "storybook build -o storybook-static",
+    "app-publish": "npm run build:all && npm publish"
   },
   "dependencies": {
     "@hookform/resolvers": "^5.1.1",
