@@ -2,17 +2,9 @@
 import React from 'react';
 import './BoardColumn.css';
 
-import { TaskCard, TaskCardProps } from '@tasks/TaskCard';
+import { TaskCard } from '@tasks/TaskCard';
 import { ColumnAddTaskButton } from '@boards/ColumnAddTaskButton';
-type TaskStatus = 'todo' | 'in-progress' | 'done';
-export interface BoardColumnProps {
-  title: string;
-  status: 'todo' | 'in-progress' | 'done';
-  tasks: TaskCardProps[];
-  columnId?: string;
-  onTaskClick?: (taskId: string) => void;
-  onAddTask?: (status: TaskStatus) => void;
-}
+import { BoardColumnProps } from './types';
 
 export const BoardColumn: React.FC<BoardColumnProps> = ({
   title,

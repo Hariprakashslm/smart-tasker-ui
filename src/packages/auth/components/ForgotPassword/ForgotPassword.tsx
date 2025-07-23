@@ -4,11 +4,7 @@ import { Input } from '@core/Input';
 import { Button } from '@core/Button';
 import { AuthLayout } from '../AuthLayout';
 import './ForgotPassword.css';
-
-export interface ForgotPasswordProps {
-  onSubmit: (email: string) => Promise<void>;
-  onBackToLogin?: () => void;
-}
+import { ForgotPasswordProps } from './types';
 
 export const ForgotPassword: React.FC<ForgotPasswordProps> = ({
   onSubmit,

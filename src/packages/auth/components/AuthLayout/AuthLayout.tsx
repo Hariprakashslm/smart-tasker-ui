@@ -1,13 +1,7 @@
 // src/ui/auth/AuthLayout.tsx
 import React from 'react';
 import './AuthLayout.css';
-
-export interface AuthLayoutProps {
-  children: React.ReactNode;
-  title?: string;
-  subtitle?: string;
-  footer?: React.ReactNode;
-}
+import { AuthLayoutProps } from './types';
 
 export const AuthLayout: React.FC<AuthLayoutProps> = ({
   children,

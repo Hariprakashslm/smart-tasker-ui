@@ -1,1 +1,1 @@
-export { BoardColumn, type BoardColumnProps } from './BoardColumn';
+export { BoardColumn } from './BoardColumn';

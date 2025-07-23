@@ -3,15 +3,9 @@ import React, { useState } from 'react';
 import './SignupForm.css';
 import { Input } from '@core/Input';
 import { Button } from '@core/Button';
-import { OAuthButtons, OAuthProvider } from '@auth/OAuthButtons';
+import { OAuthButtons } from '@auth/OAuthButtons';
 import { Divider } from '@core/Divider';
-
-export interface SignupFormProps {
-  onSubmit: (data: { name: string; email: string; password: string }) => void;
-  onCancel?: () => void;
-  showOAuth?: boolean;
-  oauthProviders?: OAuthProvider[];
-}
+import { SignupFormProps } from './types';
 
 export const SignupForm: React.FC<SignupFormProps> = ({
   onSubmit,

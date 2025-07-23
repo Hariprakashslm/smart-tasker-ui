@@ -4,12 +4,7 @@ import './ResetPassword.css';
 import { Input } from '@core/Input';
 import { Button } from '@core/Button';
 import { AuthLayout } from '../AuthLayout';
-
-export interface ResetPasswordProps {
-  token: string;
-  onSubmit: (data: { token: string; password: string }) => Promise<void>;
-  onLoginRedirect?: () => void;
-}
+import { ResetPasswordProps } from './types';
 
 export const ResetPassword: React.FC<ResetPasswordProps> = ({
   token,

@@ -1,12 +1,7 @@
 // src/ui/boards/ColumnHeader.tsx
 import React from 'react';
 import './ColumnHeader.css';
-
-export interface ColumnHeaderProps {
-  title: string;
-  taskCount?: number;
-  actions?: React.ReactNode; // optional dropdown or button
-}
+import { ColumnHeaderProps } from './types';
 
 export const ColumnHeader: React.FC<ColumnHeaderProps> = ({
   title,

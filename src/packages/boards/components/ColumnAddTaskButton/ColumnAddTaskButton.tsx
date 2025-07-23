@@ -2,12 +2,7 @@
 import React from 'react';
 import './ColumnAddTaskButton.css';
 import { Button } from '@core/Button';
-
-type TaskStatus = 'todo' | 'in-progress' | 'done';
-export interface ColumnAddTaskButtonProps {
-  status: TaskStatus;
-  onAddTask: (status: TaskStatus) => void;
-}
+import { ColumnAddTaskButtonProps } from './types';
 
 export const ColumnAddTaskButton: React.FC<ColumnAddTaskButtonProps> = ({
   status,

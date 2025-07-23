@@ -3,14 +3,7 @@ import React from 'react';
 import './KanbanBoard.css';
 
 import { BoardColumn } from '@boards/BoardColumn';
-import type { TaskCardProps } from '@tasks/TaskCard';
-
-type TaskStatus = 'todo' | 'in-progress' | 'done';
-export interface KanbanBoardProps {
-  tasks: TaskCardProps[];
-  onTaskClick?: (taskId: string) => void;
-  onAddTask?: (status: TaskStatus) => void;
-}
+import { KanbanBoardProps, TaskStatus } from './types';
 
 const COLUMN_CONFIG: { title: string; status: TaskStatus }[] = [
   { title: 'To Do', status: 'todo' },

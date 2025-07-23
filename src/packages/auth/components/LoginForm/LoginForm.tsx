@@ -3,15 +3,9 @@ import React, { useState } from 'react';
 import './LoginForm.css';
 import { Input } from '@core/Input';
 import { Button } from '@core/Button';
-import { OAuthButtons, OAuthProvider } from '@auth/OAuthButtons';
+import { OAuthButtons } from '@auth/OAuthButtons';
 import { Divider } from '@core/Divider';
-
-export interface LoginFormProps {
-  onSubmit: (data: { email: string; password: string }) => void;
-  onCancel?: () => void;
-  showOAuth?: boolean;
-  oauthProviders?: OAuthProvider[];
-}
+import { LoginFormProps } from './types';
 
 export const LoginForm: React.FC<LoginFormProps> = ({
   onSubmit,
