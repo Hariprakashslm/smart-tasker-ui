@@ -22,6 +22,8 @@ export const Default = () => {
     { label: 'Settings', path: '/settings', icon: '⚙️' },
   ];
 
+  const onNavigate = (path: string) => {};
+
   return (
     <MainLayout
       pageTitle="Dashboard"
@@ -30,6 +32,7 @@ export const Default = () => {
       showSearch
       navItems={navItems}
       appName="Smart Tasker"
+      onNavigate={onNavigate}
     >
       <div style={{ padding: 16 }}>
         <h1>Welcome to Smart Tasker 👋</h1>

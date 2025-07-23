@@ -16,6 +16,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
   unreadNotifications = 0,
   navItems = [],
   appName,
+  onNavigate,
 }) => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
@@ -35,7 +36,11 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
 
       {/* Sidebar (visible on desktop or if toggled on mobile) */}
       <aside className={`main-layout-sidebar ${sidebarOpen ? 'open' : ''}`}>
-        <Sidebar navItems={navItems} appName={appName} />
+        <Sidebar
+          navItems={navItems}
+          appName={appName}
+          onNavigate={onNavigate}
+        />
       </aside>
 
       {/* Main Content */}

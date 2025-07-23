@@ -13,4 +13,5 @@ export interface MainLayoutProps {
   unreadNotifications?: number;
   navItems?: NavItem[];
   appName?: string;
+  onNavigate: (path: string) => void;
 }
