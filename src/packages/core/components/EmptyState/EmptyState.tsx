@@ -1,12 +1,6 @@
 import React from 'react';
 import './EmptyState.css';
-
-export interface EmptyStateProps {
-  icon?: React.ReactNode;
-  title?: string;
-  description?: string;
-  action?: React.ReactNode;
-}
+import type { EmptyStateProps } from './types';
 
 export const EmptyState: React.FC<EmptyStateProps> = ({
   icon,

@@ -5,3 +5,7 @@ export const screens = {
   NotFoundPage,
   ServerErrorPage,
 };
+
+// Type exports
+export type { NotFoundPageProps } from './screens/NotFoundPage/types';
+export type { ServerErrorPageProps } from './screens/ServerErrorPage/types';

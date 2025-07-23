@@ -3,14 +3,7 @@ import React from 'react';
 import './LiveUpdateBanner.css';
 import { Button } from '@core/Button';
 import { Badge } from '@core/Badge';
-
-export interface LiveUpdateBannerProps {
-  message: string;
-  variant?: 'info' | 'success' | 'warning' | 'error';
-  actionLabel?: string;
-  onAction?: () => void;
-  fixed?: boolean;
-}
+import { LiveUpdateBannerProps } from './types';
 
 export const LiveUpdateBanner: React.FC<LiveUpdateBannerProps> = ({
   message,

@@ -1,13 +1,6 @@
 import React from 'react';
 import './Divider.css';
-
-export interface DividerProps {
-  orientation?: 'horizontal' | 'vertical';
-  text?: string;
-  textAlign?: 'left' | 'center' | 'right';
-  thickness?: string;
-  color?: string;
-}
+import type { DividerProps } from './types';
 
 export const Divider: React.FC<DividerProps> = ({
   orientation = 'horizontal',

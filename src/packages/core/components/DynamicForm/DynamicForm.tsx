@@ -4,43 +4,7 @@ import './DynamicForm.css';
 import { Input } from '@core/Input';
 import { Button } from '@core/Button';
 import { ButtonProps } from '@core/Button/Button';
-
-export type FieldType =
-  | 'text'
-  | 'email'
-  | 'password'
-  | 'textarea'
-  | 'select'
-  | 'checkbox';
-
-export interface FieldOption {
-  label: string;
-  value: string;
-}
-
-export interface ValidationRules {
-  required?: boolean;
-  pattern?: RegExp;
-  minLength?: number;
-  maxLength?: number;
-}
-
-export interface FormField {
-  name: string;
-  label: string;
-  type: FieldType;
-  placeholder?: string;
-  defaultValue?: any;
-  options?: FieldOption[]; // for select
-  colSpan?: number;
-  validation?: ValidationRules;
-}
-
-export interface DynamicFormProps {
-  fields: FormField[];
-  onSubmit: (data: Record<string, any>) => void;
-  buttons?: ButtonProps[];
-}
+import type { FieldType, FieldOption, ValidationRules, FormField, DynamicFormProps } from './types';
 
 export const DynamicForm: React.FC<DynamicFormProps> = ({
   fields,

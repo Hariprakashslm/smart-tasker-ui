@@ -1,13 +1,6 @@
 import React from 'react';
 import './Alert.css';
-
-export interface AlertProps {
-  type?: 'success' | 'error' | 'warning' | 'info';
-  message: string;
-  description?: string;
-  closable?: boolean;
-  onClose?: () => void;
-}
+import type { AlertProps } from './types';
 
 export const Alert: React.FC<AlertProps> = ({
   type = 'info',

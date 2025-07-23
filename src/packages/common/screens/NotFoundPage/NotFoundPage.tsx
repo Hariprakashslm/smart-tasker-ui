@@ -1,10 +1,7 @@
 // src/ui/common/NotFoundPage.tsx
 import React from 'react';
 import './NotFoundPage.css';
-
-export interface NotFoundPageProps {
-  onBackToHome?: () => void;
-}
+import { NotFoundPageProps } from './types';
 
 export const NotFoundPage: React.FC<NotFoundPageProps> = ({ onBackToHome }) => {
   return (

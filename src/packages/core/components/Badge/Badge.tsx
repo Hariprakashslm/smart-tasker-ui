@@ -1,13 +1,6 @@
 import React from 'react';
 import './Badge.css';
-
-export interface BadgeProps {
-  text?: number | string;
-  type?: 'success' | 'error' | 'warning' | 'info' | 'default';
-  showDot?: boolean;
-  children?: React.ReactNode;
-  color?: string;
-}
+import type { BadgeProps } from './types';
 
 export const Badge: React.FC<BadgeProps> = ({
   text,

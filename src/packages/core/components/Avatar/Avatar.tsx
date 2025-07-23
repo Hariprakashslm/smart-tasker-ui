@@ -1,15 +1,6 @@
 import React from 'react';
 import './Avatar.css';
-
-export interface AvatarProps {
-  src?: string;
-  alt?: string;
-  name?: string;
-  size?: 'small' | 'medium' | 'large';
-  shape?: 'circle' | 'square';
-  showStatus?: boolean;
-  status?: 'online' | 'offline';
-}
+import type { AvatarProps } from './types';
 
 export const Avatar: React.FC<AvatarProps> = ({
   src,

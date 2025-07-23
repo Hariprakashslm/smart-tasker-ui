@@ -2,17 +2,7 @@
 import React from 'react';
 import './TypingIndicator.css';
 import { Avatar } from '@core/Avatar';
-
-export interface TypingUser {
-  id: string;
-  name: string;
-  avatarUrl?: string;
-}
-
-export interface TypingIndicatorProps {
-  users: TypingUser[];
-  maxAvatars?: number;
-}
+import { TypingIndicatorProps } from './types';
 
 export const TypingIndicator: React.FC<TypingIndicatorProps> = ({
   users,

@@ -1,18 +1,7 @@
 // src/components/Tabs.tsx
 import React, { useState } from 'react';
 import './Tabs.css';
-
-export interface TabItem {
-  key: string;
-  title: string;
-}
-
-export interface TabsProps {
-  tabs: TabItem[];
-  defaultActiveKey?: string;
-  onChange?: (key: string) => void;
-  fullWidth?: boolean;
-}
+import type { TabItem, TabsProps } from './types';
 
 export const Tabs: React.FC<TabsProps> = ({
   tabs,

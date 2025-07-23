@@ -1,10 +1,7 @@
 // src/ui/common/ServerErrorPage.tsx
 import React from 'react';
 import './ServerErrorPage.css';
-
-export interface ServerErrorPageProps {
-  onRetry?: () => void;
-}
+import { ServerErrorPageProps } from './types';
 
 export const ServerErrorPage: React.FC<ServerErrorPageProps> = ({
   onRetry,

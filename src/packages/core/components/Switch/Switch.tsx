@@ -1,13 +1,6 @@
 import React from 'react';
 import './Switch.css';
-
-export interface SwitchProps {
-  checked: boolean;
-  onChange: (checked: boolean) => void;
-  label?: string;
-  disabled?: boolean;
-  id?: string;
-}
+import type { SwitchProps } from './types';
 
 export const Switch: React.FC<SwitchProps> = ({
   checked,

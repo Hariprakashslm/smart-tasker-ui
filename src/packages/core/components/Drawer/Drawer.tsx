@@ -1,25 +1,7 @@
 import React, { useEffect } from 'react';
 import './Drawer.css';
 import { AttachmentPreview } from '@tasks/AttachmentPreview';
-
-export interface DrawerProps {
-  isOpen: boolean;
-  onClose: () => void;
-  position?: 'left' | 'right';
-  size?: 'small' | 'medium' | 'large' | string;
-  width?: string | number;
-  content: React.ReactNode;
-  title?: string;
-  header?: React.ReactNode;
-  attachments?: any[];
-  onRemove?: (attachment: any) => void;
-  className?: string;
-  style?: React.CSSProperties;
-  closeIcon?: React.ReactNode;
-  ariaLabel?: string;
-  overlayClassName?: string;
-  overlayStyle?: React.CSSProperties;
-}
+import type { DrawerProps } from './types';
 
 export const Drawer: React.FC<DrawerProps> = ({
   isOpen,

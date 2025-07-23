@@ -1,11 +1,6 @@
 import React from 'react';
 import './ErrorMessage.css';
-
-export interface ErrorMessageProps {
-  message: string;
-  icon?: React.ReactNode;
-  className?: string;
-}
+import type { ErrorMessageProps } from './types';
 
 export const ErrorMessage: React.FC<ErrorMessageProps> = ({
   message,

@@ -1,19 +1,7 @@
 // src/ui/core/Input.tsx
 import React from 'react';
 import './Input.css';
-
-export interface InputProps {
-  label?: string;
-  placeholder?: string;
-  type?: string;
-  value?: string;
-  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
-  disabled?: boolean;
-  required?: boolean;
-  error?: string;
-  icon?: React.ReactNode; // NEW: Left icon
-  suffix?: React.ReactNode; // NEW: Right icon or button
-}
+import type { InputProps } from './types';
 
 export const Input: React.FC<InputProps> = ({
   label,

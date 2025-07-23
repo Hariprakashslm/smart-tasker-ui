@@ -3,18 +3,7 @@ import React from 'react';
 import './PresenceIndicator.css';
 import { Avatar } from '@core/Avatar';
 import { Tooltip } from '@core/Tooltip';
-
-export interface PresenceUser {
-  id: string;
-  name: string;
-  avatarUrl?: string;
-}
-
-export interface PresenceIndicatorProps {
-  users: PresenceUser[];
-  maxAvatars?: number;
-  label?: string;
-}
+import { PresenceIndicatorProps } from './types';
 
 export const PresenceIndicator: React.FC<PresenceIndicatorProps> = ({
   users,

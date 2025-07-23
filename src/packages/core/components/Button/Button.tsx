@@ -1,29 +1,7 @@
 import React from 'react';
 import { Spinner } from '@core/Spinner';
 import './Button.css';
-
-export interface ButtonProps {
-  label: string;
-  variant?: 'contained' | 'outlined' | 'text' | 'ghost';
-  color?: 'primary' | 'danger' | 'success' | 'warning' | 'default' | string;
-  size?: 'small' | 'medium' | 'large';
-  onClick?: () => void;
-  disabled?: boolean;
-  isLoading?: boolean;
-  startIcon?: React.ReactNode;
-  endIcon?: React.ReactNode;
-  fullWidth?: boolean;
-  rounded?: boolean;
-  borderRadius?: number | string;
-  spinner?: React.ReactNode;
-  className?: string;
-  style?: React.CSSProperties;
-  ariaLabel?: string;
-  type?: 'button' | 'submit' | 'reset';
-  form?: string;
-  autoFocus?: boolean;
-  tabIndex?: number;
-}
+import type { ButtonProps } from './types';
 
 const COLOR_CLASS_MAP = {
   primary: 'storybook-button--primary',

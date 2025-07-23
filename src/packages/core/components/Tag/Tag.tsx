@@ -1,12 +1,6 @@
 import React from 'react';
 import './Tag.css';
-
-export interface TagProps {
-  label: string;
-  onRemove?: () => void;
-  color?: 'default' | 'primary' | 'success' | 'danger';
-  disabled?: boolean;
-}
+import type { TagProps } from './types';
 
 export const Tag: React.FC<TagProps> = ({
   label,
