@@ -1,5 +1,5 @@
 import React from 'react';
-import './TextArea.css';
+import './Textarea.css';
 import type { TextAreaProps } from './types';
 
 export const TextArea: React.FC<TextAreaProps> = ({
