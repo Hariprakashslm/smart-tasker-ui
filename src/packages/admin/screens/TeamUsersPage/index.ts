@@ -1,1 +1,3 @@
-export {TeamUsersPage,type TeamUsersPageProps} from './TeamUsersPage'; 
+export { TeamUsersPage } from './TeamUsersPage';
+
+export * from './types';

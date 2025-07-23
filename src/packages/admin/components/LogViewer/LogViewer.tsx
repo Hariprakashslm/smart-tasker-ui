@@ -2,18 +2,7 @@
 import React from 'react';
 import './LogViewer.css';
 import { Badge } from '@core/Badge';
-
-export interface LogEntry {
-  id: string;
-  timestamp: string; // ISO or human-readable
-  level: 'info' | 'success' | 'warning' | 'error';
-  message: string;
-}
-
-export interface LogViewerProps {
-  logs: LogEntry[];
-  maxHeight?: string;
-}
+import { LogEntry, LogViewerProps } from './types';
 
 export const LogViewer: React.FC<LogViewerProps> = ({
   logs,

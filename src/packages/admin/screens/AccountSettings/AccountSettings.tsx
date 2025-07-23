@@ -4,13 +4,7 @@ import { Card } from '@core/Card';
 import { DynamicForm, FormField } from '@core/DynamicForm'; // Adjust path as needed
 import './AccountSettings.css';
 import { ButtonProps } from '@core/Button/Button';
-
-export interface AccountSettingsProps {
-  initialName: string;
-  initialEmail: string;
-  onSave: (data: { name: string; email: string; password?: string }) => void;
-  onDeactivate?: () => void;
-}
+import { AccountSettingsProps } from './types';
 
 export const AccountSettings: React.FC<AccountSettingsProps> = ({
   initialName,

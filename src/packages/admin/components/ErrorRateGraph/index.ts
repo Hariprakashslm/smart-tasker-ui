@@ -1,1 +1,2 @@
-export { ErrorRateGraph, type ErrorRatePoint } from './ErrorRateGraph';
+export { ErrorRateGraph } from './ErrorRateGraph';
+export * from './types';

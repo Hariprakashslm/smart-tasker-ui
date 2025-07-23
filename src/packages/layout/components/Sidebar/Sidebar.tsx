@@ -10,35 +10,34 @@ export interface NavItem {
 }
 
 export interface SidebarProps {
-  navItems?: NavItem[];
+  navItems: NavItem[];
   appName?: string;
   onNavigate?: (path: string) => void; // for Storybook/local use
 }
 
 export const Sidebar: React.FC<SidebarProps> = ({
-  navItems = [
-    { label: 'Dashboard', path: '/dashboard', icon: '🏠' },
-    { label: 'Projects', path: '/projects', icon: '📁' },
-    { label: 'Tasks', path: '/tasks', icon: '✅' },
-    { label: 'Settings', path: '/settings', icon: '⚙️' },
-  ],
-  appName = 'Smart Tasker',
+  navItems,
+  appName,
   onNavigate,
 }) => {
   return (
     <aside className="sidebar">
-      <div className="sidebar-header">{appName}</div>
+      {appName && <div className="sidebar-header">{appName}</div>}
       <nav className="sidebar-nav">
-        {navItems.map((item) => (
-          <button
-            key={item.path}
-            className={`sidebar-link ${item.active ? 'active' : ''}`}
-            onClick={() => onNavigate?.(item.path)}
-          >
-            {item.icon && <span className="sidebar-icon">{item.icon}</span>}
-            {item.label}
-          </button>
-        ))}
+        {navItems && navItems.length > 0 ? (
+          navItems.map((item) => (
+            <button
+              key={item.path}
+              className={`sidebar-link ${item.active ? 'active' : ''}`}
+              onClick={() => onNavigate?.(item.path)}
+            >
+              {item.icon && <span className="sidebar-icon">{item.icon}</span>}
+              {item.label}
+            </button>
+          ))
+        ) : (
+          <div style={{ color: '#888', padding: '1rem' }}>No navigation items</div>
+        )}
       </nav>
     </aside>
   );

@@ -1,17 +1,7 @@
 // src/ui/admin/NotificationSettings.tsx
 import React from 'react';
 import './NotificationSettings.css';
-
-export interface NotificationOption {
-  label: string;
-  description?: string;
-  enabled: boolean;
-  onToggle: (value: boolean) => void;
-}
-
-export interface NotificationSettingsProps {
-  options: NotificationOption[];
-}
+import { NotificationSettingsProps } from './types';
 
 export const NotificationSettings: React.FC<NotificationSettingsProps> = ({
   options,

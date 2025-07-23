@@ -1,16 +1,8 @@
 import React from 'react';
-import { UserTable, User } from '../../components/UserTable/UserTable';
-import { AssigneeDropdown, Assignee } from '../../../tasks/components/AssigneeDropdown/AssigneeDropdown';
+import { UserTable } from '../../components/UserTable/UserTable';
+import { AssigneeDropdown } from '@tasks/AssigneeDropdown';
 import './TeamUsersPage.css';
-
-export interface TeamUsersPageProps {
-  users: User[];
-  assignees: Assignee[];
-  onEditUser?: (user: User) => void;
-  onDeleteUser?: (user: User) => void;
-  onAssignTask?: (userId: string) => void;
-  selectedAssigneeId?: string | null;
-}
+import { TeamUsersPageProps } from './types';
 
 export const TeamUsersPage: React.FC<TeamUsersPageProps> = ({
   users,
@@ -30,11 +22,7 @@ export const TeamUsersPage: React.FC<TeamUsersPageProps> = ({
           onSelect={onAssignTask || (() => {})}
         />
       </div>
-      <UserTable
-        users={users}
-        onEdit={onEditUser}
-        onDelete={onDeleteUser}
-      />
+      <UserTable users={users} onEdit={onEditUser} onDelete={onDeleteUser} />
     </div>
   );
-}; 
+};

@@ -5,24 +5,7 @@ import { Badge } from '@core/Badge';
 import { Avatar } from '@core/Avatar';
 import { Tooltip } from '@core/Tooltip';
 import './AdminDashboard.css';
-
-export interface DashboardStats {
-  label: string;
-  count: number;
-  color?: string;
-}
-
-export interface RecentActivity {
-  user: string;
-  avatarUrl?: string;
-  action: string;
-  timestamp: string;
-}
-
-export interface AdminDashboardProps {
-  stats: DashboardStats[];
-  activities: RecentActivity[];
-}
+import { AdminDashboardProps } from './types';
 
 export const AdminDashboard: React.FC<AdminDashboardProps> = ({
   stats,
@@ -33,12 +16,15 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       {/* Stats */}
       <div className="dashboard-stats">
         {stats.map((stat, index) => (
-          <Card key={index} content={
-            <>
-              <span className="stat-count">{stat.count}</span>
-              <Badge color={stat.color || 'gray'}>{stat.label}</Badge>
-            </>
-          } />
+          <Card
+            key={index}
+            content={
+              <>
+                <span className="stat-count">{stat.count}</span>
+                <Badge color={stat.color || 'gray'}>{stat.label}</Badge>
+              </>
+            }
+          />
         ))}
       </div>
 
@@ -46,19 +32,22 @@ export const AdminDashboard: React.FC<AdminDashboardProps> = ({
       <div className="dashboard-activities">
         <h2 className="activity-title">Recent Activity</h2>
         {activities.map((activity, index) => (
-          <Card key={index} content={
-            <>
-              <Tooltip content={activity.user}>
-                <Avatar name={activity.user} src={activity.avatarUrl} />
-              </Tooltip>
-              <div className="activity-content">
-                <p className="activity-text">
-                  <strong>{activity.user}</strong> {activity.action}
-                </p>
-                <p className="activity-time">{activity.timestamp}</p>
-              </div>
-            </>
-          } />
+          <Card
+            key={index}
+            content={
+              <>
+                <Tooltip content={activity.user}>
+                  <Avatar name={activity.user} src={activity.avatarUrl} />
+                </Tooltip>
+                <div className="activity-content">
+                  <p className="activity-text">
+                    <strong>{activity.user}</strong> {activity.action}
+                  </p>
+                  <p className="activity-time">{activity.timestamp}</p>
+                </div>
+              </>
+            }
+          />
         ))}
       </div>
     </div>

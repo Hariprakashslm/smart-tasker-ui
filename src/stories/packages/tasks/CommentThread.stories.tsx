@@ -4,7 +4,7 @@ import { Meta, StoryObj } from '@storybook/react';
 import { CommentThread, CommentItem } from '@tasks/CommentThread';
 
 const meta: Meta<typeof CommentThread> = {
-  title: 'Tasks/CommentThread',
+  title: 'Packages/Tasks/CommentThread',
   component: CommentThread,
 };
 

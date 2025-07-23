@@ -3,18 +3,7 @@ import React from 'react';
 import { Avatar } from '@core/Avatar';
 import { Tooltip } from '@core/Tooltip';
 import './AuditLogs.css';
-
-export interface AuditLogEntry {
-  user: string;
-  avatarUrl?: string;
-  action: string;
-  timestamp: string;
-  details?: string;
-}
-
-export interface AuditLogsProps {
-  logs: AuditLogEntry[];
-}
+import { AuditLogsProps } from './types';
 
 export const AuditLogs: React.FC<AuditLogsProps> = ({ logs }) => {
   return (

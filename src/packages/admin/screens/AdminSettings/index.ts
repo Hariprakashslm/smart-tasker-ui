@@ -1,1 +1,2 @@
-export { AdminSettings, type SettingItem } from './AdminSettings';
+export { AdminSettings } from './AdminSettings';
+export * from './types';

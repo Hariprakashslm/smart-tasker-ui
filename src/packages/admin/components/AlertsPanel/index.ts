@@ -1,1 +1,2 @@
-export { AlertsPanel, type AlertItem } from './AlertsPanel';
+export { AlertsPanel } from './AlertsPanel';
+export * from './types';

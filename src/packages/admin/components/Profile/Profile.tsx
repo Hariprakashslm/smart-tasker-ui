@@ -2,16 +2,7 @@
 import React from 'react';
 import './Profile.css';
 import { Avatar } from '@core/Avatar';
-
-export interface ProfileProps {
-  name: string;
-  email: string;
-  role: string;
-  bio?: string;
-  avatarUrl?: string;
-  editable?: boolean;
-  onEdit?: () => void;
-}
+import { ProfileProps } from './types';
 
 export const Profile: React.FC<ProfileProps> = ({
   name,

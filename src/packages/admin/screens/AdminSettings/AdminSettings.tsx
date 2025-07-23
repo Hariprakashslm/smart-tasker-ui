@@ -1,20 +1,7 @@
 // src/ui/admin/AdminSettings.tsx
 import React from 'react';
 import './AdminSettings.css';
-
-export interface SettingItem {
-  label: string;
-  description?: string;
-  type: 'toggle' | 'text' | 'select';
-  value: any;
-  options?: string[]; // for select
-  onChange: (value: any) => void;
-}
-
-export interface AdminSettingsProps {
-  title?: string;
-  settings: SettingItem[];
-}
+import { AdminSettingsProps } from './types';
 
 export const AdminSettings: React.FC<AdminSettingsProps> = ({
   title = 'Admin Settings',

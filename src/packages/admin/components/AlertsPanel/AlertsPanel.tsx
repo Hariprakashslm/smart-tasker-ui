@@ -3,21 +3,7 @@ import React from 'react';
 import './AlertsPanel.css';
 import { Badge } from '@core/Badge';
 import { Button } from '@core/Button';
-
-export interface AlertItem {
-  id: string;
-  title: string;
-  message: string;
-  severity: 'info' | 'warning' | 'error' | 'success';
-  timestamp?: string;
-  onView?: () => void;
-  onDismiss?: () => void;
-}
-
-export interface AlertsPanelProps {
-  alerts: AlertItem[];
-  maxHeight?: string;
-}
+import { AlertsPanelProps } from './types';
 
 export const AlertsPanel: React.FC<AlertsPanelProps> = ({
   alerts,
