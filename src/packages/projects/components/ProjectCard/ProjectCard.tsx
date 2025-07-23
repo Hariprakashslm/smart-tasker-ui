@@ -4,19 +4,7 @@ import './ProjectCard.css';
 import { Avatar } from '@core/Avatar';
 import { Badge } from '@core/Badge';
 import { Button } from '@core/Button';
-
-export interface ProjectCardProps {
-  name: string;
-  description?: string;
-  status?: 'active' | 'archived' | 'draft';
-  owner?: {
-    name: string;
-    imageUrl?: string;
-  };
-  onClick?: () => void;
-  onEdit?: () => void;
-  onDelete?: () => void;
-}
+import type { ProjectCardProps } from './types';
 
 export const ProjectCard: React.FC<ProjectCardProps> = ({
   name,

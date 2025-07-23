@@ -16,21 +16,7 @@
  */
 import React from 'react';
 import './StatCard.css';
-
-export interface StatCardProps {
-  title: string;
-  value: string | number;
-  icon?: React.ReactNode;
-  iconSize?: number;
-  description?: string;
-  variant?: 'default' | 'success' | 'warning' | 'error' | 'info' | string;
-  onClick?: () => void;
-  loading?: boolean;
-  empty?: boolean;
-  className?: string;
-  style?: React.CSSProperties;
-  ariaLabel?: string;
-}
+import type { StatCardProps } from './types';
 
 export const StatCard: React.FC<StatCardProps> = ({
   title,

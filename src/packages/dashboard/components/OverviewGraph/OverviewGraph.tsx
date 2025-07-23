@@ -12,18 +12,7 @@ import {
   BarChart,
   Bar,
 } from 'recharts';
-
-export interface GraphDataPoint {
-  label: string; // e.g., "Mon", "Jan", "Q1"
-  value: number;
-}
-
-export interface OverviewGraphProps {
-  title?: string;
-  data: GraphDataPoint[];
-  type?: 'line' | 'bar';
-  height?: number;
-}
+import type { OverviewGraphProps } from './types';
 
 export const OverviewGraph: React.FC<OverviewGraphProps> = ({
   title = 'Overview',

@@ -3,12 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { Modal } from '@core/Modal';
 import { Input } from '@core/Input';
 import { Button } from '@core/Button';
-
-export interface CreateProjectModalProps {
-  isOpen: boolean;
-  onClose: () => void;
-  onSubmit: (data: { name: string; description: string }) => void;
-}
+import type { CreateProjectModalProps } from './types';
 
 export const CreateProjectModal: React.FC<CreateProjectModalProps> = ({
   isOpen,

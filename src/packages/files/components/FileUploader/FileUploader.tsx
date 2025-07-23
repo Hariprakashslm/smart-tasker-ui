@@ -1,13 +1,7 @@
 // src/files/FileUploader.tsx
 import React, { useRef } from 'react';
 import './FileUploader.css';
-
-export interface FileUploaderProps {
-  onUpload: (files: File[]) => void;
-  multiple?: boolean;
-  accept?: string;
-  label?: string;
-}
+import type { FileUploaderProps } from './types';
 
 export const FileUploader: React.FC<FileUploaderProps> = ({
   onUpload,

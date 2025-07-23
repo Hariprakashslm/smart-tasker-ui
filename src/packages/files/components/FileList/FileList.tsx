@@ -2,17 +2,7 @@
 import React from 'react';
 import { FileDownloadLink } from '../FileDownloadLink';
 import './FileList.css';
-
-export interface FileListItem {
-  fileName: string;
-  fileUrl: string;
-  download?: boolean;
-}
-
-export interface FileListProps {
-  files: FileListItem[];
-  maxHeight?: string;
-}
+import type { FileListItem, FileListProps } from './types';
 
 export const FileList: React.FC<FileListProps> = ({
   files,

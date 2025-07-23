@@ -1,13 +1,7 @@
 // src/packages/dashboard/StorageUsageCard.tsx
 import React from 'react';
 import './StorageUsageCard.css';
-
-export interface StorageUsageCardProps {
-  total: number; // in GB
-  used: number; // in GB
-  unit?: string; // default: "GB"
-  label?: string;
-}
+import type { StorageUsageCardProps } from './types';
 
 export const StorageUsageCard: React.FC<StorageUsageCardProps> = ({
   total,

@@ -2,14 +2,7 @@
 import React from 'react';
 import './EmailPreferenceToggle.css';
 import { Checkbox } from '@core/Checkbox'; // or Switch if available
-
-export interface EmailPreferenceToggleProps {
-  label: string;
-  description?: string;
-  checked: boolean;
-  onChange: (checked: boolean) => void;
-  disabled?: boolean;
-}
+import type { EmailPreferenceToggleProps } from './types';
 
 export const EmailPreferenceToggle: React.FC<EmailPreferenceToggleProps> = ({
   label,

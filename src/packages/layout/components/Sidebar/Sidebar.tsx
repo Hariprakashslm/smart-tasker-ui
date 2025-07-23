@@ -1,19 +1,7 @@
 // src/ui/layout/Sidebar.tsx
 import React from 'react';
 import './Sidebar.css';
-
-export interface NavItem {
-  label: string;
-  path: string;
-  icon?: React.ReactNode;
-  active?: boolean;
-}
-
-export interface SidebarProps {
-  navItems: NavItem[];
-  appName?: string;
-  onNavigate?: (path: string) => void; // for Storybook/local use
-}
+import type { NavItem, SidebarProps } from './types';
 
 export const Sidebar: React.FC<SidebarProps> = ({
   navItems,

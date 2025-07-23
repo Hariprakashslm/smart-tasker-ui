@@ -1,20 +1,7 @@
 // src/ui/search/SearchResults.tsx
 import React from 'react';
 import './SearchResults.css';
-
-export interface SearchItem {
-  id: string;
-  title: string;
-  type: 'task' | 'project' | 'user';
-  description?: string;
-  onClick?: () => void;
-}
-
-export interface SearchResultsProps {
-  query: string;
-  results: SearchItem[];
-  isLoading?: boolean;
-}
+import type { SearchItem, SearchResultsProps } from './types';
 
 export const SearchResults: React.FC<SearchResultsProps> = ({
   query,

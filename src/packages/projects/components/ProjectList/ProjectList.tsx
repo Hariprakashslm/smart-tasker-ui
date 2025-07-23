@@ -2,13 +2,7 @@
 import React from 'react';
 import './ProjectList.css';
 import { ProjectCard, ProjectCardProps } from '../ProjectCard';
-
-export interface ProjectListProps {
-  projects: ProjectCardProps[];
-  onProjectClick?: (project: ProjectCardProps) => void;
-  onEditProject?: (project: ProjectCardProps) => void;
-  onDeleteProject?: (project: ProjectCardProps) => void;
-}
+import type { ProjectListProps } from './types';
 
 export const ProjectList: React.FC<ProjectListProps> = ({
   projects,

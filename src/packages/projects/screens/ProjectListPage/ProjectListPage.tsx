@@ -1,9 +1,9 @@
 // src/ui/projects/ProjectList.tsx
 import React from 'react';
 import './ProjectListPage.css';
-import { ProjectList, ProjectListProps } from '@projects/ProjectList';
+import type { ProjectListPageProps } from './types';
 
-export const ProjectListPage: React.FC<ProjectListProps> = ({
+export const ProjectListPage: React.FC<ProjectListPageProps> = ({
   projects,
   onProjectClick,
   onEditProject,

@@ -4,18 +4,7 @@ import { FilterPanel } from '@search/FilterPanel';
 import { SortSelector } from '@search/SortSelector';
 import { SearchResults, SearchItem } from '@search/SearchResults';
 import './SearchResultsPage.css';
-
-export interface SearchResultsPageProps {
-  query: string;
-  results: SearchItem[];
-  isLoading?: boolean;
-  filters?: Record<string, string | boolean>;
-  sort?: string;
-  onQueryChange?: (query: string) => void;
-  onFilterChange?: (filters: Record<string, string | boolean>) => void;
-  onSortChange?: (sort: string) => void;
-  onResultClick?: (item: SearchItem) => void;
-}
+import type { SearchResultsPageProps } from './types';
 
 export const SearchResultsPage: React.FC<SearchResultsPageProps> = ({
   query,

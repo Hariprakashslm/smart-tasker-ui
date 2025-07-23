@@ -1,13 +1,7 @@
 // src/ui/common/FileDownloadLink.tsx
 import React from 'react';
 import './FileDownloadLink.css';
-
-export interface FileDownloadLinkProps {
-  fileName: string;
-  fileUrl: string;
-  download?: boolean; // if true, triggers browser download
-  fileType?: string; // auto-detect from fileName if not provided
-}
+import type { FileDownloadLinkProps } from './types';
 
 export const FileDownloadLink: React.FC<FileDownloadLinkProps> = ({
   fileName,

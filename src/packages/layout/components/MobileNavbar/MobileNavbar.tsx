@@ -2,16 +2,7 @@
 import React from 'react';
 import './MobileNavbar.css';
 import { Avatar } from '@core/Avatar';
-
-export interface MobileNavbarProps {
-  title?: string;
-  onMenuToggle?: () => void;
-  onAvatarClick?: () => void;
-  user?: {
-    name: string;
-    imageUrl?: string;
-  };
-}
+import type { MobileNavbarProps } from './types';
 
 export const MobileNavbar: React.FC<MobileNavbarProps> = ({
   title = 'Smart Tasker',

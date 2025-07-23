@@ -7,19 +7,7 @@ import { Input } from '@core/Input';
 import { Badge } from '@core/Badge';
 import { Button } from '@core/Button';
 import { ThemeToggle } from '@layout/ThemeToggle';
-
-export interface HeaderProps {
-  title?: string;
-  onSearch?: (value: string) => void;
-  unreadNotifications?: number;
-  onNotificationClick?: () => void;
-  user?: {
-    name: string;
-    imageUrl?: string;
-    onProfile: () => void;
-    onLogout: () => void;
-  };
-}
+import type { HeaderProps } from './types';
 
 export const Header: React.FC<HeaderProps> = ({
   title = 'Smart Tasker',

@@ -1,12 +1,7 @@
 // src/ui/common/NotificationBell.tsx
 import React from 'react';
 import './NotificationBell.css';
-
-export interface NotificationBellProps {
-  count?: number; // number of unread notifications
-  onClick?: () => void;
-  tooltip?: string;
-}
+import type { NotificationBellProps } from './types';
 
 export const NotificationBell: React.FC<NotificationBellProps> = ({
   count = 0,

@@ -2,20 +2,7 @@
 import React from 'react';
 import { Select, SelectOption } from '@core/Select';
 import './SortSelector.css';
-
-export interface SortOption extends SelectOption {
-  label: string;
-  value: string;
-}
-
-export interface SortSelectorProps {
-  value: string;
-  options: SortOption[];
-  onChange: (value: string) => void;
-  direction?: 'asc' | 'desc';
-  onDirectionToggle?: () => void;
-  showDirectionToggle?: boolean;
-}
+import type { SortOption, SortSelectorProps } from './types';
 
 export const SortSelector: React.FC<SortSelectorProps> = ({
   value,

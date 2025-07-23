@@ -1,12 +1,7 @@
 import React from 'react';
-import { NotificationItem, NotificationItemProps } from '../../components/NotificationItem/NotificationItem';
+import { NotificationItem } from '../../components/NotificationItem/NotificationItem';
 import './NotificationsCenterPage.css';
-
-export interface NotificationsCenterPageProps {
-  notifications: NotificationItemProps[];
-  onMarkRead?: (id: string) => void;
-  onClearAll?: () => void;
-}
+import type { NotificationsCenterPageProps } from './types';
 
 export const NotificationsCenterPage: React.FC<NotificationsCenterPageProps> = ({
   notifications,

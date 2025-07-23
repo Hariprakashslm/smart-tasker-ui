@@ -2,12 +2,7 @@
 import React from 'react';
 import { Input } from '@core/Input';
 import './SearchBar.css';
-export interface SearchBarProps {
-  value: string;
-  onChange: (value: string) => void;
-  placeholder?: string;
-  onClear?: () => void;
-}
+import type { SearchBarProps } from './types';
 
 export const SearchBar: React.FC<SearchBarProps> = ({
   value,

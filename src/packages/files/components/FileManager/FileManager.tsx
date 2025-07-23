@@ -1,20 +1,7 @@
 // src/ui/files/FileManager.tsx
 import React from 'react';
 import './FileManager.css';
-
-export interface FileItem {
-  id: string;
-  name: string;
-  type: 'doc' | 'image' | 'video' | 'pdf' | 'zip' | 'other';
-  size: string;
-  uploadedAt: string;
-  onDownload?: () => void;
-  onDelete?: () => void;
-}
-
-export interface FileManagerProps {
-  files: FileItem[];
-}
+import type { FileItem, FileManagerProps } from './types';
 
 export const FileManager: React.FC<FileManagerProps> = ({ files }) => {
   return (

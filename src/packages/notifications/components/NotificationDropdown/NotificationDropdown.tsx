@@ -1,13 +1,8 @@
 // src/ui/common/NotificationDropdown.tsx
 import React from 'react';
 import './NotificationDropdown.css';
-import { NotificationItem, NotificationItemProps } from '../NotificationItem';
-
-export interface NotificationDropdownProps {
-  notifications: NotificationItemProps[];
-  onMarkAllRead?: () => void;
-  onViewAll?: () => void;
-}
+import { NotificationItem } from '../NotificationItem/NotificationItem';
+import type { NotificationDropdownProps } from './types';
 
 export const NotificationDropdown: React.FC<NotificationDropdownProps> = ({
   notifications,

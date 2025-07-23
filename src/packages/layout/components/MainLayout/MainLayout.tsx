@@ -6,21 +6,7 @@ import { Sidebar } from '../Sidebar';
 import { Header } from '../Header';
 import { MobileNavbar } from '../MobileNavbar';
 import { OfflineBanner } from '../OfflineBanner';
-
-export interface MainLayoutProps {
-  children: React.ReactNode;
-  pageTitle?: string;
-  user?: {
-    name: string;
-    imageUrl?: string;
-    onProfile: () => void;
-    onLogout: () => void;
-  };
-  showSearch?: boolean;
-  unreadNotifications?: number;
-  navItems?: import('../Sidebar/Sidebar').NavItem[];
-  appName?: string;
-}
+import type { MainLayoutProps } from './types';
 
 export const MainLayout: React.FC<MainLayoutProps> = ({
   children,

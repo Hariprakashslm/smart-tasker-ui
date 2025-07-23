@@ -2,17 +2,7 @@
 import React from 'react';
 import './TaskCompletionChart.css';
 import { PieChart, Pie, Cell, ResponsiveContainer, Tooltip } from 'recharts';
-
-export interface TaskCompletionChartProps {
-  completed: number;
-  total: number;
-  width?: number;
-  height?: number;
-  colors?: {
-    completed?: string;
-    remaining?: string;
-  };
-}
+import type { TaskCompletionChartProps } from './types';
 
 export const TaskCompletionChart: React.FC<TaskCompletionChartProps> = ({
   completed,

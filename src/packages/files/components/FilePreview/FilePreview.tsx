@@ -2,13 +2,7 @@
 import React from 'react';
 import './FilePreview.css';
 import { Button } from '@core/Button';
-
-export interface FilePreviewProps {
-  fileName: string;
-  fileUrl: string;
-  fileType?: string; // 'image' | 'pdf' | 'txt' | 'other'
-  onDownload?: () => void;
-}
+import type { FilePreviewProps } from './types';
 
 export const FilePreview: React.FC<FilePreviewProps> = ({
   fileName,

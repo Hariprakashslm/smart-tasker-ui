@@ -1,13 +1,7 @@
 import React from 'react';
-import { FileManager, FileItem } from '@files/FileManager';
+import { FileManager } from '@files/FileManager';
 import './FilesPage.css';
-
-export interface FilesPageProps {
-  files: FileItem[];
-  onUpload?: () => void;
-  onDeleteFile?: (id: string) => void;
-  onDownloadFile?: (id: string) => void;
-}
+import { FilesPageProps } from './types';
 
 export const FilesPage: React.FC<FilesPageProps> = ({
   files,
@@ -35,4 +29,4 @@ export const FilesPage: React.FC<FilesPageProps> = ({
       <FileManager files={mappedFiles} />
     </div>
   );
-}; 
+};

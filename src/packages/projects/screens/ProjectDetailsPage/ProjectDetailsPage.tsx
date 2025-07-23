@@ -4,6 +4,7 @@ import './ProjectDetailsPage.css';
 import { BoardColumn, BoardColumnProps } from '@boards/BoardColumn';
 import { PresenceIndicator } from '@collaboration/PresenceIndicator';
 import { FileList } from '@files/FileList';
+import type { ProjectDetailsPageProps } from './types';
 
 export const ProjectDetailsPage: React.FC = () => {
   const project = {

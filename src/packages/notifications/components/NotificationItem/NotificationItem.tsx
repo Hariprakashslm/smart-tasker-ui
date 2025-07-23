@@ -1,16 +1,7 @@
 // src/ui/common/NotificationItem.tsx
 import React from 'react';
 import './NotificationItem.css';
-
-export interface NotificationItemProps {
-  id: string;
-  title: string;
-  message?: string;
-  time?: string; // e.g., '2m ago'
-  read?: boolean;
-  icon?: React.ReactNode;
-  onClick?: () => void;
-}
+import type { NotificationItemProps } from './types';
 
 export const NotificationItem: React.FC<NotificationItemProps> = ({
   title,
