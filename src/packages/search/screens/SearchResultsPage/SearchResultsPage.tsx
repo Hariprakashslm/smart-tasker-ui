@@ -1,8 +1,7 @@
 import React from 'react';
-import { SearchBar } from '@search/SearchBar';
 import { FilterPanel } from '@search/FilterPanel';
 import { SortSelector } from '@search/SortSelector';
-import { SearchResults, SearchItem } from '@search/SearchResults';
+import { SearchResults } from '@search/SearchResults';
 import './SearchResultsPage.css';
 import type { SearchResultsPageProps } from './types';
 
@@ -30,8 +29,14 @@ export const SearchResultsPage: React.FC<SearchResultsPageProps> = ({
   }));
 
   // Demo filter state (in real app, would be state/props)
-  const searchValue = typeof filters === 'object' && 'search' in filters ? String(filters['search']) : '';
-  const statusValue = typeof filters === 'object' && 'status' in filters ? String(filters['status']) : '';
+  const searchValue =
+    typeof filters === 'object' && 'search' in filters
+      ? String(filters['search'])
+      : '';
+  const statusValue =
+    typeof filters === 'object' && 'status' in filters
+      ? String(filters['status'])
+      : '';
   const statusOptions = [
     { label: 'Open', value: 'open' },
     { label: 'Closed', value: 'closed' },
@@ -46,9 +51,17 @@ export const SearchResultsPage: React.FC<SearchResultsPageProps> = ({
           onSearchChange={onQueryChange || (() => {})}
           status={statusValue}
           statusOptions={statusOptions}
-          onStatusChange={onFilterChange ? (v) => onFilterChange({ ...filters, status: v }) : undefined}
+          onStatusChange={
+            onFilterChange
+              ? (v) => onFilterChange({ ...filters, status: v })
+              : undefined
+          }
         />
-        <SortSelector value={sort} onChange={onSortChange || (() => {})} options={sortOptions} />
+        <SortSelector
+          value={sort}
+          onChange={onSortChange || (() => {})}
+          options={sortOptions}
+        />
       </div>
       <SearchResults
         query={query}

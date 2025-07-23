@@ -1,7 +1,7 @@
 // src/components/Tabs.tsx
 import React, { useState } from 'react';
 import './Tabs.css';
-import type { TabItem, TabsProps } from './types';
+import type { TabsProps } from './types';
 
 export const Tabs: React.FC<TabsProps> = ({
   tabs,

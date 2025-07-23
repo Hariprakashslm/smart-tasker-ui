@@ -1,11 +1,8 @@
 import React from 'react';
-import {
-  TeamUsersPage,
-  TeamUsersPageProps,
-} from '@screens/admin/TeamUsersPage';
+import { TeamUsersPage } from '@screens/admin/TeamUsersPage';
 import { User } from '@admin/UserTable';
-import { Assignee } from '@tasks/AssigneeDropdown';
 import { Meta, StoryObj } from '@storybook/react';
+import { Assignee } from '@/packages/tasks';
 
 const meta: Meta<typeof TeamUsersPage> = {
   title: 'Screens/Admin/TeamUsersPage',

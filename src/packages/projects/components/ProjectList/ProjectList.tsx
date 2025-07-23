@@ -1,7 +1,7 @@
 // src/ui/projects/ProjectList.tsx
 import React from 'react';
 import './ProjectList.css';
-import { ProjectCard, ProjectCardProps } from '../ProjectCard';
+import { ProjectCard } from '../ProjectCard';
 import type { ProjectListProps } from './types';
 
 export const ProjectList: React.FC<ProjectListProps> = ({

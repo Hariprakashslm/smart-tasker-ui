@@ -1,6 +1,6 @@
 import React from 'react';
 import './Select.css';
-import type { SelectOption, SelectProps } from './types';
+import type { SelectProps } from './types';
 
 export const Select: React.FC<SelectProps> = ({
   label,

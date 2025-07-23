@@ -1,7 +1,7 @@
 import React from 'react';
-import { FilesPage, FilesPageProps } from '@screens/files/FilesPage';
+import { FilesPage } from '@screens/files/FilesPage';
 import { Meta, StoryObj } from '@storybook/react';
-import { FileItem } from '@/packages/files/components/FileManager';
+import { FileItem } from '@/packages/files';
 
 const meta: Meta<typeof FilesPage> = {
   title: 'Screens/Files/FilesPage',

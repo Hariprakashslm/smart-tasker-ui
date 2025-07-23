@@ -1,3 +1,5 @@
+import { NavItem } from '../Sidebar/types';
+
 export interface MainLayoutProps {
   children: React.ReactNode;
   pageTitle?: string;
@@ -9,6 +11,6 @@ export interface MainLayoutProps {
   };
   showSearch?: boolean;
   unreadNotifications?: number;
-  navItems?: import('../Sidebar/Sidebar').NavItem[];
+  navItems?: NavItem[];
   appName?: string;
-} 
+}

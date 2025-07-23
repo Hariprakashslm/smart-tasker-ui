@@ -1,10 +1,10 @@
 // src/pages/projects/ProjectDetailsPage.tsx
 import React from 'react';
 import './ProjectDetailsPage.css';
-import { BoardColumn, BoardColumnProps } from '@boards/BoardColumn';
+import { BoardColumn } from '@boards/BoardColumn';
 import { PresenceIndicator } from '@collaboration/PresenceIndicator';
 import { FileList } from '@files/FileList';
-import type { ProjectDetailsPageProps } from './types';
+import { BoardColumnProps } from '@/packages/boards';
 
 export const ProjectDetailsPage: React.FC = () => {
   const project = {

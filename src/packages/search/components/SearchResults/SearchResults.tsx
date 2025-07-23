@@ -1,7 +1,7 @@
 // src/ui/search/SearchResults.tsx
 import React from 'react';
 import './SearchResults.css';
-import type { SearchItem, SearchResultsProps } from './types';
+import type { SearchResultsProps } from './types';
 
 export const SearchResults: React.FC<SearchResultsProps> = ({
   query,

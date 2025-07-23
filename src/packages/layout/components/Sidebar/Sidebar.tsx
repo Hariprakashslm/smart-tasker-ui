@@ -1,7 +1,7 @@
 // src/ui/layout/Sidebar.tsx
 import React from 'react';
 import './Sidebar.css';
-import type { NavItem, SidebarProps } from './types';
+import type { SidebarProps } from './types';
 
 export const Sidebar: React.FC<SidebarProps> = ({
   navItems,
@@ -24,7 +24,9 @@ export const Sidebar: React.FC<SidebarProps> = ({
             </button>
           ))
         ) : (
-          <div style={{ color: '#888', padding: '1rem' }}>No navigation items</div>
+          <div style={{ color: '#888', padding: '1rem' }}>
+            No navigation items
+          </div>
         )}
       </nav>
     </aside>

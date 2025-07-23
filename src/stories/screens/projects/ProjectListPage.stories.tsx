@@ -1,7 +1,7 @@
 // src/ui-stories/projects/ProjectList.stories.tsx
 import React from 'react';
 import { ProjectListPage } from '@screens/projects/ProjectListPage';
-import { ProjectCardProps } from '@projects/ProjectCard';
+import { ProjectCardProps } from '@/packages/projects';
 
 export default {
   title: 'Pages/Projects/ProjectListPage',

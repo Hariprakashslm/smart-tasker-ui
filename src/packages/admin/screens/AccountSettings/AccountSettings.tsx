@@ -1,10 +1,10 @@
 // src/ui/admin/AccountSettings.tsx
 import React from 'react';
 import { Card } from '@core/Card';
-import { DynamicForm, FormField } from '@core/DynamicForm'; // Adjust path as needed
+import { DynamicForm } from '@core/DynamicForm'; // Adjust path as needed
 import './AccountSettings.css';
-import { ButtonProps } from '@core/Button/Button';
 import { AccountSettingsProps } from './types';
+import { ButtonProps, FormField } from '@/packages/core';
 
 export const AccountSettings: React.FC<AccountSettingsProps> = ({
   initialName,

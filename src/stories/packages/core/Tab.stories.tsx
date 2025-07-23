@@ -1,7 +1,8 @@
 // src/components/Tabs.stories.tsx
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { Tabs, TabsProps, TabItem } from '@core/Tabs';
+import { Tabs } from '@core/Tabs';
+import { TabItem } from '@/packages/core';
 
 const meta: Meta<typeof Tabs> = {
   title: 'Packages/Core/Tabs',

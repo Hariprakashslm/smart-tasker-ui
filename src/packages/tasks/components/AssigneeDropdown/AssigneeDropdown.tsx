@@ -1,18 +1,8 @@
 // src/ui/tasks/AssigneeDropdown.tsx
 import React from 'react';
-import { Select, SelectOption } from '@core/Select';
-export interface Assignee {
-  id: string;
-  name: string;
-  avatarUrl?: string;
-}
-
-export interface AssigneeDropdownProps {
-  assignees: Assignee[]; // list of all available users
-  selectedId: string | null;
-  onSelect: (id: string) => void;
-  disabled?: boolean;
-}
+import { Select } from '@core/Select';
+import { AssigneeDropdownProps } from './types';
+import { SelectOption } from '@/packages/core';
 
 export const AssigneeDropdown: React.FC<AssigneeDropdownProps> = ({
   assignees,

@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import {
-  AssigneeDropdown,
-  AssigneeDropdownProps,
-} from '@tasks/AssigneeDropdown';
+import { AssigneeDropdown } from '@tasks/AssigneeDropdown';
+import { AssigneeDropdownProps } from '@/packages/tasks';
 
 const assigneeMock = [
   {

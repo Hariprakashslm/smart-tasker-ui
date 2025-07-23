@@ -1,8 +1,5 @@
 import React from 'react';
-import {
-  NotificationsCenterPage,
-  NotificationsCenterPageProps,
-} from '@screens/notifications/NotificationsCenterPage';
+import { NotificationsCenterPage } from '@screens/notifications/NotificationsCenterPage';
 import { Meta, StoryObj } from '@storybook/react';
 
 const meta: Meta<typeof NotificationsCenterPage> = {

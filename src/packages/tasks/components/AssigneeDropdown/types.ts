@@ -5,8 +5,8 @@ export interface Assignee {
 }
 
 export interface AssigneeDropdownProps {
-  assignees: Assignee[];
+  assignees: Assignee[]; // list of all available users
   selectedId: string | null;
   onSelect: (id: string) => void;
   disabled?: boolean;
-} 
+}

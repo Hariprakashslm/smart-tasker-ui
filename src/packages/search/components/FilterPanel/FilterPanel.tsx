@@ -2,7 +2,7 @@
 import React, { useState, useMemo } from 'react';
 import './FilterPanel.css';
 import { SearchBar } from '../SearchBar';
-import { Select, SelectOption } from '@core/Select';
+import { Select } from '@core/Select';
 import { Button } from '@core/Button';
 import type { FilterPanelProps } from './types';
 
@@ -26,7 +26,8 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
   const activeFilters = useMemo(() => {
     const filters: { key: string; label: string; value: string }[] = [];
     if (status) filters.push({ key: 'status', label: 'Status', value: status });
-    if (assignee) filters.push({ key: 'assignee', label: 'Assignee', value: assignee });
+    if (assignee)
+      filters.push({ key: 'assignee', label: 'Assignee', value: assignee });
     if (search) filters.push({ key: 'search', label: 'Search', value: search });
     return filters;
   }, [status, assignee, search]);
@@ -42,21 +43,26 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
   const advancedCount = [assignee].filter(Boolean).length;
 
   return (
-    <div className={`filter-panel${darkMode ? ' filter-panel-dark' : ''}`} aria-label="Filter panel">
+    <div
+      className={`filter-panel${darkMode ? ' filter-panel-dark' : ''}`}
+      aria-label="Filter panel"
+    >
       <div className="filter-badges" aria-live="polite">
-        {activeFilters.filter(f => f.key !== 'search').map((f) => (
-          <span className="filter-badge" key={f.key}>
-            {f.label}: {f.value}
-            <button
-              className="filter-badge-remove"
-              aria-label={`Remove ${f.label} filter`}
-              onClick={() => handleRemoveBadge(f.key)}
-              type="button"
-            >
-              ×
-            </button>
-          </span>
-        ))}
+        {activeFilters
+          .filter((f) => f.key !== 'search')
+          .map((f) => (
+            <span className="filter-badge" key={f.key}>
+              {f.label}: {f.value}
+              <button
+                className="filter-badge-remove"
+                aria-label={`Remove ${f.label} filter`}
+                onClick={() => handleRemoveBadge(f.key)}
+                type="button"
+              >
+                ×
+              </button>
+            </span>
+          ))}
       </div>
       <div className="filter-main-row">
         <SearchBar
@@ -80,15 +86,22 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
           type="button"
         >
           More Filters
-          {advancedCount > 0 && <span className="filter-count-badge">{advancedCount}</span>}
-          <span className={`filter-chevron${showAdvanced ? ' open' : ''}`}>▼</span>
+          {advancedCount > 0 && (
+            <span className="filter-count-badge">{advancedCount}</span>
+          )}
+          <span className={`filter-chevron${showAdvanced ? ' open' : ''}`}>
+            ▼
+          </span>
         </button>
       </div>
       <div
         id="advanced-filters"
         className={`filter-advanced${showAdvanced ? ' expanded' : ''}`}
         aria-hidden={!showAdvanced}
-        style={{ maxHeight: showAdvanced ? 200 : 0, transition: 'max-height 0.3s cubic-bezier(.4,0,.2,1)' }}
+        style={{
+          maxHeight: showAdvanced ? 200 : 0,
+          transition: 'max-height 0.3s cubic-bezier(.4,0,.2,1)',
+        }}
       >
         {assigneeOptions.length > 0 && (
           <Select
@@ -101,8 +114,17 @@ export const FilterPanel: React.FC<FilterPanelProps> = ({
       </div>
       {(onClearAll || onApply) && <div className="filter-divider" />}
       <div className="filter-actions">
-        {onClearAll && <Button label="Clear All" variant="outlined" onClick={onClearAll} className="core-button" />}
-        {onApply && <Button label="Apply" onClick={onApply} className="core-button" />}
+        {onClearAll && (
+          <Button
+            label="Clear All"
+            variant="outlined"
+            onClick={onClearAll}
+            className="core-button"
+          />
+        )}
+        {onApply && (
+          <Button label="Apply" onClick={onApply} className="core-button" />
+        )}
       </div>
     </div>
   );

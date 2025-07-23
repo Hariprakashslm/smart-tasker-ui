@@ -1,1 +1,1 @@
-export { DynamicForm, type FormField } from './DynamicForm';
+export { DynamicForm } from './DynamicForm';

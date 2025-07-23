@@ -1,1 +1,1 @@
-export { SearchResults, type SearchItem } from './SearchResults';
+export { SearchResults } from './SearchResults';

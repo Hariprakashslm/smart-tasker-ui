@@ -1,10 +1,8 @@
 // src/stories/admin/NotificationSettings.stories.tsx
 import React, { useState } from 'react';
-import {
-  NotificationSettings,
-  NotificationOption,
-} from '../../../packages/admin/components/NotificationSettings/NotificationSettings';
+import { NotificationSettings } from '../../../packages/admin/components/NotificationSettings/NotificationSettings';
 import type { Meta, StoryObj } from '@storybook/react';
+import { NotificationOption } from '@/packages/admin';
 
 const meta: Meta<typeof NotificationSettings> = {
   title: 'Pages/Admin/NotificationSettings',

@@ -1,4 +1,4 @@
-import { Assignee } from '@tasks/AssigneeDropdown';
+import { Assignee } from '@/packages/tasks';
 import { User } from '../../components/UserTable';
 
 export interface TeamUsersPageProps {

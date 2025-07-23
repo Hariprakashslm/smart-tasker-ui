@@ -1,7 +1,7 @@
 import React from 'react';
 import { SearchResultsPage } from '@screens/search/SearchResultsPage';
 import { Meta, StoryObj } from '@storybook/react';
-import { SearchItem } from '@/packages/search/components/SearchResults';
+import { SearchItem } from '@/packages/search';
 
 const meta: Meta<typeof SearchResultsPage> = {
   title: 'Screens/Search/SearchResultsPage',

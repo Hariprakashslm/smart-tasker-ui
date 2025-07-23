@@ -1,8 +1,8 @@
 // src/components/DynamicForm.stories.tsx
 import React from 'react';
 import { Meta, StoryObj } from '@storybook/react';
-import { DynamicForm, FormField } from '@core/DynamicForm';
-import { ButtonProps } from '@core/Button/Button';
+import { DynamicForm } from '@core/DynamicForm';
+import { ButtonProps, FormField } from '@/packages/core';
 
 const meta: Meta<typeof DynamicForm> = {
   title: 'Packages/Core/DynamicForm',

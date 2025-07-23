@@ -1,6 +1,7 @@
 import React from 'react';
-import { Tabs, TabItem } from '@core/Tabs';
+import { Tabs } from '@core/Tabs';
 import './TaskModalTabs.css';
+import { TabItem } from '@/packages/core';
 
 export interface TaskModalTabsProps {
   activeTab: string;
@@ -21,7 +22,9 @@ export const TaskModalTabs: React.FC<TaskModalTabsProps> = ({
     { key: 'details', title: 'Details' },
     { key: 'attachments', title: 'Attachments' },
     { key: 'comments', title: 'Comments' },
-    ...(enableDependencies ? [{ key: 'dependencies', title: 'Dependencies' }] : []),
+    ...(enableDependencies
+      ? [{ key: 'dependencies', title: 'Dependencies' }]
+      : []),
     ...(enableTimeTracking ? [{ key: 'time', title: 'Time Tracking' }] : []),
     ...(showHistoryTab ? [{ key: 'history', title: 'History' }] : []),
   ];
@@ -31,4 +34,4 @@ export const TaskModalTabs: React.FC<TaskModalTabsProps> = ({
       <Tabs tabs={tabs} onChange={onTabChange} />
     </div>
   );
-}; 
+};

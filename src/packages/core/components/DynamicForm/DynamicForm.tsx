@@ -3,8 +3,7 @@ import React, { useState } from 'react';
 import './DynamicForm.css';
 import { Input } from '@core/Input';
 import { Button } from '@core/Button';
-import { ButtonProps } from '@core/Button/Button';
-import type { FieldType, FieldOption, ValidationRules, FormField, DynamicFormProps } from './types';
+import type { FormField, DynamicFormProps } from './types';
 
 export const DynamicForm: React.FC<DynamicFormProps> = ({
   fields,

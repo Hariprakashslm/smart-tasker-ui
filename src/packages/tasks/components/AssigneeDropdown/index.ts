@@ -1,5 +1,1 @@
-export {
-  AssigneeDropdown,
-  type Assignee,
-  type AssigneeDropdownProps,
-} from './AssigneeDropdown';
+export { AssigneeDropdown } from './AssigneeDropdown';

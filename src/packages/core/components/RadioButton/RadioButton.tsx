@@ -1,6 +1,6 @@
 import React from 'react';
 import './RadioButton.css';
-import type { RadioOption, RadioButtonProps } from './types';
+import type { RadioButtonProps } from './types';
 
 export const RadioButton: React.FC<RadioButtonProps> = ({
   name,

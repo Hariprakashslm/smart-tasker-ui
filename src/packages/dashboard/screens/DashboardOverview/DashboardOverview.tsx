@@ -1,12 +1,13 @@
 // src/pages/dashboard/DashboardOverview.tsx
 import React from 'react';
 import './DashboardOverview.css';
-import { StatCard, StatCardProps } from '../../components/StatCard';
+import { StatCard } from '../../components/StatCard';
 import { OverviewGraph } from '../../components/OverviewGraph';
 import { TaskCompletionChart } from '../../components/TaskCompletionChart';
 import { StorageUsageCard } from '../../components/StorageUsageCard';
 import { PresenceIndicator } from '@collaboration/PresenceIndicator';
 import { TypingIndicator } from '@collaboration/TypingIndicator';
+import { StatCardProps } from '../../components/StatCard/types';
 
 export const DashboardOverview: React.FC = () => {
   const taskStats: StatCardProps[] = [

@@ -2,6 +2,7 @@
 import React from 'react';
 import './ProjectListPage.css';
 import type { ProjectListPageProps } from './types';
+import { ProjectList } from '../../components/ProjectList';
 
 export const ProjectListPage: React.FC<ProjectListPageProps> = ({
   projects,

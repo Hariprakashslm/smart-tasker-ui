@@ -1,1 +1,1 @@
-export { OAuthButtons, type OAuthProvider } from './OAuthButtons';
+export { OAuthButtons } from './OAuthButtons';
