@@ -1,14 +1,35 @@
 import React from 'react';
 import { Spinner } from '@core/Spinner';
-import './Button.css';
 import type { ButtonProps } from './types';
 
 const COLOR_CLASS_MAP = {
-  primary: 'storybook-button--primary',
-  danger: 'storybook-button--danger',
-  success: 'storybook-button--success',
-  warning: 'storybook-button--warning',
-  default: 'storybook-button--default',
+  primary: 'bg-blue-600 text-white hover:bg-blue-700',
+  danger: 'bg-red-600 text-white hover:bg-red-700',
+  success: 'bg-green-600 text-white hover:bg-green-700',
+  warning: 'bg-yellow-500 text-white hover:bg-yellow-600',
+  default: 'bg-gray-200 text-gray-900 hover:bg-gray-300',
+};
+
+const OUTLINE_COLOR_CLASS_MAP = {
+  primary: 'border border-blue-600 text-blue-600 hover:bg-blue-50',
+  danger: 'border border-red-600 text-red-600 hover:bg-red-50',
+  success: 'border border-green-600 text-green-600 hover:bg-green-50',
+  warning: 'border border-yellow-500 text-yellow-600 hover:bg-yellow-50',
+  default: 'border border-gray-300 text-gray-900 hover:bg-gray-100',
+};
+
+const TEXT_COLOR_CLASS_MAP = {
+  primary: 'text-blue-600 hover:bg-blue-50',
+  danger: 'text-red-600 hover:bg-red-50',
+  success: 'text-green-600 hover:bg-green-50',
+  warning: 'text-yellow-600 hover:bg-yellow-50',
+  default: 'text-gray-900 hover:bg-gray-100',
+};
+
+const SIZE_CLASS_MAP = {
+  small: 'px-3 py-1.5 text-sm',
+  medium: 'px-4 py-2 text-base',
+  large: 'px-6 py-3 text-lg',
 };
 
 export const Button = React.memo(
@@ -35,21 +56,22 @@ export const Button = React.memo(
     tabIndex,
     ...props
   }: ButtonProps) => {
-    const baseClass = 'storybook-button';
-    const sizeClass = `storybook-button--${size}`;
-    const colorClass =
-      COLOR_CLASS_MAP[color as keyof typeof COLOR_CLASS_MAP] || '';
-    const variantClass = `storybook-button--${variant}`;
-    const widthClass = fullWidth ? 'storybook-button--full-width' : '';
-    const roundedClass = rounded ? 'storybook-button--rounded' : '';
+    let colorClass = '';
+    if (variant === 'contained') {
+      colorClass = COLOR_CLASS_MAP[color as keyof typeof COLOR_CLASS_MAP] || COLOR_CLASS_MAP.default;
+    } else if (variant === 'outlined') {
+      colorClass = OUTLINE_COLOR_CLASS_MAP[color as keyof typeof OUTLINE_COLOR_CLASS_MAP] || OUTLINE_COLOR_CLASS_MAP.default;
+    } else if (variant === 'text' || variant === 'ghost') {
+      colorClass = TEXT_COLOR_CLASS_MAP[color as keyof typeof TEXT_COLOR_CLASS_MAP] || TEXT_COLOR_CLASS_MAP.default;
+    }
 
-    // Allow custom color override
-    const customColor =
-      color && !COLOR_CLASS_MAP[color as keyof typeof COLOR_CLASS_MAP]
-        ? ({ '--btn-main': color } as React.CSSProperties)
-        : {};
-    // Allow custom border radius
+    const baseClass =
+      'inline-flex items-center justify-center font-medium focus:outline-none transition-colors duration-150';
+    const sizeClass = SIZE_CLASS_MAP[size as keyof typeof SIZE_CLASS_MAP] || SIZE_CLASS_MAP.medium;
+    const widthClass = fullWidth ? 'w-full' : '';
+    const roundedClass = rounded ? 'rounded-full' : 'rounded-md';
     const customRadius = borderRadius ? { borderRadius } : {};
+    const opacityClass = (disabled || isLoading) ? 'opacity-60 cursor-not-allowed' : '';
 
     return (
       <button
@@ -57,11 +79,11 @@ export const Button = React.memo(
         disabled={disabled || isLoading}
         className={[
           baseClass,
-          sizeClass,
           colorClass,
-          variantClass,
+          sizeClass,
           widthClass,
           roundedClass,
+          opacityClass,
           className,
         ]
           .filter(Boolean)
@@ -72,24 +94,20 @@ export const Button = React.memo(
         form={form}
         autoFocus={autoFocus}
         tabIndex={tabIndex}
-        style={{ ...customColor, ...customRadius, ...style }}
+        style={{ ...customRadius, ...style }}
         {...props}
       >
         {isLoading && (
-          <span className="storybook-button__spinner">
+          <span className="mr-2 flex items-center">
             {spinner || <Spinner size="small" label="Loading..." />}
           </span>
         )}
         {!isLoading && startIcon && (
-          <span className="storybook-button__icon storybook-button__icon--start">
-            {startIcon}
-          </span>
+          <span className="mr-2 flex items-center">{startIcon}</span>
         )}
-        {!isLoading && <span className="storybook-button__label">{label}</span>}
+        {!isLoading && <span>{label}</span>}
         {!isLoading && endIcon && (
-          <span className="storybook-button__icon storybook-button__icon--end">
-            {endIcon}
-          </span>
+          <span className="ml-2 flex items-center">{endIcon}</span>
         )}
       </button>
     );
